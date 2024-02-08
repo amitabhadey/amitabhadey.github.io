@@ -12,6 +12,8 @@ title: "News"
 
 Family and friends, I am excited and honored to share that I am joining the University of North Carolina at Greensboro as a full-time Lecturer at the Department of Computer Science. I look forward to working closely with the students and the faculty staff to create and ensure a vibrant learning environment and determined to help students reach their full potential.
 
+<hr>
+
 ## LDEB Arxiv Preprint Announced
 <time>June 6th 2023</time>
 
@@ -36,6 +38,8 @@ During this time, I had plenty of opportunities to learn from many Professors. I
 
 I look forward to serving the community and giving back every bit of knowledge I have acquired over the years. Sincerest gratitude to everyone! I love you all! Borrowing the famous last words of my hero Christopher Hitchens, “Remember the Love Bit”.
 
+<hr>
+
 ## Doctoral and Master's Commencement Ceremony
 <time>May 4th 2023</time>
 
@@ -44,6 +48,8 @@ I look forward to serving the community and giving back every bit of knowledge I
 <img src="/images/graduation.jpeg" width="600" height="400">
 
 At the UNC Greensboro Doctoral and Master’s Commencement Ceremony held in Greensboro Coliseum on Thursday, May 4, 2023. I successfully obtained my Master's in Computer Science degree with a concentration in Big Data and Data Science from the University of North Carolina-Greensboro.
+
+<hr>
 
 ## Featured in UNCG Computer Science Department Website
 <time>May 4th 2023</time>

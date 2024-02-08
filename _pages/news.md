@@ -3,8 +3,10 @@ permalink: /news/
 title: "News"
 ---
 
-## Joining UNCG as a Faculty</h3>
+## Joining UNCG as a Faculty
 <time>August 1st 2023</time>
+
+<hr>
 
 <img src="/images/lecturer.jpeg" width="600" height="400">
 
@@ -13,13 +15,16 @@ Family and friends, I am excited and honored to share that I am joining the Univ
 ## LDEB Arxiv Preprint Announced
 <time>June 6th 2023</time>
 
+<hr>
+
 <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7071891478133817345" height="500" width="100%" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
 
 ## Outstanding Graduate Student Award
+<time>May 5th 2023</time>
+
+<hr>
 
 <img src="/images/gradaward.jpeg" width="600" height="400">
-
-<time>May 5th 2023</time>
 
 I am pleased to share that I received the “Outstanding Graduate Student Award” for 2022-23 from the Department of Computer Science at the University of North Carolina-Greensboro in recognition of my scholarly accomplishment and contribution to the department. 
 
@@ -32,17 +37,19 @@ During this time, I had plenty of opportunity to learn from many Professors. I w
 I look forward to serving the community and giving back every bit of knowledge I have acquired over the years. Sincerest gratitude to everyone! I love you all! Borrowing the famous last words of my hero Christopher Hitchens, “Remember the Love Bit”.
 
 ## Doctoral and Master's Commencement Ceremony
+<time>May 4th 2023</time>
+
+<hr>
 
 <img src="/images/graduation.jpeg" width="600" height="400">
-
-<time>May 4th 2023</time>
 
 At the UNC Greensboro Doctoral and Master’s Commencement Ceremony held in Greensboro Coliseum on Thursday, May 4, 2023. I successfully obtained my Master's in Computer Science degree with a concentration in Big Data and Data Science from the University of North Carolina-Greensboro.
 
 ## Featured in UNCG Computer Science Department Website</h3>
+<time>May 4th 2023</time>
+
+<hr>
 
 <img src="/images/featured.jpeg" width="600" height="400">
-
-<time>May 4th 2023</time>
 
 Got featured in the Department of Computer Science as well as the UNCG Homepage - Presenting at IFFS-ML Suthaharan's Lab in one of our weekly lab meetings, giving progress updates on my research.

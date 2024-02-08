@@ -12,7 +12,7 @@ main:
   - title: "CV"
     url: /files/amitabhadey_cv.pdf
 
-- title: "News"
+  - title: "News"
     url: /news
             
 #  - title: "Blog"

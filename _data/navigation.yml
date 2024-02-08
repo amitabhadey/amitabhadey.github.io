@@ -2,21 +2,21 @@
 main:
   - title: "Teaching"
     url: /teaching/
-
-  - title: "Resources"
-    url: /resources
-
-  - title: "News"
-    url: /news
-            
+  
   - title: "Publications"
     url: /publications/
 
-  - title: "Blog"
-    url: /year-archive/
-
   - title: "CV"
     url: /files/amitabhadey_cv.pdf
+
+  - title: "Resources"
+    url: /resources.md
+
+ # - title: "News"
+ #   url: /news
+            
+#  - title: "Blog"
+#   url: /year-archive/
 
   #- title: "Talks"
   #  url: /talks/    

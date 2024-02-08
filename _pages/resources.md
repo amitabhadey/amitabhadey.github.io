@@ -255,7 +255,7 @@ title: "Resources"
       <a href="https://jobs.dataelixir.com/jobs" target="_blank">Jobs for Data Lover - Data Elixir</a>
     </li>
   </ul>
-    <hr>
+  <hr>
   <h3>Writing</h3>
   <ul>
     <li>

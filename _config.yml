@@ -84,10 +84,14 @@ author:
   avatar           : "profile.png"
   bio              : "Lecturer, Computer Science at UNCG | NLP Researcher and Data Scientist"
   location         : "Greensboro, North Carolina"
-  employer         : "UNC Greensboro"
-  pubmed           : 
+  email            : "a_dey@uncg.edu"
+  linkedin         : "amitabhadey"
+  github           : "amitabhadey"
   googlescholar    : "https://scholar.google.com/citations?user=FbySRjMAAAAJ&hl=en&oi=sra"
-  email            :  "a_dey@uncg.edu"
+  employer         : 
+  pubmed           : 
+  
+  
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :
@@ -96,14 +100,13 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           : "amitabhadey"
+  
   google_plus      :
   keybase          :
   instagram        :
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
-  lastfm           :
-  linkedin         :  "amitabhadey"
-  orcid            : "https://orcid.org/0009-0006-3435-4730"
+  lastfm           :  
+  orcid            : 
   pinterest        :
   soundcloud       :
   stackoverflow    : # http://stackoverflow.com/users/123456/username

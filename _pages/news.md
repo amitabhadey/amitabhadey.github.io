@@ -45,7 +45,7 @@ I look forward to serving the community and giving back every bit of knowledge I
 
 At the UNC Greensboro Doctoral and Master’s Commencement Ceremony held in Greensboro Coliseum on Thursday, May 4, 2023. I successfully obtained my Master's in Computer Science degree with a concentration in Big Data and Data Science from the University of North Carolina-Greensboro.
 
-## Featured in UNCG Computer Science Department Website</h3>
+## Featured in UNCG Computer Science Department Website
 <time>May 4th 2023</time>
 
 <hr>

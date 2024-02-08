@@ -30,9 +30,9 @@ I am pleased to share that I received the “Outstanding Graduate Student Award�
 
 It is a great honor and privilege for me to receive this prestigious award, and I couldn’t have done it without the continued support of my family, friends, and the Department faculty and staff.
 
-Since joining UNCG back in August 2021, I have worked in the department every month (22 months as of writing) in some capacity, whether as a Graduate Instructional Assistant or a Graduate Teaching Associate. I have dedicated hundreds of hours into teaching, grading, and working with students.
+Since joining UNCG back in August 2021, I have worked in the department every month (22 months as of writing) in some capacity, whether as a Graduate Instructional Assistant or a Graduate Teaching Associate. I have dedicated hundreds of hours to teaching, grading, and working with students.
 
-During this time, I had plenty of opportunity to learn from many Professors. I was privy to many insightful conversations that taught me, among many things, the value of strong work ethics, being empathetic and kind to people around me, and never compromising with the quality of my work.
+During this time, I had plenty of opportunities to learn from many Professors. I was privy to many insightful conversations that taught me, among many things, the value of strong work ethics, being empathetic and kind to people around me, and never compromising the quality of my work.
 
 I look forward to serving the community and giving back every bit of knowledge I have acquired over the years. Sincerest gratitude to everyone! I love you all! Borrowing the famous last words of my hero Christopher Hitchens, “Remember the Love Bit”.
 

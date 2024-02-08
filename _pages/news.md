@@ -27,7 +27,7 @@ title: "News"
 
 <div class="gallery">
   <a target="_blank" href="img/gradaward/1.jpg">
-    <img src="img/gradaward/1.jpg" width="600" height="400">
+    <img src="/images/gradaward.jpeg" width="600" height="400">
   </a>
 </div>
 

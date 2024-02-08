@@ -1,7 +1,7 @@
 ---
 title: 'Essential Terminal Commands'
 date: 2024-02-08
-permalink: 
+permalink: /posts/2024/essential-terminal-commands
 ---
 
 ## Navigation Commands

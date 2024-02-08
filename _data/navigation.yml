@@ -10,7 +10,7 @@ main:
     url: /files/amitabhadey_cv.pdf
 
   - title: "Resources"
-    url: /pages/resources.md
+    url: /resources/
 
  # - title: "News"
  #   url: /news

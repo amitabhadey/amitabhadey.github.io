@@ -13,7 +13,7 @@ main:
     url: /news/
 
   - title: "Posts"
-   url: /posts/
+    url: /posts/
 
   - title: "CV"
     url: /files/amitabhadey_cv.pdf

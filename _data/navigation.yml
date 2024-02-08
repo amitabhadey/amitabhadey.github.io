@@ -10,7 +10,10 @@ main:
     url: /resources/
 
   - title: "News"
-    url: /news
+    url: /news/
+
+  - title: "Posts"
+   url: /posts/
 
   - title: "CV"
     url: /files/amitabhadey_cv.pdf

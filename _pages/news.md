@@ -26,7 +26,7 @@ title: "News"
 <p style="text-align: center;">May 5th 2023</p>
 
 <div class="gallery">
-  <a target="_blank" href="img/gradaward/1.jpg">
+  <a target="_blank" href="images/gradaward.jpeg/">
     <img src="/images/gradaward.jpeg" width="600" height="400">
   </a>
 </div>
@@ -45,7 +45,7 @@ title: "News"
 <p style="text-align: center;">May 4th 2023</p>
 
 <div class="gallery">
-  <a target="_blank" href="img/graduation/1.png">
+ <a target="_blank" href="images/graduation.png/">
     <img src="img/graduation/1.png" width="600" height="400">
   </a>
 </div>

@@ -18,5 +18,7 @@ I specialize in large language models (LLMs) and my work generally focuses on de
 
 My research delves into the realm of multimodal analysis, encompassing text, images, videos, and audio, develop models that can understand the context surrounding a piece of content, including historical context, user demographics, and network dynamics to develop context awareness of models, and also explores cross-lingual and cross-cultural aspects of misinformation, ensuring that detection models can be applied globally and adapted to diverse linguistic and cultural contexts.
 
-I study approaches to enhance emotion recognition in conversational AI systems by understanding the complexity of human emotions, especially within nuanced dialogues, which requires complex hybrid models that combine deep learning techniques with traditional machine learning that can accurately perceive and respond to users' emotional states. My work This has direct implications for improving user experiences in AI-driven applications, from virtual assistants to mental health support systems.
+I study approaches to enhance emotion recognition in conversational AI systems by understanding the complexity of human emotions, especially within nuanced dialogues, which requires complex hybrid models that combine deep learning techniques with traditional machine learning that can accurately perceive and respond to users' emotional states. 
+
+My work has direct implications for improving user experiences in AI-driven applications, from virtual assistants to mental health support systems.
 

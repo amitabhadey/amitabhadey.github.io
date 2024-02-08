@@ -9,11 +9,11 @@ main:
   - title: "Resources"
     url: /resources/
 
-  - title: "CV"
-    url: /files/amitabhadey_cv.pdf
-
   - title: "News"
     url: /news
+
+  - title: "CV"
+    url: /files/amitabhadey_cv.pdf
             
 #  - title: "Blog"
 #   url: /year-archive/

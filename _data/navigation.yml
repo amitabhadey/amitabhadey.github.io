@@ -12,8 +12,8 @@ main:
   - title: "CV"
     url: /files/amitabhadey_cv.pdf
 
- # - title: "News"
- #   url: /news
+- title: "News"
+    url: /news
             
 #  - title: "Blog"
 #   url: /year-archive/

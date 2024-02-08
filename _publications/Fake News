@@ -1,7 +1,7 @@
 ---
 title: "Fake News Pattern Recognition using Linguistic Analysis"
 collection: publications
-permalink: /publication/Fake News Pattern Recognition using Linguistic Analysis
+permalink: 
 excerpt: 'In the wake of the 2016 US Presidential Election, the upsurge of fake news has been a subject of increased discussion and debate. In this paper, we propose a general framework that can been adopted in future elections worldwide to augment humans in making better decisions when it comes to recognizing news deception and identifying hidden bias of the author. For our study, we constructed a dataset comprising 200 tweets on "Hilary Clinton", while performing veracity assessment. We initially perform "text normalization" on tweets, explore techniques for feature extraction to classify news into categories, perform a comprehensive linguistic analysis on tweets, extract bag-of-words to find noticeable pattern, and finally apply k-nearest neighbor algorithm for classifying polarized news from credible. We later turn to some popular evaluation metrics to quantify the success rate of our framework, discuss the results of implementing knn algorithm and discuss interconnected research domains and future research directions for constructing an ideal model for fake news detection system around social media.'
 date: 2018/6/25
 venue: '2018 Joint 7th International Conference on Informatics, Electronics & Vision (ICIEV) and 2018 2nd International Conference on Imaging, Vision & Pattern Recognition (icIVPR)'

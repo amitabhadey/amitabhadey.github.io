@@ -6,11 +6,11 @@ main:
   - title: "Publications"
     url: /publications/
 
-  - title: "CV"
-    url: /files/amitabhadey_cv.pdf
-
   - title: "Resources"
     url: /resources/
+
+  - title: "CV"
+    url: /files/amitabhadey_cv.pdf
 
  # - title: "News"
  #   url: /news

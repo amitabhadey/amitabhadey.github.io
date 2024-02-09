@@ -2,7 +2,10 @@
 title: 'Essential Terminal Commands'
 date: 2024-02-08
 permalink: /posts/2024/essential-terminal-commands
+excerpt: In the realm of Unix-like operating systems, the terminal is a crucial gateway to system administration and development. This excerpt illuminates the essential commands, from directory navigation with ls to process management with top, pivotal for mastering the command-line interface.
 ---
+
+In the realm of Unix-like operating systems, mastery of the command-line interface (CLI) is a fundamental skill for system administrators, developers, and power users alike. The terminal serves as a gateway to interact directly with the underlying system, offering a myriad of commands to query system information, manipulate files and directories, manage processes, and more. Among these commands, a handful stand out as essential tools for navigating and understanding the system's environment. From querying system information with commands like uname and df, to monitoring system processes with top, this article serves as a comprehensive guide to mastering the essential terminal commands required for efficient system administration and troubleshooting.
 
 ## Navigation Commands
 

@@ -303,14 +303,12 @@ title: "Resources"
   </ul>
 
 <table class="tg">
-<thead>
-  <tr>
-    <th class="tg-amwm">Tools</th>
-    <th class="tg-amwm">Description</th>
-    <th class="tg-amwm">URL</th>
-  </tr>
-</thead>
 <tbody>
+  <tr>
+    <td class="tg-amwm">Tools</td>
+    <td class="tg-amwm">Description</td>
+    <td class="tg-amwm">URL</td>
+  </tr>
   <tr>
     <td class="tg-baqh">Typings</td>
     <td class="tg-baqh">A sleek and modern typing test website</td>

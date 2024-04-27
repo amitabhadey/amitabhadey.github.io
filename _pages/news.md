@@ -11,7 +11,7 @@ title: "News"
 <img src="/images/review1.jpeg" width="600" height="400">
 <img src="/images/review2.jpg" width="600" height="400">
 
-Absolutely honored and humbled to get such a glorious annual review by my fellow colleagues at the Department of Computer Science! It feels good to get recognized for your hard work. It's only up from here!
+I am deeply grateful and humbled to receive such a glowing annual review from my esteemed colleagues in the Department of Computer Science. Recognition of one's dedication and effort is truly rewarding. I am committed to maintaining and enhancing an exceptional learning environment for our students, and will continue to strive for excellence in my work.
 
 <hr>
 

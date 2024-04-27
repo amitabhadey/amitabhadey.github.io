@@ -9,7 +9,7 @@ title: "News"
 <hr>
 
 <img src="/images/review1.jpeg" width="600" height="400">
-<img src="/images/review2.jpeg" width="600" height="400">
+<img src="/images/review2.jpg" width="600" height="400">
 
 Absolutely honored and humbled to get such a glorious annual review by my fellow colleagues at the Department of Computer Science! It feels good to get recognized for your hard work. It's only up from here!
 

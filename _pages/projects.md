@@ -19,7 +19,7 @@ title: "Projects"
 </ol>
 
 <div style="text-align: center;">
-  <a href="https://github.com/amitabhadey/amitabhadey.github.io/blob/master/_projects/sentiment_analysis.html" class="btn btn-custom">View code</a>
+  <a href="https://nbviewer.org/gist/amitabhadey/58237f9506e4fd3dba2ffa83800e6a46" class="btn btn-custom">View code</a>
 </div>
 
 <style>

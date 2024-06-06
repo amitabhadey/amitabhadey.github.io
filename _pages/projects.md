@@ -39,7 +39,7 @@ title: "Projects"
 </ol>
 
 <div style="text-align: center;">
-  <a href="https://401kcalculator-nuwqbvl5fat3xurfgcplcy.streamlit.app/" class="btn btn-custom">View Deployed WebApp/a>
+  <a href="https://401kcalculator-nuwqbvl5fat3xurfgcplcy.streamlit.app/" class="btn btn-custom">View Deployed WebApp</a>
 </div>
 
 

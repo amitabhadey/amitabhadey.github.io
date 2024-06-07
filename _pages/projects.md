@@ -3,8 +3,8 @@ permalink: /projects/
 title: "Projects"
 ---
 
+<hr>
 <h1>Notebooks</h1>
-  
 <h2>Sentiment Analysis in Python</h2>
 <div style="text-align: center;">
   <img src="https://media.sproutsocial.com/uploads/2023/07/Sentiment-analysis-HUB-Final.jpg" style="width: 50%; height: 50%;">
@@ -24,8 +24,8 @@ title: "Projects"
   <a href="https://nbviewer.org/gist/amitabhadey/58237f9506e4fd3dba2ffa83800e6a46" class="btn btn-custom">View Jupyter Notebook</a>
 </div>
 
+<hr>
 <h1>Web Apps</h1>
-
 <h2>401K Contribution Calculator</h2>
 <div style="text-align: center;">
   <img src="https://www.commercebank.com/-/media/cb/articles/personal/2022/articlehero_2680x960401k-(1).jpg?revision=85778e7f-dad7-48a8-a86f-804b305d77db&modified=20220216210438" style="width: 50%; height: 50%;">

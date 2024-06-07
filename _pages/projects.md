@@ -2,6 +2,8 @@
 permalink: /projects/
 title: "Projects"
 ---
+
+<h1>Notebooks</h1>
   
 <h2>Sentiment Analysis in Python</h2>
 <div style="text-align: center;">
@@ -21,6 +23,8 @@ title: "Projects"
 <div style="text-align: center;">
   <a href="https://nbviewer.org/gist/amitabhadey/58237f9506e4fd3dba2ffa83800e6a46" class="btn btn-custom">View Jupyter Notebook</a>
 </div>
+
+<h1>Web Apps</h1>
 
 <h2>401K Contribution Calculator</h2>
 <div style="text-align: center;">
@@ -42,6 +46,25 @@ title: "Projects"
   <a href="https://401kcalculator-nuwqbvl5fat3xurfgcplcy.streamlit.app/" class="btn btn-custom">View Deployed WebApp</a>
 </div>
 
+<h2>LLM Papers WebApp</h2>
+<div style="text-align: center;">
+  <img src="https://media.wired.com/photos/63a11855a12918bc073554af/master/pass/02_Mind-your-language.jpg" style="width: 50%; height: 50%;">
+</div>
+<br>
+<p>The LLM Papers WebApp is a simple, yet powerful, tool developed using Python and Streamlit. It allows users to explore, search, and filter foundational papers in the field of Large Language Models (LLMs). The app provides an intuitive interface for users to find relevant papers by title, author, summary, and publication year.</p>
+
+<h3>Objectives</h3>
+
+<ol>
+<li>Easy Access to Foundational Papers: Provide a centralized platform for accessing key research papers in the field of LLM.</li>
+<li>User-Friendly Interface: Create an intuitive and responsive web app using Streamlit to enhance user experience.</li>
+<li>Customizability: Allow users to update the underlying data (CSV file) to customize the app for their own domain-specific papers.</li>
+<li>Comprehensive Search and Filter: Enable efficient search and filtering capabilities to help users quickly find papers based on multiple criteria.</li>
+</ol>
+
+<div style="text-align: center;">
+  <a href="https://llmpapers.streamlit.app/" class="btn btn-custom">View Deployed WebApp</a>
+</div>
 
 
 

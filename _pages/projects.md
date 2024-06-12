@@ -67,6 +67,26 @@ title: "Projects"
 </div>
 
 
+<h2>Arbitrage Betting Calculator</h2>
+<div style="text-align: center;">
+  <img src="https://media.npr.org/assets/img/2022/06/14/ellingson_corrected_wide-da0efa6b9cc12438a4cc0c96b1ba0fb01c9de7b1.jpg" style="width: 50%; height: 50%;">
+</div>
+<br>
+<p>A Streamlit app to calculate potential profits and losses from arbitrage betting. Input American odds and wagers for two teams. The app computes potential profits, bookmaker margins, and checks for arbitrage opportunities. Ideal for optimizing sports betting strategies. Easy-to-use interface.</p>
+
+<h3>Features</h3>
+
+<ol>
+<li>Input American odds and wager amounts for two teams</li>
+<li>Calculate potential profit/loss for each outcome</li>
+<li>Determine bookmaker's profit margin</li>
+<li>Identify arbitrage opportunities</li>
+<li>User-friendly interface with streamlined input and output sections</li>
+</ol>
+
+<div style="text-align: center;">
+  <a href="https://arbitragebettingcalculator.streamlit.app/" class="btn btn-custom">View Deployed WebApp</a>
+</div>
 
 
 

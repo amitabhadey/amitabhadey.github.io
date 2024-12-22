@@ -13,7 +13,7 @@ main:
     url: /projects/
 
   - title: "Resources"
-    url: /resources/
+    url: "https://dot-scribe-3cd.notion.site/research-odyssey?pvs=4"
 
   - title: "News"
     url: /news/
@@ -22,7 +22,7 @@ main:
     url: /posts/
 
   - title: "Travel"
-    url: "https://amitabhadey.notion.site/d2560fefef4f478a9af0237219ccf4e3?v=5cee47dfe714495089420c7385e39c47&pvs=4"
+    url: "http://dot-scribe-3cd.notion.site"
 
   - title: "CV"
     url: /files/amitabhadey_cv.pdf

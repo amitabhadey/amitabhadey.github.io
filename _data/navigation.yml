@@ -7,13 +7,13 @@ main:
     url: /publications/
 
   - title: "Research"
-    url: /research/
+    url: "https://dot-scribe-3cd.notion.site/research-odyssey?pvs=4"
   
   - title: "Projects"
     url: /projects/
 
   - title: "Resources"
-    url: "https://dot-scribe-3cd.notion.site/research-odyssey?pvs=4"
+    url: /resources/
 
   - title: "News"
     url: /news/

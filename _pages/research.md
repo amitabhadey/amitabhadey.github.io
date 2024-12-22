@@ -1,6 +1,10 @@
 ---
-permalink: /research/
 title: "Research"
+permalink: /research/
 ---
 
-[Landmark Papers](01_Papers/Landmark_Papers.md)
+[Landmark Papers]({{ site.baseurl }}/01_Papers/Landmark_Papers)
+
+
+
+

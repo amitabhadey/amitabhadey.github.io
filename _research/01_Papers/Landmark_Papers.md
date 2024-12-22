@@ -1,6 +1,5 @@
 ---
 title: "Landmark Papers"
-layout: default
 ---
 
 <h3 id="attention-is-all-you-need">Attention Is All You Need</h3>

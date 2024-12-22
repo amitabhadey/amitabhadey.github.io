@@ -22,14 +22,11 @@ body {
 }
 
 .content-wrapper {
-  display: flex; /* Enables flexbox layout for children */
-  gap: 30px; /* Adds space between the two divs */
-  padding: 20px; /* Adds padding around the entire wrapper */
-  max-width: 900px; /* Limits the maximum width */
-  margin: auto; /* Centers the content horizontally */
-  line-height: 1.6; /* Improves readability */
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
+  line-height: 1.6;
 }
-
 
 
 h1, h2, h3, h4, h5, h6 {

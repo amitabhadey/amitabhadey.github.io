@@ -1,10 +1,14 @@
 ---
-title: "Research"
 permalink: /research/
-layout: default
+title: "Research"
 ---
 
-[Landmark Papers]({{ site.baseurl }}/_research/01_Papers/Landmark_Papers)
+<ul>
+  <li>
+    <a href="{{ site.baseurl }}/_research/01_Papers/Landmark_Papers">Landmark Papers in LLM</a>
+  </li>
+</ul>
+
 
 
 

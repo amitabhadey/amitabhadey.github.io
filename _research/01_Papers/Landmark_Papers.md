@@ -1,3 +1,8 @@
+---
+title: "Landmark Papers"
+layout: default
+---
+
 ### Attention Is All You Need 
 Vaswani et al. 2017\
 This paper introduced the Transformer architecture, which eliminated recurrence and convolution in sequence modeling. It revolutionized NLP by enabling highly parallelized training and improved long-term dependency handling.\

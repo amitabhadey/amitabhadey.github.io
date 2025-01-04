@@ -15,6 +15,10 @@ main:
     url: /news/
     target: "_blank"
 
+  - title: "Blog"
+    url: "https://amitabhadey.substack.com/"
+    target: "_blank"
+
   - title: "Leisure Lab"
     url: "https://dot-scribe-3cd.notion.site/leisure-lab?pvs=4"
     target: "_blank"

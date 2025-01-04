@@ -15,7 +15,7 @@ main:
     url: /news/
     target: "_blank"
 
-  - title: "Blog"
+  - title: "Substack"
     url: "https://amitabhadey.substack.com/"
     target: "_blank"
 

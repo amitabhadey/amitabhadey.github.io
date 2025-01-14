@@ -11,8 +11,8 @@ main:
     url: "https://dot-scribe-3cd.notion.site/research-odyssey?pvs=4"
     target: "_blank"
   
-  - title: "News"
-    url: /news/
+  - title: "Feed"
+    url: /feed/
     target: "_blank"
 
   - title: "Substack"

@@ -6,10 +6,6 @@ main:
   - title: "Publications"
     url: /publications/
     target: "_blank"
-
-  - title: "Research"
-    url: "https://dot-scribe-3cd.notion.site/research-odyssey?pvs=4"
-    target: "_blank"
   
   - title: "Feed"
     url: /feed/

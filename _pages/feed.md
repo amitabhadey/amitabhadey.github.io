@@ -14,6 +14,16 @@ title: "Feed"
 
 <hr>
 
+## 2024: CAS Sciences PTF Annual Review (Computer Science)
+<time>April 5th, 2025</time>
+
+<hr>
+
+<img src="/images/cas_annual_review/2024_1.png" width="600" height="400">
+<img src="/images/cas_annual_review/2024_2.png" width="600" height="400">
+
+<hr>
+
 ## 13th Annual COE Graduate Poster Presentation Competition
 <time>June 1st, 2024</time>
 
@@ -25,15 +35,13 @@ Research on "A Machine Learning Approach to Predict 3D Printability of Biopolyme
 
 <hr>
 
-## CAS Sciences PTF Annual Review (Computer Science), 2024
+## 2023: CAS Sciences PTF Annual Review (Computer Science)
 <time>April 3rd, 2024</time>
 
 <hr>
 
-<img src="/images/review1.jpeg" width="600" height="400">
-<img src="/images/review2.jpg" width="600" height="400">
-
-I am deeply grateful and humbled to receive such a glowing annual review from my esteemed colleagues in the Department of Computer Science. Recognition of one's dedication and effort is truly rewarding. I am committed to maintaining and enhancing an exceptional learning environment for our students, and will continue to strive for excellence in my work.
+<img src="/images/cas_annual_review/2023_1.jpeg" width="600" height="400">
+<img src="/images/cas_annual_review/2023_2.jpg" width="600" height="400">
 
 <hr>
 

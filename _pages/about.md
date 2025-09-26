@@ -9,7 +9,7 @@ redirect_from:
 
 {% include base_path %}
 
-I am a Senior Data Scientist at <a href = "https://www.optum.com/en/">Optum</a> (part of <a href = "https://www.unitedhealthgroup.com/">UnitedHealth Group</a>), specializing in Large Language Models (LLMs) and their applications in healthcare and enterprise AI. My background is in Natural Language Processing (NLP), where I have over ten years of experience working with text analysis, machine learning, and more recently, large-scale language model development.
+I am a Senior Software Engineer at <a href = "https://www.optum.com/en/">Optum</a> (part of <a href = "https://www.unitedhealthgroup.com/">UnitedHealth Group</a>), specializing in Large Language Models (LLMs) and their applications in healthcare and enterprise AI. My background is in Natural Language Processing (NLP), where I have over ten years of experience working with text analysis, machine learning, and more recently, large-scale language model development.
 
 Previously, I was a Lecturer in Computer Science at the <a href="https://compsci.uncg.edu/">University of North Carolina at Greensboro (UNCG)</a>, where I taught courses in systems programming, advanced data structures, and data science, and advised students on academic and research projects.
 

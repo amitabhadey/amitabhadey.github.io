@@ -3,6 +3,21 @@ permalink: /feed/
 title: "Feed"
 ---
 
+## Started as Senior Software Engineer at Optum
+<time>August 1st 2023</time>
+
+<hr>
+
+<img src="/images/optum.jpg" width="600" height="400">
+
+I’m excited to share that I’m starting a new position as Senior Software Engineer at Optum, part of the UnitedHealth Group!
+
+I will be working at the intersection of machine learning, LLMs, and healthcare systems. Looking forward to contributing to scalable solutions that improve patient outcomes and operational efficiency.
+
+#TeamUnited
+
+<hr>
+
 ## Commendations from Students (Fall 2022 - Present)
 <time>Pinned Post</time>
 
@@ -46,7 +61,7 @@ Research on "A Machine Learning Approach to Predict 3D Printability of Biopolyme
 
 <hr>
 
-## Joining UNCG as a Faculty
+## Started as Computer Science Lecturer at UNCG
 <time>August 1st 2023</time>
 
 <hr>

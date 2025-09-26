@@ -19,7 +19,9 @@ I earned my B.Sc. in Computer Science from BRAC University, where I worked under
 
 ## My work and research
 
-I specialize in large-scale language modeling for healthcare, with a focus on building, fine-tuning, and deploying domain-adapted Large Language Models (LLMs) under clinical, enterprise, and regulatory constraints. I study approaches to advance healthcare-focused Large Language Models (LLMs), with particular emphasis on long-sequence processing and domain-specific adaptation for tasks such as medical coding and bridging communication between patients and healthcare providers. A core part of my work involves building domain adaptation pipelines that transform general-purpose LLMs into clinically specialized models.
+I specialize in large-scale language modeling for healthcare, with a focus on building, fine-tuning, and deploying domain-adapted Large Language Models (LLMs) under clinical, enterprise, and regulatory constraints. 
+
+I study approaches to advance healthcare-focused Large Language Models (LLMs), with particular emphasis on long-sequence processing and domain-specific adaptation for tasks such as medical coding and bridging communication between patients and healthcare providers. A core part of my work involves building domain adaptation pipelines that transform general-purpose LLMs into clinically specialized models.
 
 In the past, my work focused on developing computational models and training them so that they can understand and generate human language with a high level of precision. The two major domains of my research were tackling the challenges of deploying misinformation-preventing measures and improving conversational AI. 
 

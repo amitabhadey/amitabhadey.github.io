@@ -19,28 +19,24 @@ title: " "
   <a href="#tools"     style="padding:.35rem .7rem;border:1px solid currentColor;border-radius:999px;text-decoration:none;">🛠️ Tools</a>
 </nav>
 
-<!-- Quick search -->
-<div style="margin:.5rem 0 1.25rem 0;display:flex;gap:.6rem;align-items:center;">
-  <input id="link-search" type="search" placeholder="Search resources…"
-         style="flex:1;max-width:520px;padding:.55rem .7rem;border:1px solid rgba(255,255,255,.35);border-radius:10px;background:transparent;color:inherit;">
-  <small style="opacity:.7;">Press <kbd style="border:1px solid currentColor;border-radius:4px;padding:0 .25rem;opacity:.7;">/</kbd> to focus</small>
-</div>
-
-<!-- Shown only when nothing matches -->
-<p id="no-results" style="display:none;opacity:.75;margin:.25rem 0 1rem 0;">No results. Try a different search.</p>
-
 <style>
-/* Cards */
+/* Sections & cards */
 .res-sec{ margin:1.5rem 0 2rem; }
 .res-sec h3{ margin:.1rem 0 .8rem 0; font-size:1.05rem; letter-spacing:.01em; }
 .links{ list-style:none; margin:0; padding:0; display:grid; gap:.65rem; }
+
 .card{
   border:1px solid rgba(255,255,255,.25);
-  border-radius:12px; padding:.7rem .85rem; background:rgba(255,255,255,.03);
+  border-radius:12px;
+  padding:.7rem .85rem;
+  background:rgba(255,255,255,.03);
 }
 .card h4{ margin:0 0 .25rem 0; font-size:.98rem; }
 .card p{ margin:.15rem 0 0 0; font-size:.9rem; opacity:.95; }
-.card .meta{ display:flex; gap:.5rem; flex-wrap:wrap; font-size:.8rem; opacity:.8; margin:.25rem 0 .35rem; }
+.card .meta{
+  display:flex; gap:.5rem; flex-wrap:wrap;
+  font-size:.8rem; opacity:.8; margin:.25rem 0 .35rem;
+}
 .actions{ display:flex; gap:.5rem; flex-wrap:wrap; margin-top:.4rem; }
 .actions a, .actions button{
   font-size:.82rem; text-decoration:none; padding:.25rem .55rem; border-radius:8px;
@@ -48,35 +44,59 @@ title: " "
 }
 .actions a:hover, .actions button:hover{ border-style:solid; }
 
-/* Light mode */
-@media (prefers-color-scheme: light){
-  .card{ background:#fff;border-color:#e5e7eb; }
-  #link-search{ border-color:#e5e7eb; }
-}
-
-/* Table */
+/* Tables (if you add any later) */
 .table-wrap{ overflow:auto; border-radius:12px; border:1px solid rgba(255,255,255,.25); }
 table.minimal{ width:100%; border-collapse:separate; border-spacing:0; }
-table.minimal th, table.minimal td{ padding:.6rem .75rem; border-bottom:1px solid rgba(255,255,255,.15); vertical-align:top; }
+table.minimal th, table.minimal td{
+  padding:.6rem .75rem; border-bottom:1px solid rgba(255,255,255,.15); vertical-align:top;
+}
 table.minimal th{ text-align:left; font-weight:700; position:sticky; top:0; backdrop-filter:saturate(120%); }
 table.minimal tr:last-child td{ border-bottom:none; }
 
+/* Light mode */
 @media (prefers-color-scheme: light){
+  .card{ background:#fff; border-color:#e5e7eb; }
   .table-wrap{ border-color:#e5e7eb; }
   table.minimal th, table.minimal td{ border-bottom:1px solid #ececec; }
 }
-kbd{ font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono",monospace; font-size:.75em; }
+
+/* Tools grid (scoped) */
+#tools .res-list{ list-style:none; margin:.5rem 0 0; padding:0; display:grid; gap:.6rem; }
+@media(min-width:720px){ #tools .res-list{ grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media(min-width:1160px){ #tools .res-list{ grid-template-columns:repeat(3,minmax(0,1fr)); } }
+
+#tools .res-item{
+  border:1px solid rgba(255,255,255,.25);
+  border-radius:12px;
+  background:rgba(255,255,255,.03);
+  padding:.8rem .9rem;
+  display:grid; grid-template-rows:auto auto 1fr; gap:.35rem;
+}
+#tools .res-title{ margin:0; font-weight:700; letter-spacing:.01em; }
+#tools .res-desc{ margin:0; opacity:.9; font-size:.92rem; line-height:1.45; }
+#tools .res-link a{
+  display:inline-block; margin-top:.15rem;
+  text-decoration:none; border:1px dashed rgba(255,255,255,.35);
+  padding:.25rem .55rem; border-radius:8px; font-size:.85rem; color:inherit;
+}
+#tools .res-link a:hover{ border-style:solid; }
+
+@media (prefers-color-scheme: light){
+  #tools .res-item{ background:#fff; border-color:#e5e7eb; }
+  #tools .res-link a{ border-color:#e5e7eb; color:#111; }
+  #tools .res-title, #tools .res-desc{ color:#111; }
+}
 </style>
 
-{%- comment -%} Helper references to CSV rows {%- endcomment -%}
+{%- comment -%} Pull from CSV with robust matching {%- endcomment -%}
 {%- assign all = site.data.resources -%}
-{%- assign by_card = all | where: "format", "card" -%}
-{%- assign by_tile = all | where: "format", "tile" -%}
+{%- assign by_card = all | where_exp: "i", "i.format | downcase | strip == 'card'" -%}
+{%- assign by_tile = all | where_exp: "i", "i.format | downcase | strip == 'tile'" -%}
 
 <!-- ========= BOOKMARKS ========= -->
 <section id="bookmarks" class="res-sec">
   <h3>📌 Bookmarks</h3>
-  {%- assign items = by_card | where: "section", "bookmarks" | sort: "title" -%}
+  {%- assign items = by_card | where_exp: "i", "i.section | downcase | strip == 'bookmarks'" | sort: "title" -%}
   <ul class="links">
     {%- for item in items -%}
       {%- include resource_card.html item=item -%}
@@ -89,7 +109,7 @@ kbd{ font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation M
 <!-- ========= DSA ========= -->
 <section id="dsa" class="res-sec">
   <h3>🧩 Data Structures & Algorithms</h3>
-  {%- assign items = by_card | where: "section", "dsa" | sort: "title" -%}
+  {%- assign items = by_card | where_exp: "i", "i.section | downcase | strip == 'dsa'" | sort: "title" -%}
   <ul class="links">
     {%- for item in items -%}
       {%- include resource_card.html item=item -%}
@@ -102,7 +122,7 @@ kbd{ font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation M
 <!-- ========= MACHINE LEARNING ========= -->
 <section id="ml" class="res-sec">
   <h3>🤖 Machine Learning</h3>
-  {%- assign items = by_card | where: "section", "ml" | sort: "title" -%}
+  {%- assign items = by_card | where_exp: "i", "i.section | downcase | strip == 'ml'" | sort: "title" -%}
   <ul class="links">
     {%- for item in items -%}
       {%- include resource_card.html item=item -%}
@@ -115,7 +135,7 @@ kbd{ font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation M
 <!-- ========= DATA SCIENCE ========= -->
 <section id="datasci" class="res-sec">
   <h3>📊 Data Science</h3>
-  {%- assign items = by_card | where: "section", "datasci" | sort: "title" -%}
+  {%- assign items = by_card | where_exp: "i", "i.section | downcase | strip == 'datasci'" | sort: "title" -%}
   <ul class="links">
     {%- for item in items -%}
       {%- include resource_card.html item=item -%}
@@ -128,7 +148,7 @@ kbd{ font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation M
 <!-- ========= MATHEMATICS ========= -->
 <section id="math" class="res-sec">
   <h3>∑ Mathematics</h3>
-  {%- assign items = by_card | where: "section", "math" | sort: "title" -%}
+  {%- assign items = by_card | where_exp: "i", "i.section | downcase | strip == 'math'" | sort: "title" -%}
   <ul class="links">
     {%- for item in items -%}
       {%- include resource_card.html item=item -%}
@@ -141,7 +161,7 @@ kbd{ font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation M
 <!-- ========= HARVARD COURSES ========= -->
 <section id="harvard" class="res-sec">
   <h3>🎓 Harvard Courses</h3>
-  {%- assign items = by_card | where: "section", "harvard" | sort: "title" -%}
+  {%- assign items = by_card | where_exp: "i", "i.section | downcase | strip == 'harvard'" | sort: "title" -%}
   <ul class="links">
     {%- for item in items -%}
       {%- include resource_card.html item=item -%}
@@ -154,7 +174,7 @@ kbd{ font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation M
 <!-- ========= JOBS ========= -->
 <section id="jobs" class="res-sec">
   <h3>💼 Jobs & Interviews</h3>
-  {%- assign items = by_card | where: "section", "jobs" | sort: "title" -%}
+  {%- assign items = by_card | where_exp: "i", "i.section | downcase | strip == 'jobs'" | sort: "title" -%}
   <ul class="links">
     {%- for item in items -%}
       {%- include resource_card.html item=item -%}
@@ -167,7 +187,7 @@ kbd{ font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation M
 <!-- ========= WRITING ========= -->
 <section id="writing" class="res-sec">
   <h3>✍️ Writing</h3>
-  {%- assign items = by_card | where: "section", "writing" | sort: "title" -%}
+  {%- assign items = by_card | where_exp: "i", "i.section | downcase | strip == 'writing'" | sort: "title" -%}
   <ul class="links">
     {%- for item in items -%}
       {%- include resource_card.html item=item -%}
@@ -181,33 +201,7 @@ kbd{ font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation M
 <section id="tools" class="res-sec">
   <h3>🛠️ Tools</h3>
 
-  <!-- Scoped styles to this section only -->
-  <style>
-    #tools .res-list{list-style:none;margin:.5rem 0 0;padding:0;display:grid;gap:.6rem}
-    @media(min-width:720px){#tools .res-list{grid-template-columns:repeat(2,minmax(0,1fr))}}
-    @media(min-width:1160px){#tools .res-list{grid-template-columns:repeat(3,minmax(0,1fr))}}
-
-    #tools .res-item{
-      border:1px solid rgba(255,255,255,.25);
-      border-radius:12px; background:rgba(255,255,255,.03);
-      padding:.8rem .9rem; display:grid; grid-template-rows:auto auto 1fr; gap:.35rem
-    }
-    #tools .res-title{margin:0;font-weight:700;letter-spacing:.01em}
-    #tools .res-desc{margin:0;opacity:.9;font-size:.92rem;line-height:1.45}
-    #tools .res-link a{
-      display:inline-block;margin-top:.15rem;text-decoration:none;border:1px dashed rgba(255,255,255,.35);
-      padding:.25rem .55rem;border-radius:8px;font-size:.85rem;color:inherit
-    }
-    #tools .res-link a:hover{border-style:solid}
-
-    @media (prefers-color-scheme: light){
-      #tools .res-item{background:#fff;border-color:#e5e7eb}
-      #tools .res-link a{border-color:#e5e7eb;color:#111}
-      #tools .res-title,#tools .res-desc{color:#111}
-    }
-  </style>
-
-  {%- assign items = by_tile | where: "section", "tools" | sort: "title" -%}
+  {%- assign items = by_tile | where_exp: "i", "i.section | downcase | strip == 'tools'" | sort: "title" -%}
   <ul class="res-list">
     {%- for item in items -%}
       {%- include resource_tile.html item=item -%}
@@ -220,121 +214,9 @@ kbd{ font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation M
   </ul>
 </section>
 
-<!-- ========= SEARCH & COPY (tiny JS) ========= -->
-<script>
-(function () {
-  function onReady(fn){
-    if (document.readyState !== 'loading') fn();
-    else document.addEventListener('DOMContentLoaded', fn, { once:true });
-  }
-
-  onReady(function(){
-    const q = document.getElementById('link-search');
-    const noResults = document.getElementById('no-results');
-    if (!q) return;
-
-    // Collect items (cards + tool tiles)
-    function getItems(){ return Array.from(document.querySelectorAll('.card, #tools .res-item')); }
-    // Collect sections
-    function getSections(){ return Array.from(document.querySelectorAll('.res-sec')); }
-
-    // Build searchable index per node
-    function indexNode(el){
-      const parts = [];
-      parts.push((el.textContent || '').trim());
-      const tags = el.getAttribute('data-tags');
-      if (tags) parts.push(tags);
-      el.querySelectorAll('a[href]').forEach(a=>{
-        parts.push(a.textContent || '');
-        parts.push(a.getAttribute('href') || '');
-      });
-      el.dataset._idx = parts.join(' ').replace(/\s+/g,' ').toLowerCase();
-    }
-
-    let items = getItems();
-    items.forEach(indexNode);
-
-    // Returns true if a section has any visible entries
-    function sectionHasVisible(section){
-      return !!Array.from(section.querySelectorAll('.card, #tools .res-item'))
-        .some(el => el.style.display !== 'none');
-    }
-
-    function filter(){
-      const v = (q.value || '').toLowerCase().trim();
-      let anyVisible = false;
-
-      if (!v){
-        items.forEach(el => { el.style.display = ''; });
-        getSections().forEach(sec => { sec.style.display = ''; });
-        noResults.style.display = 'none';
-        return;
-      }
-
-      items.forEach(el=>{
-        const idx = el.dataset._idx || '';
-        const match = idx.includes(v);
-        el.style.display = match ? '' : 'none';
-        if (match) anyVisible = true;
-      });
-
-      // Collapse sections with no visible children
-      getSections().forEach(sec=>{
-        sec.style.display = sectionHasVisible(sec) ? '' : 'none';
-      });
-
-      // Global no-results message
-      noResults.style.display = anyVisible ? 'none' : '';
-    }
-
-    // Debounce
-    let to = null;
-    q.addEventListener('input', () => { clearTimeout(to); to = setTimeout(filter, 60); });
-
-    // "/" to focus, Esc to clear (while focused)
-    document.addEventListener('keydown', e=>{
-      if (e.key === '/' && document.activeElement !== q){ e.preventDefault(); q.focus(); q.select(); }
-      else if (e.key === 'Escape' && document.activeElement === q){ q.value=''; filter(); }
-    });
-
-    // Copy buttons with fallback
-    document.addEventListener('click', async e=>{
-      const btn = e.target.closest('button[data-copy]');
-      if (!btn) return;
-      const url = btn.getAttribute('data-copy') || '';
-      try{
-        if (navigator.clipboard?.writeText){ await navigator.clipboard.writeText(url); }
-        else{
-          const ta = document.createElement('textarea');
-          ta.value = url; ta.setAttribute('readonly','');
-          ta.style.position='absolute'; ta.style.left='-9999px';
-          document.body.appendChild(ta); ta.select(); document.execCommand('copy'); ta.remove();
-        }
-        const old = btn.textContent; btn.textContent = 'Copied! ✓';
-        setTimeout(()=>btn.textContent = old, 900);
-      }catch(err){ console.error('Copy failed:', err); }
-    });
-
-    // Re-index when page is restored / content changes
-    function rebind(){
-      items = getItems(); items.forEach(indexNode); filter();
-    }
-    window.addEventListener('pageshow', rebind);
-    document.addEventListener('pjax:complete', rebind);
-
-    // First render
-    filter();
-  });
-})();
-</script>
-
 <!--
 DATA-SOURCE NOTES:
 - Rows live in _data/resources.csv with columns:
   section,title,url,meta,desc,tags,format
 - Use format=card for normal sections, format=tile for Tools grid.
-
-If your site enforces a CSP that blocks inline scripts, move the JS into
-/assets/js/resources.js and include it with:
-<script src="/assets/js/resources.js" defer></script>
 -->

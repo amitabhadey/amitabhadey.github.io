@@ -62,458 +62,112 @@ table.minimal tr:last-child td{ border-bottom:none; }
 kbd{ font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; font-size:.75em; }
 </style>
 
+{%- comment -%} Helper references to CSV rows {%- endcomment -%}
+{%- assign all = site.data.resources -%}
+{%- assign by_card = all | where: "format", "card" -%}
+{%- assign by_tile = all | where: "format", "tile" -%}
+
 <!-- ========= BOOKMARKS ========= -->
 <section id="bookmarks" class="res-sec">
   <h3>📌 Bookmarks</h3>
+  {%- assign items = by_card | where: "section", "bookmarks" | sort: "title" -%}
   <ul class="links">
-    <li class="card" data-tags="healthcare course mit data">
-      <h4><a href="https://openlearninglibrary.mit.edu/courses/course-v1:MITx+HST.953x+3T2020/course/" target="_blank" rel="noopener">Collaborative Data Science for Healthcare — MIT</a></h4>
-      <div class="meta">Course • Healthcare • MITx</div>
-      <p>Team-based analytics and decision-making in clinical settings.</p>
-      <div class="actions">
-        <a href="https://openlearninglibrary.mit.edu/courses/course-v1:MITx+HST.953x+3T2020/course/" target="_blank" rel="noopener">Open</a>
-        <button data-copy="https://openlearninglibrary.mit.edu/courses/course-v1:MITx+HST.953x+3T2020/course/">Copy link</button>
-      </div>
-    </li>
-
-    <li class="card" data-tags="visualization stanford graphics">
-      <h4><a href="https://web.stanford.edu/class/archive/cs/cs448b/cs448b.1166/cgi-bin/wiki/index.php?title=Main_Page" target="_blank" rel="noopener">CS448B: Visualization — Stanford</a></h4>
-      <div class="meta">Course • Visualization • Stanford</div>
-      <p>Foundations of interactive visualization and systems design.</p>
-      <div class="actions">
-        <a href="https://web.stanford.edu/class/archive/cs/cs448b/cs448b.1166/cgi-bin/wiki/index.php?title=Main_Page" target="_blank" rel="noopener">Open</a>
-        <button data-copy="https://web.stanford.edu/class/archive/cs/cs448b/cs448b.1166/cgi-bin/wiki/index.php?title=Main_Page">Copy link</button>
-      </div>
-    </li>
-
-    <li class="card" data-tags="quantitative reasoning math pedagogy">
-      <h4><a href="http://www.uwyo.edu/wisdome/_files/documents/QRinContext_MayesPeterson.pdf" target="_blank" rel="noopener">Quantitative Reasoning in Context</a></h4>
-      <div class="meta">PDF • QR • Pedagogy</div>
-      <p>Applied quantitative reasoning examples and instructional framing.</p>
-      <div class="actions">
-        <a href="http://www.uwyo.edu/wisdome/_files/documents/QRinContext_MayesPeterson.pdf" target="_blank" rel="noopener">Open</a>
-        <button data-copy="http://www.uwyo.edu/wisdome/_files/documents/QRinContext_MayesPeterson.pdf">Copy link</button>
-      </div>
-    </li>
-
-    <li class="card" data-tags="quantitative reasoning mit practice">
-      <h4><a href="https://web.mit.edu/eglenn/www/QR/QR_Review_Web/Review_Handout_Web.html" target="_blank" rel="noopener">Quantitative Reasoning Test-Out — MIT</a></h4>
-      <div class="meta">Practice • MIT • QR</div>
-      <p>Concise QR drills for numeracy calibration.</p>
-      <div class="actions">
-        <a href="https://web.mit.edu/eglenn/www/QR/QR_Review_Web/Review_Handout_Web.html" target="_blank" rel="noopener">Open</a>
-        <button data-copy="https://web.mit.edu/eglenn/www/QR/QR_Review_Web/Review_Handout_Web.html">Copy link</button>
-      </div>
-    </li>
-
-    <!-- Keep adding <li class="card"> blocks here; they’ll auto-style and be searchable -->
+    {%- for item in items -%}
+      {%- include resource_card.html item=item -%}
+    {%- else -%}
+      <li class="card"><p>No bookmarks yet.</p></li>
+    {%- endfor -%}
   </ul>
 </section>
 
 <!-- ========= DSA ========= -->
 <section id="dsa" class="res-sec">
   <h3>🧩 Data Structures & Algorithms</h3>
+  {%- assign items = by_card | where: "section", "dsa" | sort: "title" -%}
   <ul class="links">
-    <li class="card" data-tags="awesome list algorithms">
-      <h4><a href="https://github.com/gaerae/awesome-algorithms-education" target="_blank" rel="noopener">Awesome Algorithms Education</a></h4>
-      <div class="meta">GitHub • Curated</div>
-      <p>Hand-picked algorithm learning resources across formats.</p>
-      <div class="actions">
-        <a href="https://github.com/gaerae/awesome-algorithms-education" target="_blank" rel="noopener">Open</a>
-        <button data-copy="https://github.com/gaerae/awesome-algorithms-education">Copy link</button>
-      </div>
-    </li>
-
-    <li class="card" data-tags="algorithms repository">
-      <h4><a href="https://github.com/tayllan/awesome-algorithms" target="_blank" rel="noopener">Awesome Algorithms</a></h4>
-      <div class="meta">GitHub • Curated</div>
-      <p>Broad algorithm references and implementations.</p>
-      <div class="actions">
-        <a href="https://github.com/tayllan/awesome-algorithms" target="_blank" rel="noopener">Open</a>
-        <button data-copy="https://github.com/tayllan/awesome-algorithms">Copy link</button>
-      </div>
-    </li>
-
-    <li class="card" data-tags="python algorithms">
-      <h4><a href="https://github.com/TheAlgorithms/Python" target="_blank" rel="noopener">TheAlgorithms/Python</a></h4>
-      <div class="meta">GitHub • Implementations</div>
-      <p>Canonical Python implementations for hundreds of algorithms.</p>
-      <div class="actions">
-        <a href="https://github.com/TheAlgorithms/Python" target="_blank" rel="noopener">Open</a>
-        <button data-copy="https://github.com/TheAlgorithms/Python">Copy link</button>
-      </div>
-    </li>
-
-    <li class="card" data-tags="book interactive dsa">
-      <h4><a href="https://runestone.academy/ns/books/published/pythonds/index.html" target="_blank" rel="noopener">Problem Solving with Algorithms & Data Structures (Python)</a></h4>
-      <div class="meta">Interactive • Textbook</div>
-      <p>Runestone’s interactive textbook for DSA in Python.</p>
-      <div class="actions">
-        <a href="https://runestone.academy/ns/books/published/pythonds/index.html" target="_blank" rel="noopener">Open</a>
-        <button data-copy="https://runestone.academy/ns/books/published/pythonds/index.html">Copy link</button>
-      </div>
-    </li>
-
-    <li class="card" data-tags="practice roadmap">
-      <h4><a href="https://github.com/bakhodir10/AlgoCS" target="_blank" rel="noopener">AlgoCS</a></h4>
-      <div class="meta">GitHub • Roadmap</div>
-      <p>Study roadmap and practice sets for CS interviews.</p>
-      <div class="actions">
-        <a href="https://github.com/bakhodir10/AlgoCS" target="_blank" rel="noopener">Open</a>
-        <button data-copy="https://github.com/bakhodir10/AlgoCS">Copy link</button>
-      </div>
-    </li>
+    {%- for item in items -%}
+      {%- include resource_card.html item=item -%}
+    {%- else -%}
+      <li class="card"><p>No DSA links yet.</p></li>
+    {%- endfor -%}
   </ul>
 </section>
 
 <!-- ========= MACHINE LEARNING ========= -->
 <section id="ml" class="res-sec">
   <h3>🤖 Machine Learning</h3>
+  {%- assign items = by_card | where: "section", "ml" | sort: "title" -%}
   <ul class="links">
-    <li class="card" data-tags="book code">
-      <h4><a href="https://github.com/iamtrask/Grokking-Deep-Learning" target="_blank" rel="noopener">Grokking Deep Learning</a></h4>
-      <div class="meta">Code • Concepts</div>
-      <p>From first principles to working neural nets—hands-on.</p>
-      <div class="actions">
-        <a href="https://github.com/iamtrask/Grokking-Deep-Learning" target="_blank" rel="noopener">Open</a>
-        <button data-copy="https://github.com/iamtrask/Grokking-Deep-Learning">Copy link</button>
-      </div>
-    </li>
-
-    <li class="card" data-tags="lectures deep learning goodfellow">
-      <h4><a href="https://www.deeplearningbook.org/lecture_slides.html" target="_blank" rel="noopener">Deep Learning Lectures</a></h4>
-      <div class="meta">Slides • Goodfellow–Bengio–Courville</div>
-      <p>Authoritative lecture deck companion to the DL Book.</p>
-      <div class="actions">
-        <a href="https://www.deeplearningbook.org/lecture_slides.html" target="_blank" rel="noopener">Open</a>
-        <button data-copy="https://www.deeplearningbook.org/lecture_slides.html">Copy link</button>
-      </div>
-    </li>
-
-    <li class="card" data-tags="ideas projects beginners">
-      <h4><a href="https://github.com/NirantK/awesome-project-ideas" target="_blank" rel="noopener">Awesome DL Project Ideas</a></h4>
-      <div class="meta">GitHub • Ideas</div>
-      <p>Project prompts to sharpen practical ML skills.</p>
-      <div class="actions">
-        <a href="https://github.com/NirantK/awesome-project-ideas" target="_blank" rel="noopener">Open</a>
-        <button data-copy="https://github.com/NirantK/awesome-project-ideas">Copy link</button>
-      </div>
-    </li>
-
-    <li class="card" data-tags="tutorial beginner">
-      <h4><a href="https://iamtrask.github.io/2015/07/12/basic-python-network/" target="_blank" rel="noopener">A Neural Network in 11 Lines of Python</a></h4>
-      <div class="meta">Tutorial • Hands-on</div>
-      <p>Tiny, readable implementation to demystify backprop.</p>
-      <div class="actions">
-        <a href="https://iamtrask.github.io/2015/07/12/basic-python-network/" target="_blank" rel="noopener">Open</a>
-        <button data-copy="https://iamtrask.github.io/2015/07/12/basic-python-network/">Copy link</button>
-      </div>
-    </li>
-
-    <li class="card" data-tags="course fastai">
-      <h4><a href="https://course.fast.ai/" target="_blank" rel="noopener">Practical Deep Learning for Coders</a></h4>
-      <div class="meta">Course • fast.ai</div>
-      <p>Top-down DL course with strong production focus.</p>
-      <div class="actions">
-        <a href="https://course.fast.ai/" target="_blank" rel="noopener">Open</a>
-        <button data-copy="https://course.fast.ai/">Copy link</button>
-      </div>
-    </li>
-
-    <li class="card" data-tags="course berkeley rl">
-      <h4><a href="http://rail.eecs.berkeley.edu/deeprlcourse/" target="_blank" rel="noopener">Deep Reinforcement Learning — Berkeley</a></h4>
-      <div class="meta">Course • RL</div>
-      <p>Foundational and modern RL techniques with labs.</p>
-      <div class="actions">
-        <a href="http://rail.eecs.berkeley.edu/deeprlcourse/" target="_blank" rel="noopener">Open</a>
-        <button data-copy="http://rail.eecs.berkeley.edu/deeprlcourse/">Copy link</button>
-      </div>
-    </li>
-
-    <li class="card" data-tags="projects python learning-by-building">
-      <h4><a href="https://github.com/practical-tutorials/project-based-learning#python" target="_blank" rel="noopener">Project-Based Learning (Python)</a></h4>
-      <div class="meta">GitHub • Projects</div>
-      <p>Build real projects across domains to cement concepts.</p>
-      <div class="actions">
-        <a href="https://github.com/practical-tutorials/project-based-learning#python" target="_blank" rel="noopener">Open</a>
-        <button data-copy="https://github.com/practical-tutorials/project-based-learning#python">Copy link</button>
-      </div>
-    </li>
-
-    <li class="card" data-tags="paper feed arxiv">
-      <h4><a href="https://arxiv-sanity-lite.com/" target="_blank" rel="noopener">arXiv Sanity Lite</a></h4>
-      <div class="meta">Papers • Feed</div>
-      <p>Lightweight viewer for staying current with arXiv.</p>
-      <div class="actions">
-        <a href="https://arxiv-sanity-lite.com/" target="_blank" rel="noopener">Open</a>
-        <button data-copy="https://arxiv-sanity-lite.com/">Copy link</button>
-      </div>
-    </li>
-
-    <li class="card" data-tags="course google tf">
-      <h4><a href="https://developers.google.com/machine-learning/crash-course/" target="_blank" rel="noopener">ML Crash Course (Google)</a></h4>
-      <div class="meta">Course • TensorFlow</div>
-      <p>Short, structured ML intro with exercises.</p>
-      <div class="actions">
-        <a href="https://developers.google.com/machine-learning/crash-course/" target="_blank" rel="noopener">Open</a>
-        <button data-copy="https://developers.google.com/machine-learning/crash-course/">Copy link</button>
-      </div>
-    </li>
-
-    <li class="card" data-tags="curation resources">
-      <h4><a href="https://sgfin.github.io/learning-resources/" target="_blank" rel="noopener">ML Resources — Sam Finlayson</a></h4>
-      <div class="meta">Curation</div>
-      <p>Compact, practical resource list for ML learners.</p>
-      <div class="actions">
-        <a href="https://sgfin.github.io/learning-resources/" target="_blank" rel="noopener">Open</a>
-        <button data-copy="https://sgfin.github.io/learning-resources/">Copy link</button>
-      </div>
-    </li>
-
-    <li class="card" data-tags="overview beginner">
-      <h4><a href="https://towardsdatascience.com/the-7-steps-of-machine-learning-2877d7e5548e" target="_blank" rel="noopener">The 7 Steps of ML</a></h4>
-      <div class="meta">Article • Overview</div>
-      <p>Approachable pipeline framing for newcomers.</p>
-      <div class="actions">
-        <a href="https://towardsdatascience.com/the-7-steps-of-machine-learning-2877d7e5548e" target="_blank" rel="noopener">Open</a>
-        <button data-copy="https://towardsdatascience.com/the-7-steps-of-machine-learning-2877d7e5548e">Copy link</button>
-      </div>
-    </li>
+    {%- for item in items -%}
+      {%- include resource_card.html item=item -%}
+    {%- else -%}
+      <li class="card"><p>No ML links yet.</p></li>
+    {%- endfor -%}
   </ul>
 </section>
 
 <!-- ========= DATA SCIENCE ========= -->
 <section id="datasci" class="res-sec">
   <h3>📊 Data Science</h3>
+  {%- assign items = by_card | where: "section", "datasci" | sort: "title" -%}
   <ul class="links">
-    <li class="card" data-tags="python book">
-      <h4><a href="https://github.com/StephenElston/ExploringDataWithPython" target="_blank" rel="noopener">Exploring Data with Python</a></h4>
-      <div class="meta">GitHub • Book</div>
-      <p>Exploratory analysis patterns and recipes in Python.</p>
-      <div class="actions">
-        <a href="https://github.com/StephenElston/ExploringDataWithPython" target="_blank" rel="noopener">Open</a>
-        <button data-copy="https://github.com/StephenElston/ExploringDataWithPython">Copy link</button>
-      </div>
-    </li>
-
-    <li class="card" data-tags="blogs companies">
-      <h4><a href="https://github.com/caitlinhudon/company_data_science_blogs" target="_blank" rel="noopener">Company Data Science Blogs</a></h4>
-      <div class="meta">GitHub • Curation</div>
-      <p>Engineering & analytics blogs from leading teams.</p>
-      <div class="actions">
-        <a href="https://github.com/caitlinhudon/company_data_science_blogs" target="_blank" rel="noopener">Open</a>
-        <button data-copy="https://github.com/caitlinhudon/company_data_science_blogs">Copy link</button>
-      </div>
-    </li>
-
-    <li class="card" data-tags="sql intro">
-      <h4><a href="https://www.khanacademy.org/computing/computer-programming/sql" target="_blank" rel="noopener">Intro to SQL — Khan Academy</a></h4>
-      <div class="meta">Course • SQL</div>
-      <p>Fast, interactive primer on SQL fundamentals.</p>
-      <div class="actions">
-        <a href="https://www.khanacademy.org/computing/computer-programming/sql" target="_blank" rel="noopener">Open</a>
-        <button data-copy="https://www.khanacademy.org/computing/computer-programming/sql">Copy link</button>
-      </div>
-    </li>
-
-    <li class="card" data-tags="python cs text">
-      <h4><a href="http://www.openbookproject.net/thinkcs/python/english3e/" target="_blank" rel="noopener">How to Think Like a Computer Scientist</a></h4>
-      <div class="meta">Textbook • Python</div>
-      <p>Gentle introduction to CS with Python examples.</p>
-      <div class="actions">
-        <a href="http://www.openbookproject.net/thinkcs/python/english3e/" target="_blank" rel="noopener">Open</a>
-        <button data-copy="http://www.openbookproject.net/thinkcs/python/english3e/">Copy link</button>
-      </div>
-    </li>
-
-    <li class="card" data-tags="caltech course">
-      <h4><a href="https://work.caltech.edu/lectures.html#lectures" target="_blank" rel="noopener">Learning from Data — Caltech</a></h4>
-      <div class="meta">Course • ML theory</div>
-      <p>Classic ML theory course with lectures and notes.</p>
-      <div class="actions">
-        <a href="https://work.caltech.edu/lectures.html#lectures" target="_blank" rel="noopener">Open</a>
-        <button data-copy="https://work.caltech.edu/lectures.html#lectures">Copy link</button>
-      </div>
-    </li>
-
-    <li class="card" data-tags="automation python">
-      <h4><a href="https://automatetheboringstuff.com/" target="_blank" rel="noopener">Automate the Boring Stuff with Python</a></h4>
-      <div class="meta">Book • Practical</div>
-      <p>Automations for daily tasks—files, web, spreadsheets, and more.</p>
-      <div class="actions">
-        <a href="https://automatetheboringstuff.com/" target="_blank" rel="noopener">Open</a>
-        <button data-copy="https://automatetheboringstuff.com/">Copy link</button>
-      </div>
-    </li>
-
-    <li class="card" data-tags="ml resources raschka">
-      <h4><a href="https://pages.stat.wisc.edu/~sraschka/teaching/stat479-fs2018/#resources" target="_blank" rel="noopener">ML Resources — Sebastian Raschka</a></h4>
-      <div class="meta">Curated • ML</div>
-      <p>Links and references from Raschka’s courses.</p>
-      <div class="actions">
-        <a href="https://pages.stat.wisc.edu/~sraschka/teaching/stat479-fs2018/#resources" target="_blank" rel="noopener">Open</a>
-        <button data-copy="https://pages.stat.wisc.edu/~sraschka/teaching/stat479-fs2018/#resources">Copy link</button>
-      </div>
-    </li>
-
-    <li class="card" data-tags="projects kaggle cleaning">
-      <h4><a href="https://www.kaggle.com/learn/data-cleaning" target="_blank" rel="noopener">Data Cleaning — Kaggle</a></h4>
-      <div class="meta">Course • Kaggle</div>
-      <p>Realistic exercises on messy data handling.</p>
-      <div class="actions">
-        <a href="https://www.kaggle.com/learn/data-cleaning" target="_blank" rel="noopener">Open</a>
-        <button data-copy="https://www.kaggle.com/learn/data-cleaning">Copy link</button>
-      </div>
-    </li>
-
-    <li class="card" data-tags="dssg guide">
-      <h4><a href="https://github.com/dssg/hitchhikers-guide" target="_blank" rel="noopener">The Hitchhiker’s Guide to Data Science</a></h4>
-      <div class="meta">Guide • DSSG</div>
-      <p>Playbooks for DS projects from scoping to delivery.</p>
-      <div class="actions">
-        <a href="https://github.com/dssg/hitchhikers-guide" target="_blank" rel="noopener">Open</a>
-        <button data-copy="https://github.com/dssg/hitchhikers-guide">Copy link</button>
-      </div>
-    </li>
+    {%- for item in items -%}
+      {%- include resource_card.html item=item -%}
+    {%- else -%}
+      <li class="card"><p>No Data Science links yet.</p></li>
+    {%- endfor -%}
   </ul>
 </section>
 
 <!-- ========= MATHEMATICS ========= -->
 <section id="math" class="res-sec">
   <h3>∑ Mathematics</h3>
+  {%- assign items = by_card | where: "section", "math" | sort: "title" -%}
   <ul class="links">
-    <li class="card" data-tags="stats text stanford">
-      <h4><a href="https://www.statlearning.com/" target="_blank" rel="noopener">An Introduction to Statistical Learning</a></h4>
-      <div class="meta">Textbook • Stanford</div>
-      <p>The classic applied statistics + ML text (with labs).</p>
-      <div class="actions">
-        <a href="https://www.statlearning.com/" target="_blank" rel="noopener">Open</a>
-        <button data-copy="https://www.statlearning.com/">Copy link</button>
-      </div>
-    </li>
-
-    <li class="card" data-tags="calculus notes">
-      <h4><a href="https://tutorial.math.lamar.edu/Classes/CalcI/CalcI.aspx" target="_blank" rel="noopener">Calculus I — Paul’s Online Notes</a></h4>
-      <div class="meta">Reference • Calculus</div>
-      <p>Concise, reliable notes & exercises.</p>
-      <div class="actions">
-        <a href="https://tutorial.math.lamar.edu/Classes/CalcI/CalcI.aspx" target="_blank" rel="noopener">Open</a>
-        <button data-copy="https://tutorial.math.lamar.edu/Classes/CalcI/CalcI.aspx">Copy link</button>
-      </div>
-    </li>
-
-    <li class="card" data-tags="probability cheatsheet">
-      <h4><a href="https://static1.squarespace.com/static/54bf3241e4b0f0d81bf7ff36/t/55e9494fe4b011aed10e48e5/1441352015658/probability_cheatsheet.pdf" target="_blank" rel="noopener">Probability Cheatsheet</a></h4>
-      <div class="meta">PDF • Reference</div>
-      <p>Quick reference for distributions and identities.</p>
-      <div class="actions">
-        <a href="https://static1.squarespace.com/static/54bf3241e4b0f0d81bf7ff36/t/55e9494fe4b011aed10e48e5/1441352015658/probability_cheatsheet.pdf" target="_blank" rel="noopener">Open</a>
-        <button data-copy="https://static1.squarespace.com/static/54bf3241e4b0f0d81bf7ff36/t/55e9494fe4b011aed10e48e5/1441352015658/probability_cheatsheet.pdf">Copy link</button>
-      </div>
-    </li>
-
-    <!-- Add remaining math links in same pattern… -->
+    {%- for item in items -%}
+      {%- include resource_card.html item=item -%}
+    {%- else -%}
+      <li class="card"><p>No Math links yet.</p></li>
+    {%- endfor -%}
   </ul>
 </section>
 
 <!-- ========= HARVARD COURSES ========= -->
 <section id="harvard" class="res-sec">
   <h3>🎓 Harvard Courses</h3>
+  {%- assign items = by_card | where: "section", "harvard" | sort: "title" -%}
   <ul class="links">
-    <li class="card" data-tags="cs50 intro">
-      <h4><a href="https://pll.harvard.edu/course/cs50-introduction-computer-science" target="_blank" rel="noopener">CS50: Introduction to Computer Science</a></h4>
-      <div class="meta">Course • Harvard</div>
-      <p>Legendary CS intro—problem sets, lectures, and labs.</p>
-      <div class="actions">
-        <a href="https://pll.harvard.edu/course/cs50-introduction-computer-science" target="_blank" rel="noopener">Open</a>
-        <button data-copy="https://pll.harvard.edu/course/cs50-introduction-computer-science">Copy link</button>
-      </div>
-    </li>
-    <!-- Add the rest of your Harvard list the same way… -->
+    {%- for item in items -%}
+      {%- include resource_card.html item=item -%}
+    {%- else -%}
+      <li class="card"><p>No Harvard links yet.</p></li>
+    {%- endfor -%}
   </ul>
 </section>
 
 <!-- ========= JOBS ========= -->
 <section id="jobs" class="res-sec">
   <h3>💼 Jobs & Interviews</h3>
+  {%- assign items = by_card | where: "section", "jobs" | sort: "title" -%}
   <ul class="links">
-    <li class="card" data-tags="interview prep talk">
-      <h4><a href="https://www.youtube.com/live/ii9NLvcAfpE?feature=share" target="_blank" rel="noopener">How to Prepare for Technical Interviews</a></h4>
-      <div class="meta">Talk • YouTube</div>
-      <p>Concrete strategies and timelines for interview prep.</p>
-      <div class="actions">
-        <a href="https://www.youtube.com/live/ii9NLvcAfpE?feature=share" target="_blank" rel="noopener">Open</a>
-        <button data-copy="https://www.youtube.com/live/ii9NLvcAfpE?feature=share">Copy link</button>
-      </div>
-    </li>
-
-    <li class="card" data-tags="resume cover letter">
-      <h4><a href="https://drive.google.com/file/d/1VZTaSr87VBqp8COtuGOW1PH7tuyp8mnS/view?usp=sharing" target="_blank" rel="noopener">Harvard Resume & Cover Letter Guides</a></h4>
-      <div class="meta">Guides • PDF</div>
-      <p>Current templates and strong examples from OCS.</p>
-      <div class="actions">
-        <a href="https://drive.google.com/file/d/1VZTaSr87VBqp8COtuGOW1PH7tuyp8mnS/view?usp=sharing" target="_blank" rel="noopener">Open</a>
-        <button data-copy="https://drive.google.com/file/d/1VZTaSr87VBqp8COtuGOW1PH7tuyp8mnS/view?usp=sharing">Copy link</button>
-      </div>
-    </li>
-
-    <li class="card" data-tags="job board newsletter">
-      <h4><a href="https://jobs.dataelixir.com/jobs" target="_blank" rel="noopener">Jobs for Data Lovers — Data Elixir</a></h4>
-      <div class="meta">Board • Data</div>
-      <p>Frequent DS/ML openings curated by Data Elixir.</p>
-      <div class="actions">
-        <a href="https://jobs.dataelixir.com/jobs" target="_blank" rel="noopener">Open</a>
-        <button data-copy="https://jobs.dataelixir.com/jobs">Copy link</button>
-      </div>
-    </li>
+    {%- for item in items -%}
+      {%- include resource_card.html item=item -%}
+    {%- else -%}
+      <li class="card"><p>No Jobs links yet.</p></li>
+    {%- endfor -%}
   </ul>
 </section>
 
 <!-- ========= WRITING ========= -->
 <section id="writing" class="res-sec">
   <h3>✍️ Writing</h3>
+  {%- assign items = by_card | where: "section", "writing" | sort: "title" -%}
   <ul class="links">
-    <li class="card" data-tags="workflow practice">
-      <h4><a href="https://nesslabs.com/writing-thinking-tool" target="_blank" rel="noopener">Writing as a Thinking Tool</a></h4>
-      <div class="meta">Essay • Metacognition</div>
-      <p>Use writing to clarify models and decisions.</p>
-      <div class="actions">
-        <a href="https://nesslabs.com/writing-thinking-tool" target="_blank" rel="noopener">Open</a>
-        <button data-copy="https://nesslabs.com/writing-thinking-tool">Copy link</button>
-      </div>
-    </li>
-
-    <li class="card" data-tags="workflow practice">
-      <h4><a href="https://archive.org/" target="_blank" rel="noopener">Internet Archive</a></h4>
-      <div class="meta">Digital • Library</div>
-      <p>Non-profit library of millions of free texts, movies, software, music, websites, and more.</p>
-      <div class="actions">
-        <a href="https://archive.org/" target="_blank" rel="noopener">Open</a>
-        <button data-copy="https://archive.org/">Copy link</button>
-      </div>
-    </li>
-
-    <li class="card" data-tags="classic guide online">
-      <h4><a href="https://perell.com/essay/the-ultimate-guide-to-writing-online/" target="_blank" rel="noopener">The Ultimate Guide to Writing Online</a></h4>
-      <div class="meta">Guide • Publishing</div>
-      <p>Distribution, cadence, and systems for consistent output.</p>
-      <div class="actions">
-        <a href="https://perell.com/essay/the-ultimate-guide-to-writing-online/" target="_blank" rel="noopener">Open</a>
-        <button data-copy="https://perell.com/essay/the-ultimate-guide-to-writing-online/">Copy link</button>
-      </div>
-    </li>
-
-    <li class="card" data-tags="notes illustrated">
-      <h4><a href="https://maggieappleton.com/basb" target="_blank" rel="noopener">Building a Second Brain — Illustrated</a></h4>
-      <div class="meta">Notes • PKM</div>
-      <p>A visual summary of PARA, capture, and retrieval.</p>
-      <div class="actions">
-        <a href="https://maggieappleton.com/basb" target="_blank" rel="noopener">Open</a>
-        <button data-copy="https://maggieappleton.com/basb">Copy link</button>
-      </div>
-    </li>
-
-    <!-- Add remaining writing links similarly… -->
+    {%- for item in items -%}
+      {%- include resource_card.html item=item -%}
+    {%- else -%}
+      <li class="card"><p>No Writing links yet.</p></li>
+    {%- endfor -%}
   </ul>
 </section>
 
@@ -554,66 +208,16 @@ kbd{ font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberat
     }
   </style>
 
+  {%- assign items = by_tile | where: "section", "tools" | sort: "title" -%}
   <ul class="res-list">
-    <li class="res-item">
-      <p class="res-title">Typings</p>
-      <p class="res-desc">A sleek and modern typing test website.</p>
-      <p class="res-link"><a href="https://typings.gg/" target="_blank" rel="noopener">typings.gg</a></p>
-    </li>
-
-    <li class="res-item">
-      <p class="res-title">Ghostwriter</p>
-      <p class="res-desc">Free, open-source, distraction-free Markdown editor.</p>
-      <p class="res-link"><a href="https://ghostwriter.kde.org/" target="_blank" rel="noopener">ghostwriter.kde.org</a></p>
-    </li>
-
-    <li class="res-item">
-      <p class="res-title">Letter Count</p>
-      <p class="res-desc">Counts characters—perfect for tweets and length limits.</p>
-      <p class="res-link"><a href="https://www.lettercount.com/" target="_blank" rel="noopener">lettercount.com</a></p>
-    </li>
-
-    <li class="res-item">
-      <p class="res-title">Zeoob</p>
-      <p class="res-desc">Fake post &amp; chat generators for social media mockups.</p>
-      <p class="res-link"><a href="https://zeoob.com/" target="_blank" rel="noopener">zeoob.com</a></p>
-    </li>
-
-    <li class="res-item">
-      <p class="res-title">Word Hippo</p>
-      <p class="res-desc">Thesaurus and word-choice tools for better phrasing.</p>
-      <p class="res-link"><a href="https://www.wordhippo.com/" target="_blank" rel="noopener">wordhippo.com</a></p>
-    </li>
-
-    <li class="res-item">
-      <p class="res-title">Hemingway Editor</p>
-      <p class="res-desc">Readability highlights to simplify and tighten prose.</p>
-      <p class="res-link"><a href="https://hemingwayapp.com/" target="_blank" rel="noopener">hemingwayapp.com</a></p>
-    </li>
-
-    <li class="res-item">
-      <p class="res-title">Ludwig</p>
-      <p class="res-desc">Sentence search with high-quality, contextual examples.</p>
-      <p class="res-link"><a href="https://ludwig.guru/" target="_blank" rel="noopener">ludwig.guru</a></p>
-    </li>
-
-    <li class="res-item">
-      <p class="res-title">YourDictionary</p>
-      <p class="res-desc">Find sentence examples and usage patterns fast.</p>
-      <p class="res-link"><a href="https://sentence.yourdictionary.com/" target="_blank" rel="noopener">sentence.yourdictionary.com</a></p>
-    </li>
-
-    <li class="res-item">
-      <p class="res-title">A-Z Alternative Words</p>
-      <p class="res-desc">Plain-English alternatives to complex or pompous terms.</p>
-      <p class="res-link"><a href="https://www.plainenglish.co.uk/the-a-z-of-alternative-words.html" target="_blank" rel="noopener">plainenglish.co.uk</a></p>
-    </li>
-
-    <li class="res-item">
-      <p class="res-title">Voice Dictation - Online Speech Recognition</p>
-      <p class="res-desc">Use the magic of speech recognition to write emails and documents in Google Chrome.</p>
-      <p class="res-link"><a href="https://dictation.io/" target="_blank" rel="noopener">dictation.io</a></p>
-    </li>
+    {%- for item in items -%}
+      {%- include resource_tile.html item=item -%}
+    {%- else -%}
+      <li class="res-item">
+        <p class="res-title">No tools yet</p>
+        <p class="res-desc">Add rows with format=tile in _data/resources.csv</p>
+      </li>
+    {%- endfor -%}
   </ul>
 </section>
 
@@ -621,46 +225,49 @@ kbd{ font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberat
 <!-- ========= SEARCH & COPY (tiny JS) ========= -->
 <script>
 (function () {
-  function onReady(fn) {
+  // fire only after DOM is ready (handles bfcache too)
+  function onReady(fn){
     if (document.readyState !== 'loading') fn();
     else document.addEventListener('DOMContentLoaded', fn, { once: true });
   }
 
-  onReady(function () {
+  onReady(function(){
     const q = document.getElementById('link-search');
     if (!q) return;
 
-    const toolsRoot = document.getElementById('tools');
-
-    // Grab all items (cards + tool tiles)
-    function getItems() {
+    // Collect all searchable items (cards + tools tiles)
+    function getItems(){
       return Array.from(document.querySelectorAll('.card, #tools .res-item'));
     }
 
-    // Build a robust text index once per node
-    function buildIndexFor(el) {
-      // Collect visible text
-      const parts = [el.innerText || el.textContent || ''];
+    // Build a searchable index per node: visible text + data-tags + hrefs
+    function buildIndexFor(el){
+      const parts = [];
 
-      // Pull tag chips from data-attributes / hidden spans
+      // main text (prefer textContent for cross-browser)
+      parts.push((el.textContent || '').trim());
+
+      // tags
       const tagAttr = el.getAttribute('data-tags');
       if (tagAttr) parts.push(tagAttr);
 
-      // Include hrefs to make URL text searchable
-      el.querySelectorAll('a[href]').forEach(a => parts.push(a.href, a.textContent || ''));
+      // all link text + hrefs so URLs are searchable
+      el.querySelectorAll('a[href]').forEach(a=>{
+        parts.push(a.textContent || '');
+        parts.push(a.getAttribute('href') || '');
+      });
 
-      const idx = parts.join(' ').replace(/\s+/g, ' ').trim().toLowerCase();
-      el.dataset._idx = idx;
+      el.dataset._idx = parts.join(' ').replace(/\s+/g,' ').toLowerCase();
     }
 
     let items = getItems();
     items.forEach(buildIndexFor);
 
-    // Filtering
-    function filter() {
+    // Filter handler
+    function filter(){
       const v = (q.value || '').toLowerCase().trim();
-      if (!v) {
-        items.forEach(el => (el.style.display = ''));
+      if (!v){
+        items.forEach(el => el.style.display = '');
         return;
       }
       items.forEach(el => {
@@ -669,91 +276,67 @@ kbd{ font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberat
       });
     }
 
-    // Debounce
+    // Debounce fast typing
     let to = null;
     q.addEventListener('input', () => {
       clearTimeout(to);
-      to = setTimeout(filter, 50);
+      to = setTimeout(filter, 60);
     });
 
-    // "/" to focus, "Esc" to clear
+    // "/" to focus, "Esc" to clear when focused
     document.addEventListener('keydown', e => {
-      if (e.key === '/' && document.activeElement !== q) {
+      if (e.key === '/' && document.activeElement !== q){
         e.preventDefault();
         q.focus();
         q.select();
-      } else if (e.key === 'Escape' && document.activeElement === q) {
+      } else if (e.key === 'Escape' && document.activeElement === q){
         q.value = '';
         filter();
       }
     });
 
-    // Safe copy handler (works without navigator.clipboard)
-    document.addEventListener('click', async e => {
+    // Copy buttons (with fallback if Clipboard API unavailable)
+    document.addEventListener('click', async e=>{
       const btn = e.target.closest('button[data-copy]');
       if (!btn) return;
-      const url = btn.getAttribute('data-copy');
-      try {
-        if (navigator.clipboard && navigator.clipboard.writeText) {
+      const url = btn.getAttribute('data-copy') || '';
+      try{
+        if (navigator.clipboard?.writeText){
           await navigator.clipboard.writeText(url);
         } else {
-          // Fallback
           const ta = document.createElement('textarea');
-          ta.value = url;
-          ta.setAttribute('readonly', '');
-          ta.style.position = 'absolute';
-          ta.style.left = '-9999px';
+          ta.value = url; ta.setAttribute('readonly','');
+          ta.style.position = 'absolute'; ta.style.left = '-9999px';
           document.body.appendChild(ta);
-          ta.select();
-          document.execCommand('copy');
-          document.body.removeChild(ta);
+          ta.select(); document.execCommand('copy'); ta.remove();
         }
         const old = btn.textContent;
         btn.textContent = 'Copied! ✓';
-        setTimeout(() => (btn.textContent = old), 900);
-      } catch (err) {
+        setTimeout(() => btn.textContent = old, 900);
+      }catch(err){
         console.error('Copy failed:', err);
       }
     });
 
-    // Re-index after PJAX/Turbolinks or back/forward cache
-    function rebind() {
+    // Re-index if the page is restored from bfcache or content changes
+    function rebind(){
       items = getItems();
       items.forEach(buildIndexFor);
       filter();
     }
-    document.addEventListener('pjax:complete', rebind);
     window.addEventListener('pageshow', rebind);
+    document.addEventListener('pjax:complete', rebind);
 
     // Initial pass
     filter();
-
-    // Optional: also re-index if Tools section is dynamically altered later
-    if (toolsRoot) {
-      const mo = new MutationObserver(() => {
-        rebind();
-      });
-      mo.observe(toolsRoot, { childList: true, subtree: true });
-    }
   });
 })();
 </script>
 
 
-
 <!--
-HOW TO ADD NEW LINKS QUICKLY:
-Copy a block:
-
-<li class="card" data-tags="tag1 tag2">
-  <h4><a href="https://example.com" target="_blank" rel="noopener">Title Here</a></h4>
-  <div class="meta">Type • Topic</div>
-  <p>One-line description.</p>
-  <div class="actions">
-    <a href="https://example.com" target="_blank" rel="noopener">Open</a>
-    <button data-copy="https://example.com">Copy link</button>
-  </div>
-</li>
-
-Paste under the right <ul class="links">. It will auto-style and be searchable.
+DATA-SOURCE NOTES:
+- Rows live in _data/resources.csv with columns:
+  section,title,url,meta,desc,tags,format
+- Use format=card for normal sections, format=tile for Tools grid.
 -->

@@ -3,7 +3,7 @@ permalink: /resources/
 title: " "
 ---
 
-<h1 style="margin:0 0 .75rem 0;">🧭 Resources</h1>
+<h1 style="margin:0 0 .75rem 0;">📣 Resources</h1>
 <p style="margin:0 0 1rem 0;opacity:.9">Curated links I reference often—courses, papers, guides, and utilities.</p>
 
 <!-- Top nav pills -->

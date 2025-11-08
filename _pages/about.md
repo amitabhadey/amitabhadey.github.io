@@ -20,12 +20,15 @@ redirect_from:
 
 ---
 
-## About Me
+<h1 style="margin:0 0 .75rem 0;">👋 About Me</h1>
 <span id="about-me"></span>
 
 I am a **Senior Data Scientist** at **Optum (UnitedHealth Group)**, working at the intersection of **Large Language Models (LLMs)**, healthcare systems, and enterprise AI.  
 My work focuses on transforming **general-purpose language models** into **clinically specialized systems** that operate under real-world constraints such as interpretability, regulatory safety, workflow alignment, and domain knowledge grounding.
 
+<p style="margin-top: .75rem;">
+  Occasionally, I journal and reflect on research, work, and life on <a href="https://amitabhadey.substack.com/" target="_blank" style="border-bottom:1px dotted; text-decoration:none; color:#fff;">Substack</a>. If you’re curious about the journey behind the work, you’re welcome to read along. ✦
+</p>
 ---
 
 ## What I Do

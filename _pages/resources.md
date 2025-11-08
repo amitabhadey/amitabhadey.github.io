@@ -20,14 +20,7 @@ title: " "
 </nav>
 
 <style>
-/* 🔒 Hard-kill any residual search UI some layout/old script might inject */
-#link-search,
-label[for="link-search"],
-.search-wrap,
-input[placeholder*="Search resources"],
-input[placeholder*="Search Resources"],
-input[type="search"]#link-search,
-#no-results { display:none !important; }
+
 
 /* Cards */
 .res-sec{ margin:1.5rem 0 2rem; }
@@ -282,18 +275,6 @@ kbd{ font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation M
   </ul>
 </section>
 
-<!-- Tiny defensive script: if a layout/old include inserted a search input, remove it -->
 <script>
-document.addEventListener('DOMContentLoaded', function () {
-  var kill = function (el) { if (el && el.parentElement) el.parentElement.removeChild(el); };
-  kill(document.getElementById('link-search'));
-  // Also remove any sibling container commonly used for the old search UI
-  var suspects = document.querySelectorAll('.search-wrap, input[placeholder*="Search resources"], input[placeholder*="Search Resources"]');
-  suspects.forEach(function (n) { 
-    if (n.id === 'link-search') return;
-    // remove container if it only holds search input/label
-    var container = n.closest('div, form, section') || n;
-    kill(container);
-  });
-});
+
 </script>

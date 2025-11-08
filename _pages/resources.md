@@ -483,6 +483,16 @@ kbd{ font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberat
       </div>
     </li>
 
+    <li class="card" data-tags="workflow practice">
+      <h4><a href="https://archive.org/" target="_blank" rel="noopener">Internet Archive</a></h4>
+      <div class="meta">Digital • Library</div>
+      <p>Non-profit library of millions of free texts, movies, software, music, websites, and more.</p>
+      <div class="actions">
+        <a href="https://archive.org/" target="_blank" rel="noopener">Open</a>
+        <button data-copy="https://archive.org/">Copy link</button>
+      </div>
+    </li>
+
     <li class="card" data-tags="classic guide online">
       <h4><a href="https://perell.com/essay/the-ultimate-guide-to-writing-online/" target="_blank" rel="noopener">The Ultimate Guide to Writing Online</a></h4>
       <div class="meta">Guide • Publishing</div>
@@ -597,6 +607,12 @@ kbd{ font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberat
       <p class="res-title">A-Z Alternative Words</p>
       <p class="res-desc">Plain-English alternatives to complex or pompous terms.</p>
       <p class="res-link"><a href="https://www.plainenglish.co.uk/the-a-z-of-alternative-words.html" target="_blank" rel="noopener">plainenglish.co.uk</a></p>
+    </li>
+
+    <li class="res-item">
+      <p class="res-title">Voice Dictation - Online Speech Recognition</p>
+      <p class="res-desc">Use the magic of speech recognition to write emails and documents in Google Chrome.</p>
+      <p class="res-link"><a href="https://dictation.io/" target="_blank" rel="noopener">dictation.io</a></p>
     </li>
   </ul>
 </section>

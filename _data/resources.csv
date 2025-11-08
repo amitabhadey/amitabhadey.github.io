@@ -1,0 +1,13 @@
+section,title,url,meta,desc,tags,format
+bookmarks,Collaborative Data Science for Healthcare — MIT,https://openlearninglibrary.mit.edu/courses/course-v1:MITx+HST.953x+3T2020/course/,Course • Healthcare • MITx,Team-based analytics and decision-making in clinical settings.,"healthcare course mit data",card
+bookmarks,CS448B: Visualization — Stanford,https://web.stanford.edu/class/archive/cs/cs448b/cs448b.1166/cgi-bin/wiki/index.php?title=Main_Page,Course • Visualization • Stanford,Foundations of interactive visualization and systems design.,"visualization stanford graphics",card
+dsa,Awesome Algorithms Education,https://github.com/gaerae/awesome-algorithms-education,GitHub • Curated,Hand-picked algorithm learning resources across formats.,"awesome list algorithms",card
+ml,Grokking Deep Learning,https://github.com/iamtrask/Grokking-Deep-Learning,Code • Concepts,From first principles to working neural nets—hands-on.,"book code",card
+datasci,Exploring Data with Python,https://github.com/StephenElston/ExploringDataWithPython,GitHub • Book,Exploratory analysis patterns and recipes in Python.,"python book",card
+math,An Introduction to Statistical Learning,https://www.statlearning.com/,Textbook • Stanford,The classic applied statistics + ML text (with labs).,"stats text stanford",card
+harvard,CS50: Introduction to Computer Science,https://pll.harvard.edu/course/cs50-introduction-computer-science,Course • Harvard,Legendary CS intro—problem sets, lectures, and labs.,"cs50 intro",card
+jobs,Jobs for Data Lovers — Data Elixir,https://jobs.dataelixir.com/jobs,Board • Data,Frequent DS/ML openings curated by Data Elixir.,"job board newsletter",card
+writing,Writing as a Thinking Tool,https://nesslabs.com/writing-thinking-tool,Essay • Metacognition,Use writing to clarify models and decisions.,"workflow practice",card
+tools,Typings,https://typings.gg/,—,A sleek and modern typing test website.,,tile
+tools,Ghostwriter,https://ghostwriter.kde.org/,—,Free and open-source distraction-free Markdown editor.,,tile
+ml,Andrej Karpathy: Neural Nets from Scratch,https://www.youtube.com/watch?v=VMj-3S1tku0,Talk • YouTube,From first principles to a tiny GPT.,karpathy lecture,card

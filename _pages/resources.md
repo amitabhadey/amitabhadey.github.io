@@ -620,33 +620,71 @@ kbd{ font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberat
 
 <!-- ========= SEARCH & COPY (tiny JS) ========= -->
 <script>
-(function(){
-  const q = document.getElementById('link-search');
-  const cards = Array.from(document.querySelectorAll('.card'));
-  function filter(){
-    const v = (q.value || '').toLowerCase().trim();
-    cards.forEach(c=>{
-      const t = c.innerText.toLowerCase();
-      c.style.display = v && !t.includes(v) ? 'none' : '';
-    });
+(function () {
+  function onReady(fn) {
+    if (document.readyState !== 'loading') fn();
+    else document.addEventListener('DOMContentLoaded', fn);
   }
-  if(q){
-    q.addEventListener('input', filter);
-    document.addEventListener('keydown', e=>{
-      if(e.key === '/' && document.activeElement !== q){ e.preventDefault(); q.focus(); }
+
+  onReady(function () {
+    const q = document.getElementById('link-search');
+    if (!q) return;
+
+    const getItems = () =>
+      Array.from(document.querySelectorAll('.card, #tools .res-item'));
+    let items = getItems();
+
+    function filter() {
+      const v = (q.value || '').toLowerCase().trim();
+      items.forEach(el => {
+        const t = (el.innerText || el.textContent || '').toLowerCase();
+        el.style.display = v && !t.includes(v) ? 'none' : '';
+      });
+    }
+
+    // Focus with "/" (like VS Code)
+    document.addEventListener('keydown', e => {
+      if (e.key === '/' && document.activeElement !== q) {
+        e.preventDefault();
+        q.focus();
+        q.select();
+      }
     });
-  }
-  document.addEventListener('click',e=>{
-    const btn = e.target.closest('button[data-copy]');
-    if(!btn) return;
-    const url = btn.getAttribute('data-copy');
-    navigator.clipboard.writeText(url).then(()=>{
-      const old = btn.textContent; btn.textContent = 'Copied! ✓';
-      setTimeout(()=>btn.textContent = old, 900);
+
+    // Debounced input
+    let to = null;
+    q.addEventListener('input', () => {
+      clearTimeout(to);
+      to = setTimeout(filter, 40);
     });
+
+    // Copy buttons
+    document.addEventListener('click', e => {
+      const btn = e.target.closest('button[data-copy]');
+      if (!btn) return;
+      const url = btn.getAttribute('data-copy');
+      (navigator.clipboard && navigator.clipboard.writeText(url)).then(() => {
+        const old = btn.textContent;
+        btn.textContent = 'Copied! ✓';
+        setTimeout(() => (btn.textContent = old), 900);
+      });
+    });
+
+    // Rebind after PJAX/Turbolinks navigations (if your theme uses them)
+    document.addEventListener('pjax:complete', () => {
+      items = getItems();
+      filter();
+    });
+    window.addEventListener('pageshow', () => {
+      items = getItems();
+    });
+
+    // Initial filter pass
+    filter();
   });
 })();
 </script>
+
 
 <!--
 HOW TO ADD NEW LINKS QUICKLY:

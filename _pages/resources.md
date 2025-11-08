@@ -8,23 +8,26 @@ title: " "
 
 <!-- Top nav pills -->
 <nav style="display:flex;flex-wrap:wrap;gap:8px;margin:0 0 1rem 0;">
-  <a href="#bookmarks"            style="padding:.35rem .7rem;border:1px solid currentColor;border-radius:999px;text-decoration:none;">📌 Bookmarks</a>
-  <a href="#dsa"                  style="padding:.35rem .7rem;border:1px solid currentColor;border-radius:999px;text-decoration:none;">🧩 DSA</a>
-  <a href="#ml"                   style="padding:.35rem .7rem;border:1px solid currentColor;border-radius:999px;text-decoration:none;">🤖 ML</a>
-  <a href="#datasci"              style="padding:.35rem .7rem;border:1px solid currentColor;border-radius:999px;text-decoration:none;">📊 Data Science</a>
-  <a href="#math"                 style="padding:.35rem .7rem;border:1px solid currentColor;border-radius:999px;text-decoration:none;">∑ Math</a>
-  <a href="#harvard"              style="padding:.35rem .7rem;border:1px solid currentColor;border-radius:999px;text-decoration:none;">🎓 Harvard</a>
-  <a href="#jobs"                 style="padding:.35rem .7rem;border:1px solid currentColor;border-radius:999px;text-decoration:none;">💼 Jobs</a>
-  <a href="#writing"              style="padding:.35rem .7rem;border:1px solid currentColor;border-radius:999px;text-decoration:none;">✍️ Writing</a>
-  <a href="#tools"                style="padding:.35rem .7rem;border:1px solid currentColor;border-radius:999px;text-decoration:none;">🛠️ Tools</a>
+  <a href="#bookmarks" style="padding:.35rem .7rem;border:1px solid currentColor;border-radius:999px;text-decoration:none;">📌 Bookmarks</a>
+  <a href="#dsa"       style="padding:.35rem .7rem;border:1px solid currentColor;border-radius:999px;text-decoration:none;">🧩 DSA</a>
+  <a href="#ml"        style="padding:.35rem .7rem;border:1px solid currentColor;border-radius:999px;text-decoration:none;">🤖 ML</a>
+  <a href="#datasci"   style="padding:.35rem .7rem;border:1px solid currentColor;border-radius:999px;text-decoration:none;">📊 Data Science</a>
+  <a href="#math"      style="padding:.35rem .7rem;border:1px solid currentColor;border-radius:999px;text-decoration:none;">∑ Math</a>
+  <a href="#harvard"   style="padding:.35rem .7rem;border:1px solid currentColor;border-radius:999px;text-decoration:none;">🎓 Harvard</a>
+  <a href="#jobs"      style="padding:.35rem .7rem;border:1px solid currentColor;border-radius:999px;text-decoration:none;">💼 Jobs</a>
+  <a href="#writing"   style="padding:.35rem .7rem;border:1px solid currentColor;border-radius:999px;text-decoration:none;">✍️ Writing</a>
+  <a href="#tools"     style="padding:.35rem .7rem;border:1px solid currentColor;border-radius:999px;text-decoration:none;">🛠️ Tools</a>
 </nav>
 
 <!-- Quick search -->
 <div style="margin:.5rem 0 1.25rem 0;display:flex;gap:.6rem;align-items:center;">
-  <input id="link-search" type="search" placeholder="Search resources…" 
+  <input id="link-search" type="search" placeholder="Search resources…"
          style="flex:1;max-width:520px;padding:.55rem .7rem;border:1px solid rgba(255,255,255,.35);border-radius:10px;background:transparent;color:inherit;">
   <small style="opacity:.7;">Press <kbd style="border:1px solid currentColor;border-radius:4px;padding:0 .25rem;opacity:.7;">/</kbd> to focus</small>
 </div>
+
+<!-- Shown only when nothing matches -->
+<p id="no-results" style="display:none;opacity:.75;margin:.25rem 0 1rem 0;">No results. Try a different search.</p>
 
 <style>
 /* Cards */
@@ -44,22 +47,25 @@ title: " "
   border:1px dashed rgba(255,255,255,.35); background:transparent; color:inherit; cursor:pointer;
 }
 .actions a:hover, .actions button:hover{ border-style:solid; }
+
 /* Light mode */
 @media (prefers-color-scheme: light){
   .card{ background:#fff;border-color:#e5e7eb; }
   #link-search{ border-color:#e5e7eb; }
 }
+
 /* Table */
 .table-wrap{ overflow:auto; border-radius:12px; border:1px solid rgba(255,255,255,.25); }
 table.minimal{ width:100%; border-collapse:separate; border-spacing:0; }
 table.minimal th, table.minimal td{ padding:.6rem .75rem; border-bottom:1px solid rgba(255,255,255,.15); vertical-align:top; }
 table.minimal th{ text-align:left; font-weight:700; position:sticky; top:0; backdrop-filter:saturate(120%); }
 table.minimal tr:last-child td{ border-bottom:none; }
+
 @media (prefers-color-scheme: light){
   .table-wrap{ border-color:#e5e7eb; }
   table.minimal th, table.minimal td{ border-bottom:1px solid #ececec; }
 }
-kbd{ font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; font-size:.75em; }
+kbd{ font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono",monospace; font-size:.75em; }
 </style>
 
 {%- comment -%} Helper references to CSV rows {%- endcomment -%}
@@ -178,29 +184,22 @@ kbd{ font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberat
   <!-- Scoped styles to this section only -->
   <style>
     #tools .res-list{list-style:none;margin:.5rem 0 0;padding:0;display:grid;gap:.6rem}
-    /* Two-up / three-up responsive grid */
     @media(min-width:720px){#tools .res-list{grid-template-columns:repeat(2,minmax(0,1fr))}}
     @media(min-width:1160px){#tools .res-list{grid-template-columns:repeat(3,minmax(0,1fr))}}
 
     #tools .res-item{
       border:1px solid rgba(255,255,255,.25);
-      border-radius:12px;
-      background:rgba(255,255,255,.03);
-      padding:.8rem .9rem;
-      display:grid;
-      grid-template-rows:auto auto 1fr;
-      gap:.35rem
+      border-radius:12px; background:rgba(255,255,255,.03);
+      padding:.8rem .9rem; display:grid; grid-template-rows:auto auto 1fr; gap:.35rem
     }
     #tools .res-title{margin:0;font-weight:700;letter-spacing:.01em}
     #tools .res-desc{margin:0;opacity:.9;font-size:.92rem;line-height:1.45}
     #tools .res-link a{
-      display:inline-block;margin-top:.15rem;
-      text-decoration:none;border:1px dashed rgba(255,255,255,.35);
+      display:inline-block;margin-top:.15rem;text-decoration:none;border:1px dashed rgba(255,255,255,.35);
       padding:.25rem .55rem;border-radius:8px;font-size:.85rem;color:inherit
     }
     #tools .res-link a:hover{border-style:solid}
 
-    /* Light mode fallback */
     @media (prefers-color-scheme: light){
       #tools .res-item{background:#fff;border-color:#e5e7eb}
       #tools .res-link a{border-color:#e5e7eb;color:#111}
@@ -221,122 +220,121 @@ kbd{ font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberat
   </ul>
 </section>
 
-
 <!-- ========= SEARCH & COPY (tiny JS) ========= -->
 <script>
 (function () {
-  // fire only after DOM is ready (handles bfcache too)
   function onReady(fn){
     if (document.readyState !== 'loading') fn();
-    else document.addEventListener('DOMContentLoaded', fn, { once: true });
+    else document.addEventListener('DOMContentLoaded', fn, { once:true });
   }
 
   onReady(function(){
     const q = document.getElementById('link-search');
+    const noResults = document.getElementById('no-results');
     if (!q) return;
 
-    // Collect all searchable items (cards + tools tiles)
-    function getItems(){
-      return Array.from(document.querySelectorAll('.card, #tools .res-item'));
-    }
+    // Collect items (cards + tool tiles)
+    function getItems(){ return Array.from(document.querySelectorAll('.card, #tools .res-item')); }
+    // Collect sections
+    function getSections(){ return Array.from(document.querySelectorAll('.res-sec')); }
 
-    // Build a searchable index per node: visible text + data-tags + hrefs
-    function buildIndexFor(el){
+    // Build searchable index per node
+    function indexNode(el){
       const parts = [];
-
-      // main text (prefer textContent for cross-browser)
       parts.push((el.textContent || '').trim());
-
-      // tags
-      const tagAttr = el.getAttribute('data-tags');
-      if (tagAttr) parts.push(tagAttr);
-
-      // all link text + hrefs so URLs are searchable
+      const tags = el.getAttribute('data-tags');
+      if (tags) parts.push(tags);
       el.querySelectorAll('a[href]').forEach(a=>{
         parts.push(a.textContent || '');
         parts.push(a.getAttribute('href') || '');
       });
-
       el.dataset._idx = parts.join(' ').replace(/\s+/g,' ').toLowerCase();
     }
 
     let items = getItems();
-    items.forEach(buildIndexFor);
+    items.forEach(indexNode);
 
-    // Filter handler
-    function filter(){
-      const v = (q.value || '').toLowerCase().trim();
-      if (!v){
-        items.forEach(el => el.style.display = '');
-        return;
-      }
-      items.forEach(el => {
-        const idx = el.dataset._idx || '';
-        el.style.display = idx.includes(v) ? '' : 'none';
-      });
+    // Returns true if a section has any visible entries
+    function sectionHasVisible(section){
+      return !!Array.from(section.querySelectorAll('.card, #tools .res-item'))
+        .some(el => el.style.display !== 'none');
     }
 
-    // Debounce fast typing
-    let to = null;
-    q.addEventListener('input', () => {
-      clearTimeout(to);
-      to = setTimeout(filter, 60);
-    });
+    function filter(){
+      const v = (q.value || '').toLowerCase().trim();
+      let anyVisible = false;
 
-    // "/" to focus, "Esc" to clear when focused
-    document.addEventListener('keydown', e => {
-      if (e.key === '/' && document.activeElement !== q){
-        e.preventDefault();
-        q.focus();
-        q.select();
-      } else if (e.key === 'Escape' && document.activeElement === q){
-        q.value = '';
-        filter();
+      if (!v){
+        items.forEach(el => { el.style.display = ''; });
+        getSections().forEach(sec => { sec.style.display = ''; });
+        noResults.style.display = 'none';
+        return;
       }
+
+      items.forEach(el=>{
+        const idx = el.dataset._idx || '';
+        const match = idx.includes(v);
+        el.style.display = match ? '' : 'none';
+        if (match) anyVisible = true;
+      });
+
+      // Collapse sections with no visible children
+      getSections().forEach(sec=>{
+        sec.style.display = sectionHasVisible(sec) ? '' : 'none';
+      });
+
+      // Global no-results message
+      noResults.style.display = anyVisible ? 'none' : '';
+    }
+
+    // Debounce
+    let to = null;
+    q.addEventListener('input', () => { clearTimeout(to); to = setTimeout(filter, 60); });
+
+    // "/" to focus, Esc to clear (while focused)
+    document.addEventListener('keydown', e=>{
+      if (e.key === '/' && document.activeElement !== q){ e.preventDefault(); q.focus(); q.select(); }
+      else if (e.key === 'Escape' && document.activeElement === q){ q.value=''; filter(); }
     });
 
-    // Copy buttons (with fallback if Clipboard API unavailable)
+    // Copy buttons with fallback
     document.addEventListener('click', async e=>{
       const btn = e.target.closest('button[data-copy]');
       if (!btn) return;
       const url = btn.getAttribute('data-copy') || '';
       try{
-        if (navigator.clipboard?.writeText){
-          await navigator.clipboard.writeText(url);
-        } else {
+        if (navigator.clipboard?.writeText){ await navigator.clipboard.writeText(url); }
+        else{
           const ta = document.createElement('textarea');
           ta.value = url; ta.setAttribute('readonly','');
-          ta.style.position = 'absolute'; ta.style.left = '-9999px';
-          document.body.appendChild(ta);
-          ta.select(); document.execCommand('copy'); ta.remove();
+          ta.style.position='absolute'; ta.style.left='-9999px';
+          document.body.appendChild(ta); ta.select(); document.execCommand('copy'); ta.remove();
         }
-        const old = btn.textContent;
-        btn.textContent = 'Copied! ✓';
-        setTimeout(() => btn.textContent = old, 900);
-      }catch(err){
-        console.error('Copy failed:', err);
-      }
+        const old = btn.textContent; btn.textContent = 'Copied! ✓';
+        setTimeout(()=>btn.textContent = old, 900);
+      }catch(err){ console.error('Copy failed:', err); }
     });
 
-    // Re-index if the page is restored from bfcache or content changes
+    // Re-index when page is restored / content changes
     function rebind(){
-      items = getItems();
-      items.forEach(buildIndexFor);
-      filter();
+      items = getItems(); items.forEach(indexNode); filter();
     }
     window.addEventListener('pageshow', rebind);
     document.addEventListener('pjax:complete', rebind);
 
-    // Initial pass
+    // First render
     filter();
   });
 })();
 </script>
-
 
 <!--
 DATA-SOURCE NOTES:
 - Rows live in _data/resources.csv with columns:
   section,title,url,meta,desc,tags,format
 - Use format=card for normal sections, format=tile for Tools grid.
+
+If your site enforces a CSP that blocks inline scripts, move the JS into
+/assets/js/resources.js and include it with:
+<script src="/assets/js/resources.js" defer></script>
 -->

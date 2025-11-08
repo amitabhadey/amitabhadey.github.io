@@ -19,9 +19,15 @@ title: " "
   <a href="#tools"     style="padding:.35rem .7rem;border:1px solid currentColor;border-radius:999px;text-decoration:none;">🛠️ Tools</a>
 </nav>
 
+<!-- Quick search -->
+<div style="margin:.5rem 0 1.25rem 0;display:flex;gap:.6rem;align-items:center;">
+  <input id="link-search" type="search" placeholder="Search resources…"
+         style="flex:1;max-width:520px;padding:.55rem .7rem;border:1px solid rgba(255,255,255,.35);border-radius:10px;background:transparent;color:inherit;">
+  <small style="opacity:.7;">Press <kbd style="border:1px solid currentColor;border-radius:4px;padding:0 .25rem;opacity:.7;">/</kbd> to focus</small>
+</div>
+<p id="no-results" style="display:none;opacity:.75;margin:.25rem 0 1rem 0;">No results. Try a different search.</p>
+
 <style>
-
-
 /* Cards */
 .res-sec{ margin:1.5rem 0 2rem; }
 .res-sec h3{ margin:.1rem 0 .8rem 0; font-size:1.05rem; letter-spacing:.01em; }
@@ -43,6 +49,7 @@ title: " "
 /* Light mode */
 @media (prefers-color-scheme: light){
   .card{ background:#fff;border-color:#e5e7eb; }
+  #link-search{ border-color:#e5e7eb; }
 }
 
 /* Tables (kept if you add any later) */
@@ -275,6 +282,94 @@ kbd{ font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation M
   </ul>
 </section>
 
+<!-- ========= SEARCH (tiny JS) ========= -->
 <script>
+(function(){
+  function onReady(fn){
+    if (document.readyState !== 'loading') fn();
+    else document.addEventListener('DOMContentLoaded', fn, { once:true });
+  }
 
+  onReady(function(){
+    const q = document.getElementById('link-search');
+    const noRes = document.getElementById('no-results');
+
+    if(!q) return;
+
+    // Get all searchable items (cards + tool tiles)
+    const getItems = () => Array.from(document.querySelectorAll('.card, #tools .res-item'));
+
+    // Build text index for each element: text + tags + hrefs
+    function indexEl(el){
+      const parts = [];
+      parts.push(el.textContent || '');
+      const tags = el.getAttribute('data-tags');
+      if (tags) parts.push(tags);
+      el.querySelectorAll('a[href]').forEach(a=>{
+        parts.push(a.textContent || '');
+        parts.push(a.getAttribute('href') || '');
+      });
+      el.dataset._idx = parts.join(' ').replace(/\s+/g,' ').toLowerCase();
+    }
+
+    let items = getItems();
+    items.forEach(indexEl);
+
+    function anyVisibleInSection(section){
+      return !!section.querySelector('.card:not([style*="display: none"]) , .res-item:not([style*="display: none"])');
+    }
+
+    function filter(){
+      const v = (q.value || '').toLowerCase().trim();
+
+      if(!v){
+        items.forEach(el => el.style.display = '');
+      }else{
+        items.forEach(el => {
+          const idx = el.dataset._idx || '';
+          el.style.display = idx.includes(v) ? '' : 'none';
+        });
+      }
+
+      // Hide entire sections with no visible items
+      document.querySelectorAll('.res-sec').forEach(sec=>{
+        sec.style.display = anyVisibleInSection(sec) ? '' : 'none';
+      });
+
+      // Toggle global "no results" message
+      const anyVisible = items.some(el => el.style.display !== 'none');
+      if (noRes) noRes.style.display = anyVisible ? 'none' : '';
+    }
+
+    // Debounce typing
+    let to = null;
+    q.addEventListener('input', () => { clearTimeout(to); to = setTimeout(filter, 60); });
+
+    // Keyboard shortcuts: "/" to focus, "Esc" to clear
+    document.addEventListener('keydown', (e)=>{
+      if (e.key === '/' && document.activeElement !== q){
+        e.preventDefault(); q.focus(); q.select();
+      } else if (e.key === 'Escape' && document.activeElement === q){
+        q.value = ''; filter();
+      }
+    });
+
+    // Reindex on BFCache restore or DOM mutations in tools
+    function rebind(){
+      items = getItems();
+      items.forEach(indexEl);
+      filter();
+    }
+    window.addEventListener('pageshow', rebind);
+
+    const toolsRoot = document.getElementById('tools');
+    if (toolsRoot && 'MutationObserver' in window){
+      const mo = new MutationObserver(rebind);
+      mo.observe(toolsRoot, { childList:true, subtree:true });
+    }
+
+    // Initial pass
+    filter();
+  });
+})();
 </script>

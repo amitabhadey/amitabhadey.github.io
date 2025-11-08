@@ -20,6 +20,15 @@ title: " "
 </nav>
 
 <style>
+/* 🔒 Hard-kill any residual search UI some layout/old script might inject */
+#link-search,
+label[for="link-search"],
+.search-wrap,
+input[placeholder*="Search resources"],
+input[placeholder*="Search Resources"],
+input[type="search"]#link-search,
+#no-results { display:none !important; }
+
 /* Cards */
 .res-sec{ margin:1.5rem 0 2rem; }
 .res-sec h3{ margin:.1rem 0 .8rem 0; font-size:1.05rem; letter-spacing:.01em; }
@@ -43,7 +52,7 @@ title: " "
   .card{ background:#fff;border-color:#e5e7eb; }
 }
 
-/* Table */
+/* Tables (kept if you add any later) */
 .table-wrap{ overflow:auto; border-radius:12px; border:1px solid rgba(255,255,255,.25); }
 table.minimal{ width:100%; border-collapse:separate; border-spacing:0; }
 table.minimal th, table.minimal td{ padding:.6rem .75rem; border-bottom:1px solid rgba(255,255,255,.15); vertical-align:top; }
@@ -83,11 +92,6 @@ kbd{ font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation M
 {%- assign all = site.data.resources | default: empty -%}
 {%- assign by_card = all | where: "format", "card" -%}
 {%- assign by_tile = all | where: "format", "tile" -%}
-
-{%- comment -%}
-Helper macro-ish snippets for rendering a card/tile inline without includes.
-We also guard against missing fields using `default`.
-{%- endcomment -%}
 
 {%- comment -%} ======== BOOKMARKS ======== {%- endcomment -%}
 <section id="bookmarks" class="res-sec">
@@ -278,10 +282,18 @@ We also guard against missing fields using `default`.
   </ul>
 </section>
 
-<!--
-DATA-SOURCE NOTES:
-- Rows live in _data/resources.csv with columns:
-  section,title,url,meta,desc,tags,format
-- Use format=card for normal sections, format=tile for Tools grid.
-- This template renders inline (no includes) and guards against blank titles.
--->
+<!-- Tiny defensive script: if a layout/old include inserted a search input, remove it -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var kill = function (el) { if (el && el.parentElement) el.parentElement.removeChild(el); };
+  kill(document.getElementById('link-search'));
+  // Also remove any sibling container commonly used for the old search UI
+  var suspects = document.querySelectorAll('.search-wrap, input[placeholder*="Search resources"], input[placeholder*="Search Resources"]');
+  suspects.forEach(function (n) { 
+    if (n.id === 'link-search') return;
+    // remove container if it only holds search input/label
+    var container = n.closest('div, form, section') || n;
+    kill(container);
+  });
+});
+</script>

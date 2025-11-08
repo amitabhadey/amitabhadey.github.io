@@ -7,27 +7,23 @@ redirect_from:
   - /about.html
 ---
 
-{% include base_path %}
-
 <!-- Anchor Navigation -->
-<div align="center" style="margin: 1.8rem 0;">
-  <a href="#about-me" style="padding: 6px 14px; border: 1px solid #fff; border-radius: 6px; margin: 0 4px; text-decoration: none; color: #fff; font-size: 0.95rem;">About</a>
-  <a href="#what-i-do" style="padding: 6px 14px; border: 1px solid #fff; border-radius: 6px; margin: 0 4px; text-decoration: none; color: #fff; font-size: 0.95rem;">Work</a>
-  <a href="#professional-experience" style="padding: 6px 14px; border: 1px solid #fff; border-radius: 6px; margin: 0 4px; text-decoration: none; color: #fff; font-size: 0.95rem;">Experience</a>
-  <a href="#academic-background" style="padding: 6px 14px; border: 1px solid #fff; border-radius: 6px; margin: 0 4px; text-decoration: none; color: #fff; font-size: 0.95rem;">Academic Background</a>
-  <a href="#research-themes" style="padding: 6px 14px; border: 1px solid #fff; border-radius: 6px; margin: 0 4px; text-decoration: none; color: #fff; font-size: 0.95rem;">Research</a>
-  <a href="#publications-list" style="padding: 6px 14px; border: 1px solid #fff; border-radius: 6px; margin: 0 4px; text-decoration: none; color: #fff; font-size: 0.95rem;">Publications</a>
+<div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; margin: 1.8rem 0;">
+  <a href="#about-me" style="padding: 6px 18px; border: 1px solid #fff; border-radius: 8px; text-decoration: none; color: #fff; font-size: 0.95rem; display: inline-block;">About</a>
+  <a href="#what-i-do" style="padding: 6px 18px; border: 1px solid #fff; border-radius: 8px; text-decoration: none; color: #fff; font-size: 0.95rem; display: inline-block;">Work</a>
+  <a href="#professional-experience" style="padding: 6px 18px; border: 1px solid #fff; border-radius: 8px; text-decoration: none; color: #fff; font-size: 0.95rem; display: inline-block;">Experience</a>
+  <a href="#academic-background" style="padding: 6px 18px; border: 1px solid #fff; border-radius: 8px; text-decoration: none; color: #fff; font-size: 0.95rem; display: inline-block;">Academic Background</a>
+  <a href="#research-themes" style="padding: 6px 18px; border: 1px solid #fff; border-radius: 8px; text-decoration: none; color: #fff; font-size: 0.95rem; display: inline-block;">Research</a>
+  <a href="#publications-list" style="padding: 6px 18px; border: 1px solid #fff; border-radius: 8px; text-decoration: none; color: #fff; font-size: 0.95rem; display: inline-block;">Publications</a>
 </div>
 
-<!-- Hover Effect Inline -->
 <style>
-  /* Only affects the navigation links above */
-  div[align="center"] a:hover {
-    background-color: #ffffff22; /* subtle translucent highlight */
-    border-color: #ffffff;
+  div[style*="flex"] a:hover {
+    background-color: #ffffff22;
     transition: 0.25s ease-in-out;
   }
 </style>
+
 
 ---
 

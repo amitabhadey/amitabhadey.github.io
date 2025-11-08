@@ -10,12 +10,12 @@ title: " "
 style="width:100%;padding:.6rem .75rem;border-radius:8px;border:1px solid rgba(255,255,255,.25);margin:0 0 1.2rem 0;background:rgba(255,255,255,.03);color:inherit;">
 
 <nav style="display:flex;flex-wrap:wrap;gap:8px;margin:0 0 1.4rem 0;">
-  <a href="#aillmtech" style="padding:.35rem .7rem;border:1px solid currentColor;border-radius:999px;text-decoration:none;">AI/LLM/TECH</a>
-  <a href="#finance" style="padding:.35rem .7rem;border:1px solid currentColor;border-radius:999px;text-decoration:none;">FINANCE</a>
-  <a href="#health" style="padding:.35rem .7rem;border:1px solid currentColor;border-radius:999px;text-decoration:none;">HEALTH</a>
-  <a href="#productivity" style="padding:.35rem .7rem;border:1px solid currentColor;border-radius:999px;text-decoration:none;">PRODUCTIVITY</a>
-  <a href="#psychology" style="padding:.35rem .7rem;border:1px solid currentColor;border-radius:999px;text-decoration:none;">PSYCHOLOGY</a>
-  <a href="#science" style="padding:.35rem .7rem;border:1px solid currentColor;border-radius:999px;text-decoration:none;">SCIENCE</a>
+  <a href="#aillmtech" style="padding:.35rem .7rem;border:1px solid currentColor;border-radius:999px;text-decoration:none;">AI/LLM/Tech</a>
+  <a href="#finance" style="padding:.35rem .7rem;border:1px solid currentColor;border-radius:999px;text-decoration:none;">Finance</a>
+  <a href="#health" style="padding:.35rem .7rem;border:1px solid currentColor;border-radius:999px;text-decoration:none;">Health</a>
+  <a href="#productivity" style="padding:.35rem .7rem;border:1px solid currentColor;border-radius:999px;text-decoration:none;">Productivity</a>
+  <a href="#psychology" style="padding:.35rem .7rem;border:1px solid currentColor;border-radius:999px;text-decoration:none;">Psychology</a>
+  <a href="#science" style="padding:.35rem .7rem;border:1px solid currentColor;border-radius:999px;text-decoration:none;">Science</a>
 </nav>
 
 <style>

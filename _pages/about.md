@@ -9,37 +9,170 @@ redirect_from:
 
 {% include base_path %}
 
-I am a Senior Data Scientist at <a href="https://www.optum.com/en/">Optum</a> (part of <a href="https://www.unitedhealthgroup.com/">UnitedHealth Group</a>), specializing in Large Language Models (LLMs) and their applications in healthcare and enterprise AI. My background is in Natural Language Processing (NLP), where I have over ten years of experience working with text analysis, machine learning, and more recently, large-scale language model development.
+<!-- Anchor Navigation -->
+<div align="center" style="margin: 1.8rem 0;">
+  <a href="#about-me" style="padding: 6px 14px; border: 1px solid #fff; border-radius: 6px; margin: 0 4px; text-decoration: none; color: #fff; font-size: 0.95rem;">About</a>
+  <a href="#what-i-do" style="padding: 6px 14px; border: 1px solid #fff; border-radius: 6px; margin: 0 4px; text-decoration: none; color: #fff; font-size: 0.95rem;">Work</a>
+  <a href="#professional-experience" style="padding: 6px 14px; border: 1px solid #fff; border-radius: 6px; margin: 0 4px; text-decoration: none; color: #fff; font-size: 0.95rem;">Experience</a>
+  <a href="#academic-background" style="padding: 6px 14px; border: 1px solid #fff; border-radius: 6px; margin: 0 4px; text-decoration: none; color: #fff; font-size: 0.95rem;">Academic Background</a>
+  <a href="#research-themes" style="padding: 6px 14px; border: 1px solid #fff; border-radius: 6px; margin: 0 4px; text-decoration: none; color: #fff; font-size: 0.95rem;">Research</a>
+  <a href="#publications-list" style="padding: 6px 14px; border: 1px solid #fff; border-radius: 6px; margin: 0 4px; text-decoration: none; color: #fff; font-size: 0.95rem;">Publications</a>
+</div>
 
-Previously, I was a Lecturer in Computer Science at the <a href="https://compsci.uncg.edu/">University of North Carolina at Greensboro (UNCG)</a>, where I taught courses in systems programming, advanced data structures, and data science, and advised students on academic and research projects.
+<!-- Hover Effect Inline -->
+<style>
+  /* Only affects the navigation links above */
+  div[align="center"] a:hover {
+    background-color: #ffffff22; /* subtle translucent highlight */
+    border-color: #ffffff;
+    transition: 0.25s ease-in-out;
+  }
+</style>
 
-I completed my M.Sc. in Computer Science with a concentration in Big Data and Data Science at UNCG, working as a graduate research student in the IFFS-ML Lab under the supervision of <a href="https://sites.google.com/uncg.edu/shan-suthaharan/home">Dr. Shan Suthaharan</a>. My dissertation was titled <em>LDEB: Label Digitization with Emotion Binarization and Machine Learning for Emotion Recognition in Conversational Dialogues</em>.
+---
 
-I earned my B.Sc. in Computer Science from BRAC University, where I worked under the supervision of <a href="https://cse.sds.bracu.ac.bd/faculty_profile/69/dr_amitabha_chakrabarty">Dr. Amitabha Chakrabarty</a>. My undergraduate thesis was titled <em>Fake News Pattern Recognition using Linguistic Analysis</em>.
+## About Me
+<span id="about-me"></span>
 
-## My work and research
+I am a **Senior Data Scientist at Optum (UnitedHealth Group)**, working at the intersection of **Large Language Models (LLMs)**, healthcare systems, and enterprise AI.  
+My work focuses on transforming **general-purpose language models** into **clinically specialized systems** that operate under real-world constraints such as interpretability, regulatory safety, workflow alignment, and domain knowledge grounding.
 
-I specialize in large-scale language modeling for healthcare, with a focus on building, fine-tuning, and deploying domain-adapted Large Language Models (LLMs) under clinical, enterprise, and regulatory constraints.
+---
 
-I study approaches to advance healthcare-focused Large Language Models (LLMs), with particular emphasis on long-sequence processing and domain-specific adaptation for tasks such as medical coding and bridging communication between patients and healthcare providers. A core part of my work involves building domain adaptation pipelines that transform general-purpose LLMs into clinically specialized models.
+## What I Do
+<span id="what-i-do"></span>
 
-In the past, my work focused on developing computational models that can understand and generate human language with high precision. My research also previously explored multimodal analysis, misinformation prevention, conversational AI, and cross-cultural linguistic adaptation.
+### 🧠 Healthcare-Focused Language Models
+I design and deploy **domain-adapted LLMs** that support:
+- Automated **medical coding** and clinical documentation intelligence  
+- **Long-sequence** chart and encounter reasoning  
+- Improved **provider–patient communication** understanding  
+- **Evaluation and safety frameworks** aligned with clinical correctness  
+
+### ☁️ Large-Scale Training & Deployment
+I build and maintain **multi-cloud ML infrastructure** across:
+- **AWS SageMaker** and **Azure AI Foundry**
+- Distributed GPU clusters (e.g., **NC80adis_H100_v5**)
+- **Containerized CI/CD** workflows for model training and inference
+
+This work spans large-scale data ingestion, preprocessing, fine-tuning, versioning, benchmarking, and production deployment.
+
+---
+
+## Professional Experience
+<span id="professional-experience"></span>
+
+I have worked across **industry**, **research**, and **academia**, building machine learning systems and guiding others in how to think and experiment in this space.
+
+- 🎓 **Computer Science Lecturer — UNCG**
+  - Taught **Systems Programming**, **Advanced Data Structures**, and **Data Science**
+  - Mentored students in research thinking and applied experimentation
+  - Advised students on research and academic development.
+
+- 🧪 - **Data Scientist — DevResonance Ltd.**
+  - Worked on public health and social impact analytics
+  - Built end-to-end **machine learning workflows** using **Python**, **PyTorch**, **scikit-learn**
+  - Developed interactive analysis dashboards with **Streamlit** and **Plotly**
+  - Collaborated with global health organizations on data-driven decision systems
+
+- 🛠️ **Data Science Intern — Redgreen Corporation**
+  - Applied statistical modeling and predictive analytics to support business operations
+  - Worked with feature engineering, regression pipelines, and exploratory analytics
+  - Contributed to internal dashboards for business insight and product decision-making
+
+These experiences collectively shaped how I approach problem formulation, data reasoning, model alignment with real-world constraints, and measurable impact.
+
+
+
+---
+
+## Academic Background
+<span id="academic-background"></span>
+
+I completed my **M.Sc. in Computer Science** at the **University of North Carolina at Greensboro (UNCG)**, where I worked as a graduate researcher in the **IFFS-ML Lab** under **Dr. Shan Suthaharan**.  
+My thesis — **LDEB: Label Digitization with Emotion Binarization** — proposed a structured encoding approach for **emotion recognition in conversational dialogues**, enabling more stable learning in label-sparse environments.
+
+Before that, I earned my **B.Sc. in Computer Science & Engineering** from **BRAC University**, where I conducted research under **Dr. Amitabha Chakrabarty**.  
+My undergraduate thesis — **Fake News Pattern Recognition using Linguistic Analysis** — explored how linguistic cues can reveal author bias and deceptive intent in political social media discourse.
+
+---
+
+## Research Themes
+<span id="research-themes"></span>
+
+- 🏥 **Healthcare LLMs**: domain adaptation aligned with clinical language + workflows  
+- 📝 **Long-Sequence Modeling**: reasoning across multi-note patient histories  
+- 🔄 **Model Adaptation Pipelines**: embedding spaces, structured prompting, evaluation  
+- 🎛️ **Past Work**: multimodal misinformation detection, conversational AI, cross-lingual adaptation  
 
 ---
 
 ## Publications
+<span id="publications-list"></span>
 
 <style>
 .pub-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 1rem; }
-.pub-card { border: 1px solid #e5e7eb; border-radius: 12px; padding: 1rem 1.25rem; background: #fff; }
-.pub-title { font-weight: 600; font-size: 1.05rem; margin: 0 0 .25rem 0; color: #000 !important; }
-.pub-meta { font-size: .9rem; color: #444 !important; margin: 0 0 .5rem 0; }
-.pub-actions a { text-decoration: none; color: #000 !important; border-bottom: 1px dotted #aaa; }
-.pub-actions a:hover { border-bottom: 1px solid #000; }
-.pub-details summary { cursor: pointer; font-weight: 600; color: #000 !important; margin-top: .5rem; }
-.pub-details div { margin-top: .4rem; color: #000 !important; }
-.cite { font-size: .9rem; color: #333 !important; margin-top: .75rem; }
-.badge { display: inline-block; border: 1px solid #d1d5db; border-radius: 999px; padding: 0.15rem .6rem; font-size: .75rem; color: #333 !important; background: #f9fafb; vertical-align: middle; }
+
+/* Black background + white border + white text */
+.pub-card { 
+  border: 1px solid #ffffff !important; 
+  border-radius: 12px; 
+  padding: 1rem 1.25rem; 
+  background: #000 !important; 
+  color: #ffffff !important; 
+}
+
+.pub-title { 
+  font-weight: 600; 
+  font-size: 1.05rem; 
+  margin: 0 0 .25rem 0; 
+  color: #ffffff !important; 
+}
+
+.pub-meta { 
+  font-size: .9rem; 
+  color: #e5e5e5 !important; 
+  margin: 0 0 .5rem 0; 
+}
+
+.pub-actions a { 
+  text-decoration: none; 
+  color: #ffffff !important; 
+  border-bottom: 1px dotted #ffffff; 
+}
+
+.pub-actions a:hover { 
+  border-bottom: 1px solid #ffffff; 
+}
+
+.pub-details summary { 
+  cursor: pointer; 
+  font-weight: 600; 
+  color: #ffffff !important; 
+  margin-top: .5rem; 
+}
+
+.pub-details div { 
+  margin-top: .4rem; 
+  color: #ffffff !important; 
+}
+
+.cite { 
+  font-size: .9rem; 
+  color: #e5e5e5 !important; 
+  margin-top: .75rem; 
+}
+
+.badge { 
+  display: inline-block; 
+  border: 1px solid #ffffff !important; 
+  border-radius: 999px; 
+  padding: 0.15rem .6rem; 
+  font-size: .75rem; 
+  color: #ffffff !important; 
+  background: #000000 !important; 
+  vertical-align: middle; 
+}
 </style>
 
 <ul class="pub-list">
@@ -53,10 +186,10 @@ In the past, my work focused on developing computational models that can underst
     <details class="pub-details">
       <summary>Abstract</summary>
       <div>
-        Emotion recognition in conversations (ERC) is vital to the advancements of conversational AI and its applications. Therefore, the development of an automated ERC model using the concepts of machine learning (ML) would be beneficial. However, the conversational dialogues present a unique problem where each dialogue depicts nested emotions that entangle the association between the emotional feature descriptors and emotion type (or label). This entanglement that can be multiplied with the presence of data paucity is an obstacle for a ML model. To overcome this problem, we proposed a novel approach called Label Digitization with Emotion Binarization (LDEB) that disentangles the twists by utilizing the text normalization and 7-bit digital encoding techniques and constructs a meaningful feature space for a ML model to be trained. We also utilized the publicly available dataset called the FETA-DailyDialog dataset for feature learning and developed a hierarchical ERC model using random forest (RF) and artificial neural network (ANN) classifiers. Simulations showed that the ANN-based ERC model was able to predict emotion with the best accuracy and precision scores of about 74% and 76%, respectively. Simulations also showed that the ANN-model could reach a training accuracy score of about 98% with 60 epochs. On the other hand, the RF-based ERC model was able to predict emotions with the best accuracy and precision scores of about 78% and 75%, respectively.
+        Emotion recognition in conversations (ERC) is vital to the advancements of conversational AI and its applications. Therefore, the development of an automated ERC model using machine learning (ML) is beneficial. However, conversational dialogues present nested emotions that entangle emotional descriptors with the emotion label. LDEB resolves this through digitization and binarization, enabling more meaningful model training. We evaluate the proposed method using hierarchical RF and ANN models on the FETA-DailyDialog dataset, demonstrating promising accuracy and precision.
       </div>
     </details>
-    <p class="cite"><strong>Citation:</strong>Dey, A., & Suthaharan, S. (2023). LDEB--Label Digitization with Emotion Binarization and Machine Learning for Emotion Recognition in Conversational Dialogues. arXiv preprint arXiv:2306.02193. https://arxiv.org/abs/2306.02193</p>
+    <p class="cite"><strong>Citation:</strong> Dey, A., & Suthaharan, S. (2023). LDEB -- Label Digitization with Emotion Binarization and Machine Learning for Emotion Recognition in Conversational Dialogues. arXiv:2306.02193.</p>
   </li>
 
   <li class="pub-card">
@@ -68,10 +201,10 @@ In the past, my work focused on developing computational models that can underst
     <details class="pub-details">
       <summary>Abstract</summary>
       <div>
-        In the wake of the 2016 US Presidential Election, the upsurge of fake news has been a subject of increased discussion and debate. In this paper, we propose a general framework that can been adopted in future elections worldwide to augment humans in making better decisions when it comes to recognizing news deception and identifying hidden bias of the author. For our study, we constructed a dataset comprising 200 tweets on “Hilary Clinton”, while performing veracity assessment. We initially perform “text normalization” on tweets, explore techniques for feature extraction to classify news into categories, perform a comprehensive linguistic analysis on tweets, extract bag-of-words to find noticeable pattern, and finally apply k-nearest neighbor algorithm for classifying polarized news from credible. We later turn to some popular evaluation metrics to quantify the success rate of our framework, discuss the results of implementing knn algorithm and discuss interconnected research domains and future research directions for constructing an ideal model for fake news detection system around social media.
+        This work presents a framework for detecting deception and bias in political social media content. Using linguistic normalization, feature extraction, pattern recognition, and k-nearest neighbor classification on tweets related to the 2016 election, the study demonstrates how automated linguistic analysis can support fake news detection and evaluation.
       </div>
     </details>
-    <p class="cite"><strong>Citation:</strong> A. Dey, R. Z. Rafi, S. Hasan Parash, S. K. Arko and A. Chakrabarty, "Fake News Pattern Recognition using Linguistic Analysis," 2018 Joint 7th International Conference on Informatics, Electronics & Vision (ICIEV) and 2018 2nd International Conference on Imaging, Vision & Pattern Recognition (icIVPR), Kitakyushu, Japan, 2018, pp. 305-309, https://ieeexplore.ieee.org/document/8641018</p>
+    <p class="cite"><strong>Citation:</strong> A. Dey, R. Z. Rafi, S. H. Parash, S. K. Arko and A. Chakrabarty (2018). Fake News Pattern Recognition using Linguistic Analysis. ICIEV & icIVPR.</p>
   </li>
 
 </ul>

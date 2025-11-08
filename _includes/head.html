@@ -12,10 +12,66 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <script>
+  // remove no-js class used by Minimal Mistakes
   document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+
+  // ---- Theme bootstrap (prevents flash) ----
+  (function () {
+    try {
+      var saved = localStorage.getItem('theme'); // "light" | "dark" | null
+      var systemPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var theme = saved || (systemPrefersDark ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+    } catch (e) { /* noop */ }
+  })();
 </script>
 
-<!-- For all browsers -->
+<!-- Main theme stylesheet (Minimal Mistakes / Academic Pages) -->
 <link rel="stylesheet" href="{{ base_path }}/assets/css/main.css">
+
+<!-- Inline theme variables + gentle overrides -->
+<style>
+  :root{
+    --bg: #ffffff;
+    --text: #111111;
+    --muted: #444444;
+    --link: #0366d6;
+    --link-hover: #023e8a;
+    --border: #e5e7eb;
+    --card: #ffffff;
+  }
+  [data-theme="dark"]{
+    --bg: #0b0d0f;
+    --text: #eaeaea;
+    --muted: #c9c9c9;
+    --link: #8ab4f8;
+    --link-hover: #b3d1ff;
+    --border: #3a3a3a;
+    --card: #121417;
+  }
+
+  /* Base surface & text */
+  html, body { background: var(--bg) !important; color: var(--text) !important; }
+  body a { color: var(--link); }
+  body a:hover, body a:focus { color: var(--link-hover); }
+
+  /* Common Minimal Mistakes elements */
+  .page, .archive { background: var(--bg); }
+  .page__content, .page__meta, .notice, .toc, .sidebar, .pagination,
+  .breadcrumbs, .masthead, .greedy-nav, .author__content, .author__urls,
+  .page__inner-wrap, .page__hero, .page__hero--overlay { border-color: var(--border) !important; }
+  .notice, .toc, .archive__item, .author__content, .author__urls,
+  .page__meta, .pagination, .breadcrumbs { background: var(--card); }
+
+  /* Tables */
+  table { color: var(--text); }
+  table th, table td { border-color: var(--border); }
+
+  /* Code blocks */
+  pre, code { background: rgba(127,127,127,0.08); color: var(--text); }
+
+  /* Inputs (search, forms if used) */
+  input, select, textarea { background: var(--card); color: var(--text); border-color: var(--border); }
+</style>
 
 <meta http-equiv="cleartype" content="on">

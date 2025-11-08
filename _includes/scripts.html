@@ -2,3 +2,50 @@
 
 {% include analytics.html %}
 {% include /comments-providers/scripts.html %}
+
+<!-- Theme Toggle Script -->
+<script>
+(function () {
+  const root = document.documentElement;
+  const btn = document.getElementById('theme-toggle');
+  const icon = document.getElementById('theme-toggle-icon');
+  const STORAGE_KEY = 'theme';
+
+  if (!btn || !icon) return; // Safety check if masthead not loaded yet
+
+  // Reads user preference or system default
+  function getInitialTheme() {
+    const saved = localStorage.getItem(STORAGE_KEY);
+    if (saved === 'light' || saved === 'dark') return saved;
+
+    // Fallback: follow OS preference
+    const prefersDark = window.matchMedia &&
+      window.matchMedia('(prefers-color-scheme: dark)').matches;
+    return prefersDark ? 'dark' : 'light';
+  }
+
+  function applyTheme(theme) {
+    root.setAttribute('data-theme', theme);
+    localStorage.setItem(STORAGE_KEY, theme);
+    icon.textContent = theme === 'dark' ? '☀️' : '☾';
+  }
+
+  // Initialize
+  applyTheme(getInitialTheme());
+
+  // Toggle on click
+  btn.addEventListener('click', () => {
+    const newTheme = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    applyTheme(newTheme);
+  });
+
+  // Auto-switch when OS changes *only if user has not manually selected*
+  if (window.matchMedia) {
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+      if (!localStorage.getItem(STORAGE_KEY)) {
+        applyTheme(e.matches ? 'dark' : 'light');
+      }
+    });
+  }
+})();
+</script>

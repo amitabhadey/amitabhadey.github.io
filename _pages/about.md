@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: " "
+title: ""          # was " " — make truly empty to avoid duplicate H1
 author_profile: true
 redirect_from: 
   - /about/
@@ -9,20 +9,13 @@ redirect_from:
 
 <!-- Anchor Navigation -->
 <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; margin: 1.8rem 0;">
-  <a href="#about-me" style="padding: 6px 18px; border: 1px solid #fff; border-radius: 8px; text-decoration: none; color: #fff; font-size: 0.95rem; display: inline-block;">About</a>
-  <a href="#what-i-do" style="padding: 6px 18px; border: 1px solid #fff; border-radius: 8px; text-decoration: none; color: #fff; font-size: 0.95rem; display: inline-block;">Work</a>
-  <a href="#professional-experience" style="padding: 6px 18px; border: 1px solid #fff; border-radius: 8px; text-decoration: none; color: #fff; font-size: 0.95rem; display: inline-block;">Experience</a>
-  <a href="#academic-background" style="padding: 6px 18px; border: 1px solid #fff; border-radius: 8px; text-decoration: none; color: #fff; font-size: 0.95rem; display: inline-block;">Academic Background</a>
-  <a href="#research-themes" style="padding: 6px 18px; border: 1px solid #fff; border-radius: 8px; text-decoration: none; color: #fff; font-size: 0.95rem; display: inline-block;">Research</a>
-  <a href="#publications-list" style="padding: 6px 18px; border: 1px solid #fff; border-radius: 8px; text-decoration: none; color: #fff; font-size: 0.95rem; display: inline-block;">Publications</a>
+  <a href="#about-me" style="padding: 6px 18px; border: 1px solid #fff; border-radius: 8px; text-decoration: none; color: #fff; font-size: 0.95rem; display: inline-block; white-space: nowrap; line-height: 1;">About</a>
+  <a href="#what-i-do" style="padding: 6px 18px; border: 1px solid #fff; border-radius: 8px; text-decoration: none; color: #fff; font-size: 0.95rem; display: inline-block; white-space: nowrap; line-height: 1;">Work</a>
+  <a href="#professional-experience" style="padding: 6px 18px; border: 1px solid #fff; border-radius: 8px; text-decoration: none; color: #fff; font-size: 0.95rem; display: inline-block; white-space: nowrap; line-height: 1;">Experience</a>
+  <a href="#academic-background" style="padding: 6px 18px; border: 1px solid #fff; border-radius: 8px; text-decoration: none; color: #fff; font-size: 0.95rem; display: inline-block; white-space: nowrap; line-height: 1;">Academic Background</a>
+  <a href="#research-themes" style="padding: 6px 18px; border: 1px solid #fff; border-radius: 8px; text-decoration: none; color: #fff; font-size: 0.95rem; display: inline-block; white-space: nowrap; line-height: 1;">Research</a>
+  <a href="#publications-list" style="padding: 6px 18px; border: 1px solid #fff; border-radius: 8px; text-decoration: none; color: #fff; font-size: 0.95rem; display: inline-block; white-space: nowrap; line-height: 1;">Publications</a>
 </div>
-
-<style>
-  div[style*="flex"] a:hover {
-    background-color: #ffffff22;
-    transition: 0.25s ease-in-out;
-  }
-</style>
 
 
 ---
@@ -30,7 +23,7 @@ redirect_from:
 ## About Me
 <span id="about-me"></span>
 
-I am a **Senior Data Scientist at Optum (UnitedHealth Group)**, working at the intersection of **Large Language Models (LLMs)**, healthcare systems, and enterprise AI.  
+I am a **Senior Data Scientist** at **Optum (UnitedHealth Group)**, working at the intersection of **Large Language Models (LLMs)**, healthcare systems, and enterprise AI.  
 My work focuses on transforming **general-purpose language models** into **clinically specialized systems** that operate under real-world constraints such as interpretability, regulatory safety, workflow alignment, and domain knowledge grounding.
 
 ---

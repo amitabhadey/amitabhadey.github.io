@@ -12,10 +12,6 @@ main:
     url: /resources/
     target: "_blank"
   
-  - title: "Substack"
-    url: "https://amitabhadey.substack.com/"
-    target: "_blank"
-
   - title: "CV"
     url: /files/amitabhadey_cv.pdf
     target: "_blank"

@@ -3,10 +3,6 @@ main:
     url: /teaching/
     target: "_blank"
   
-  - title: "Publications"
-    url: /publications/
-    target: "_blank"
-  
   - title: "Feed"
     url: /feed/
     target: "_blank"

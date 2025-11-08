@@ -1,119 +1,203 @@
 ---
 permalink: /feed/
-title: "Feed"
+title: "Feed & Highlights"
 ---
 
-## Started as Senior Software Engineer at Optum
-<time>August 1st 2023</time>
+<!-- ===== FEED HEADER ===== -->
+<h1 style="margin:0 0 .5rem 0;">📜 Feed & Highlights</h1>
+<p style="margin:0 0 1.25rem 0; opacity:.9;">
+  A curated timeline of professional milestones, academic achievements, and research updates.
+</p>
+<hr style="border:none;border-top:1px solid #666;opacity:.4;margin:1rem 0 1.25rem;">
 
-<hr>
+<!-- ===== FEED STYLES (INLINE) ===== -->
+<style>
+  /* Container */
+  .feed-grid{
+    display:grid;grid-template-columns:repeat(12,1fr);gap:16px;margin:0;padding:0;list-style:none;
+  }
+  /* Card */
+  .feed-card{
+    grid-column:span 12;
+    border:1px solid rgba(255,255,255,.25);
+    border-radius:12px;
+    padding:14px 16px;
+    background:rgba(255,255,255,.03);
+    backdrop-filter:saturate(120%);
+  }
+  /* Light mode fallback */
+  @media (prefers-color-scheme: light){
+    .feed-card{ background:#fff;border-color:#e5e7eb; }
+    .feed-tag{ border-color:#e5e7eb; color:#111; }
+    .feed-title a{ color:#111 !important; }
+    .feed-meta{ color:#444; }
+    .feed-text{ color:#222; }
+  }
+  /* Grid behaviour */
+  @media(min-width:720px){ .feed-card{ grid-column:span 6; } }
+  @media(min-width:1160px){ .feed-card{ grid-column:span 4; } } /* 3-up on wide screens */
 
-<img src="/images/optum.jpg" width="600" height="400">
+  /* Elements */
+  .feed-title{ margin:.15rem 0 .35rem 0; font-weight:700; font-size:1.02rem; line-height:1.35; }
+  .feed-title a{ text-decoration:none; color:#fff; }
+  .feed-title a:hover{ text-decoration:underline; }
+  .feed-meta{ font-size:.82rem; opacity:.8; margin-bottom:.5rem; display:flex; gap:8px; align-items:center; flex-wrap:wrap; }
+  .feed-tag{ display:inline-block; padding:.1rem .5rem; font-size:.7rem; border:1px solid rgba(255,255,255,.35); border-radius:999px; opacity:.9; }
+  .feed-img{ width:100%; height:auto; border-radius:10px; margin:.5rem 0; border:1px solid rgba(255,255,255,.15); }
+  .feed-text{ font-size:.94rem; line-height:1.5; opacity:.95; margin: .25rem 0 .5rem; }
+  .feed-actions{ display:flex; gap:10px; flex-wrap:wrap; }
+  .feed-actions a{ text-decoration:none; border:1px dashed rgba(255,255,255,.35); padding:.25rem .55rem; border-radius:8px; font-size:.82rem; }
+  .feed-actions a:hover{ border-style:solid; }
+  /* Light/dark neutral links */
+  .feed-actions a, .feed-meta a{ color:inherit; }
+</style>
 
-I’m excited to share that I’m starting a new position as Senior Software Engineer at Optum, part of the UnitedHealth Group!
+<!-- ===== FEED BODY ===== -->
+<ul class="feed-grid">
 
-I will be working at the intersection of machine learning, LLMs, and healthcare systems. Looking forward to contributing to scalable solutions that improve patient outcomes and operational efficiency.
+  <!-- Card: Optum start -->
+  <li class="feed-card">
+    <div class="feed-meta">
+      🚀 <strong>2023 → Present</strong>
+      <span class="feed-tag">Career</span>
+      <time datetime="2023-08-01">Aug 1, 2023</time>
+    </div>
+    <h3 class="feed-title">Started at Optum (UnitedHealth Group) — Senior SWE ➜ Senior Data Scientist</h3>
+    <img class="feed-img" src="/images/optum.jpg" alt="Optum logo / banner">
+    <p class="feed-text">
+      Thrilled to work at the intersection of <strong>LLMs</strong>, healthcare systems, and enterprise AI—building scalable model
+      pipelines that improve patient outcomes and operational efficiency. #TeamUnited
+    </p>
+    <div class="feed-actions">
+      <a href="/">About my work</a>
+    </div>
+  </li>
 
-#TeamUnited
+  <!-- Card: Commendations -->
+  <li class="feed-card">
+    <div class="feed-meta">
+      📌 <strong>Pinned</strong>
+      <span class="feed-tag">Teaching</span>
+      <time datetime="2022-08-15">Fall 2022 → Present</time>
+    </div>
+    <h3 class="feed-title">Commendations from Students</h3>
+    <img class="feed-img" src="/images/evaluation/Commendations from Students-1.png" alt="Commendations sample 1">
+    <img class="feed-img" src="/images/evaluation/Commendations from Students-2.png" alt="Commendations sample 2">
+    <img class="feed-img" src="/images/evaluation/Commendations from Students-3.png" alt="Commendations sample 3">
+    <img class="feed-img" src="/images/evaluation/Commendations from Students-4.png" alt="Commendations sample 4">
+    <p class="feed-text">Grateful for the generous feedback that keeps me motivated to design rigorous, supportive learning experiences.</p>
+  </li>
 
-<hr>
+  <!-- Card: CAS PTF 2024 -->
+  <li class="feed-card">
+    <div class="feed-meta">
+      🏆 <strong>2024</strong>
+      <span class="feed-tag">Review</span>
+      <time datetime="2025-04-05">Apr 5, 2025</time>
+    </div>
+    <h3 class="feed-title">CAS Sciences PTF Annual Review (Computer Science) — 2024</h3>
+    <img class="feed-img" src="/images/cas_annual_review/2024_1.png" alt="CAS review 2024 page 1">
+    <img class="feed-img" src="/images/cas_annual_review/2024_2.png" alt="CAS review 2024 page 2">
+    <p class="feed-text">Highlights ongoing contributions to instruction, mentorship, and research initiatives.</p>
+  </li>
 
-## Commendations from Students (Fall 2022 - Present)
-<time>Pinned Post</time>
+  <!-- Card: COE Poster -->
+  <li class="feed-card">
+    <div class="feed-meta">
+      🧪 <strong>2024</strong>
+      <span class="feed-tag">Research</span>
+      <time datetime="2024-06-01">Jun 1, 2024</time>
+    </div>
+    <h3 class="feed-title">13th Annual COE Graduate Poster Competition</h3>
+    <img class="feed-img" src="/images/13th COE Poster_Shakib_CBBE_Dr. Azad-1.png" alt="Poster image">
+    <p class="feed-text">
+      <em>“A Machine Learning Approach to Predict 3D Printability of Biopolymer-Based Ink.”</em>
+      Exploring rheology-aware features and predictive modeling for additive manufacturing workflows.
+    </p>
+  </li>
 
-<hr>
+  <!-- Card: CAS PTF 2023 -->
+  <li class="feed-card">
+    <div class="feed-meta">
+      🏆 <strong>2023</strong>
+      <span class="feed-tag">Review</span>
+      <time datetime="2024-04-03">Apr 3, 2024</time>
+    </div>
+    <h3 class="feed-title">CAS Sciences PTF Annual Review (Computer Science) — 2023</h3>
+    <img class="feed-img" src="/images/cas_annual_review/2023_1.jpeg" alt="CAS review 2023 page 1">
+    <img class="feed-img" src="/images/cas_annual_review/2023_2.jpg" alt="CAS review 2023 page 2">
+    <p class="feed-text">Documenting growth across teaching, service, and lab collaborations.</p>
+  </li>
 
-<img src="/images/evaluation/Commendations from Students-1.png" width="600" height="400">
-<img src="/images/evaluation/Commendations from Students-2.png" width="600" height="400">
-<img src="/images/evaluation/Commendations from Students-3.png" width="600" height="400">
-<img src="/images/evaluation/Commendations from Students-4.png" width="600" height="400">
+  <!-- Card: UNCG Lecturer -->
+  <li class="feed-card">
+    <div class="feed-meta">
+      🎓 <strong>2023</strong>
+      <span class="feed-tag">Teaching</span>
+      <time datetime="2023-08-01">Aug 1, 2023</time>
+    </div>
+    <h3 class="feed-title">Joined UNCG as Computer Science Lecturer</h3>
+    <img class="feed-img" src="/images/lecturer.jpeg" alt="UNCG lecturer">
+    <p class="feed-text">
+      Honored to teach Systems Programming, Advanced Data Structures, and Data Science—aiming to cultivate clear thinking and
+      craftsmanship in code.
+    </p>
+  </li>
 
-<hr>
+  <!-- Card: LDEB preprint -->
+  <li class="feed-card">
+    <div class="feed-meta">
+      📄 <strong>2023</strong>
+      <span class="feed-tag">Preprint</span>
+      <time datetime="2023-06-06">Jun 6, 2023</time>
+    </div>
+    <h3 class="feed-title">LDEB — arXiv Preprint Announced</h3>
+    <div class="feed-text">
+      <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7071891478133817345"
+              height="360" width="100%" frameborder="0" allowfullscreen=""
+              title="LinkedIn post: LDEB"></iframe>
+    </div>
+  </li>
 
-## 2024: CAS Sciences PTF Annual Review (Computer Science)
-<time>April 5th, 2025</time>
+  <!-- Card: Outstanding Grad Award -->
+  <li class="feed-card">
+    <div class="feed-meta">
+      🏅 <strong>2023</strong>
+      <span class="feed-tag">Award</span>
+      <time datetime="2023-05-05">May 5, 2023</time>
+    </div>
+    <h3 class="feed-title">Outstanding Graduate Student Award</h3>
+    <img class="feed-img" src="/images/gradaward.jpeg" alt="Award photo">
+    <p class="feed-text">
+      Recognized by UNCG Computer Science for scholarly accomplishment and department contributions. Grateful to mentors,
+      colleagues, friends, and family—“Remember the Love Bit.”
+    </p>
+  </li>
 
-<hr>
+  <!-- Card: Commencement -->
+  <li class="feed-card">
+    <div class="feed-meta">
+      🎓 <strong>2023</strong>
+      <span class="feed-tag">Milestone</span>
+      <time datetime="2023-05-04">May 4, 2023</time>
+    </div>
+    <h3 class="feed-title">Doctoral & Master’s Commencement — UNCG</h3>
+    <img class="feed-img" src="/images/graduation.jpeg" alt="Graduation photo">
+    <p class="feed-text">
+      Completed M.Sc. in Computer Science (Big Data & Data Science) at the Greensboro Coliseum ceremony.
+    </p>
+  </li>
 
-<img src="/images/cas_annual_review/2024_1.png" width="600" height="400">
-<img src="/images/cas_annual_review/2024_2.png" width="600" height="400">
-
-<hr>
-
-## 13th Annual COE Graduate Poster Presentation Competition
-<time>June 1st, 2024</time>
-
-<hr>
-
-<img src="/images/13th COE Poster_Shakib_CBBE_Dr. Azad-1.png" width="600" height="400">
-
-Research on "A Machine Learning Approach to Predict 3D Printability of Biopolymer-Based Ink", highlighting the innovative work we are doing in Rheology and 3D printing research field.
-
-<hr>
-
-## 2023: CAS Sciences PTF Annual Review (Computer Science)
-<time>April 3rd, 2024</time>
-
-<hr>
-
-<img src="/images/cas_annual_review/2023_1.jpeg" width="600" height="400">
-<img src="/images/cas_annual_review/2023_2.jpg" width="600" height="400">
-
-<hr>
-
-## Started as Computer Science Lecturer at UNCG
-<time>August 1st 2023</time>
-
-<hr>
-
-<img src="/images/lecturer.jpeg" width="600" height="400">
-
-Family and friends, I am excited and honored to share that I am joining the University of North Carolina at Greensboro as a full-time Lecturer at the Department of Computer Science. I look forward to working closely with the students and the faculty staff to create and ensure a vibrant learning environment and determined to help students reach their full potential.
-
-<hr>
-
-## LDEB Arxiv Preprint Announced
-<time>June 6th 2023</time>
-
-<hr>
-
-<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7071891478133817345" height="500" width="100%" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
-
-## Outstanding Graduate Student Award
-<time>May 5th 2023</time>
-
-<hr>
-
-<img src="/images/gradaward.jpeg" width="600" height="400">
-
-I am pleased to share that I received the “Outstanding Graduate Student Award” for 2022-23 from the Department of Computer Science at the University of North Carolina-Greensboro in recognition of my scholarly accomplishment and contribution to the department. 
-
-It is a great honor and privilege for me to receive this prestigious award, and I couldn’t have done it without the continued support of my family, friends, and the Department faculty and staff.
-
-Since joining UNCG back in August 2021, I have worked in the department every month (22 months as of writing) in some capacity, whether as a Graduate Instructional Assistant or a Graduate Teaching Associate. I have dedicated hundreds of hours to teaching, grading, and working with students.
-
-During this time, I had plenty of opportunities to learn from many Professors. I was privy to many insightful conversations that taught me, among many things, the value of strong work ethics, being empathetic and kind to people around me, and never compromising the quality of my work.
-
-I look forward to serving the community and giving back every bit of knowledge I have acquired over the years. Sincerest gratitude to everyone! I love you all! Borrowing the famous last words of my hero Christopher Hitchens, “Remember the Love Bit”.
-
-<hr>
-
-## Doctoral and Master's Commencement Ceremony
-<time>May 4th 2023</time>
-
-<hr>
-
-<img src="/images/graduation.jpeg" width="600" height="400">
-
-At the UNC Greensboro Doctoral and Master’s Commencement Ceremony held in Greensboro Coliseum on Thursday, May 4, 2023. I successfully obtained my Master's in Computer Science degree with a concentration in Big Data and Data Science from the University of North Carolina-Greensboro.
-
-<hr>
-
-## Featured in UNCG Computer Science Department Website
-<time>May 4th 2023</time>
-
-<hr>
-
-<img src="/images/featured.jpeg" width="600" height="400">
-
-Got featured in the Department of Computer Science as well as the UNCG Homepage - Presenting at IFFS-ML Suthaharan's Lab in one of our weekly lab meetings, giving progress updates on my research.
+  <!-- Card: Featured -->
+  <li class="feed-card">
+    <div class="feed-meta">
+      🔊 <strong>2023</strong>
+      <span class="feed-tag">Feature</span>
+      <time datetime="2023-05-04">May 4, 2023</time>
+    </div>
+    <h3 class="feed-title">Featured on UNCG CS Website</h3>
+    <img class="feed-img" src="/images/featured.jpeg" alt="Featured image">
+    <p class="feed-text">
+      Presenting progress updates in IFFS-ML (Suthaharan Lab)—sharing results and next steps with peers.
+    </p>
+  </l

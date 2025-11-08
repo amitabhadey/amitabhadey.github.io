@@ -507,68 +507,100 @@ kbd{ font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberat
   </ul>
 </section>
 
-<!-- ========= TOOLS (TABLE) ========= -->
+<!-- ========= TOOLS (LIST-CARDS) ========= -->
 <section id="tools" class="res-sec">
   <h3>🛠️ Tools</h3>
-  <div class="table-wrap">
-    <table class="minimal">
-      <thead>
-        <tr>
-          <th style="min-width:140px;">Tool</th>
-          <th>Description</th>
-          <th style="min-width:220px;">URL</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Typings</td>
-          <td>A sleek and modern typing test website</td>
-          <td><a href="https://typings.gg/" target="_blank" rel="noopener">https://typings.gg/</a></td>
-        </tr>
-        <tr>
-          <td>Ghostwriter</td>
-          <td>Free and open-source distraction-free Markdown editor</td>
-          <td><a href="https://ghostwriter.kde.org/" target="_blank" rel="noopener">https://ghostwriter.kde.org/</a></td>
-        </tr>
-        <tr>
-          <td>Letter Count</td>
-          <td>Counts characters—handy for tweets and constraints</td>
-          <td><a href="https://www.lettercount.com/" target="_blank" rel="noopener">https://www.lettercount.com/</a></td>
-        </tr>
-        <tr>
-          <td>Zeoob</td>
-          <td>Fake post & chat generators for social media</td>
-          <td><a href="https://zeoob.com/" target="_blank" rel="noopener">https://zeoob.com/</a></td>
-        </tr>
-        <tr>
-          <td>Word Hippo</td>
-          <td>Thesaurus and word tools for phrasing</td>
-          <td><a href="https://www.wordhippo.com/" target="_blank" rel="noopener">https://www.wordhippo.com/</a></td>
-        </tr>
-        <tr>
-          <td>Hemingway Editor</td>
-          <td>Readability highlighting and simplification</td>
-          <td><a href="https://hemingwayapp.com/" target="_blank" rel="noopener">https://hemingwayapp.com/</a></td>
-        </tr>
-        <tr>
-          <td>Ludwig</td>
-          <td>Sentence search with contextualized examples</td>
-          <td><a href="https://ludwig.guru/" target="_blank" rel="noopener">https://ludwig.guru/</a></td>
-        </tr>
-        <tr>
-          <td>YourDictionary</td>
-          <td>Find sentence examples for usage</td>
-          <td><a href="https://sentence.yourdictionary.com/" target="_blank" rel="noopener">https://sentence.yourdictionary.com/</a></td>
-        </tr>
-        <tr>
-          <td>A-Z Alternative Words</td>
-          <td>Simpler alternatives to pompous words</td>
-          <td><a href="https://www.plainenglish.co.uk/the-a-z-of-alternative-words.html" target="_blank" rel="noopener">plainenglish.co.uk</a></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+
+  <!-- Scoped styles to this section only -->
+  <style>
+    #tools .res-list{list-style:none;margin:.5rem 0 0;padding:0;display:grid;gap:.6rem}
+    /* Two-up / three-up responsive grid */
+    @media(min-width:720px){#tools .res-list{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(min-width:1160px){#tools .res-list{grid-template-columns:repeat(3,minmax(0,1fr))}}
+
+    #tools .res-item{
+      border:1px solid rgba(255,255,255,.25);
+      border-radius:12px;
+      background:rgba(255,255,255,.03);
+      padding:.8rem .9rem;
+      display:grid;
+      grid-template-rows:auto auto 1fr;
+      gap:.35rem
+    }
+    #tools .res-title{margin:0;font-weight:700;letter-spacing:.01em}
+    #tools .res-desc{margin:0;opacity:.9;font-size:.92rem;line-height:1.45}
+    #tools .res-link a{
+      display:inline-block;margin-top:.15rem;
+      text-decoration:none;border:1px dashed rgba(255,255,255,.35);
+      padding:.25rem .55rem;border-radius:8px;font-size:.85rem;color:inherit
+    }
+    #tools .res-link a:hover{border-style:solid}
+
+    /* Light mode fallback */
+    @media (prefers-color-scheme: light){
+      #tools .res-item{background:#fff;border-color:#e5e7eb}
+      #tools .res-link a{border-color:#e5e7eb;color:#111}
+      #tools .res-title,#tools .res-desc{color:#111}
+    }
+  </style>
+
+  <ul class="res-list">
+    <li class="res-item">
+      <p class="res-title">Typings</p>
+      <p class="res-desc">A sleek and modern typing test website.</p>
+      <p class="res-link"><a href="https://typings.gg/" target="_blank" rel="noopener">typings.gg</a></p>
+    </li>
+
+    <li class="res-item">
+      <p class="res-title">Ghostwriter</p>
+      <p class="res-desc">Free, open-source, distraction-free Markdown editor.</p>
+      <p class="res-link"><a href="https://ghostwriter.kde.org/" target="_blank" rel="noopener">ghostwriter.kde.org</a></p>
+    </li>
+
+    <li class="res-item">
+      <p class="res-title">Letter Count</p>
+      <p class="res-desc">Counts characters—perfect for tweets and length limits.</p>
+      <p class="res-link"><a href="https://www.lettercount.com/" target="_blank" rel="noopener">lettercount.com</a></p>
+    </li>
+
+    <li class="res-item">
+      <p class="res-title">Zeoob</p>
+      <p class="res-desc">Fake post &amp; chat generators for social media mockups.</p>
+      <p class="res-link"><a href="https://zeoob.com/" target="_blank" rel="noopener">zeoob.com</a></p>
+    </li>
+
+    <li class="res-item">
+      <p class="res-title">Word Hippo</p>
+      <p class="res-desc">Thesaurus and word-choice tools for better phrasing.</p>
+      <p class="res-link"><a href="https://www.wordhippo.com/" target="_blank" rel="noopener">wordhippo.com</a></p>
+    </li>
+
+    <li class="res-item">
+      <p class="res-title">Hemingway Editor</p>
+      <p class="res-desc">Readability highlights to simplify and tighten prose.</p>
+      <p class="res-link"><a href="https://hemingwayapp.com/" target="_blank" rel="noopener">hemingwayapp.com</a></p>
+    </li>
+
+    <li class="res-item">
+      <p class="res-title">Ludwig</p>
+      <p class="res-desc">Sentence search with high-quality, contextual examples.</p>
+      <p class="res-link"><a href="https://ludwig.guru/" target="_blank" rel="noopener">ludwig.guru</a></p>
+    </li>
+
+    <li class="res-item">
+      <p class="res-title">YourDictionary</p>
+      <p class="res-desc">Find sentence examples and usage patterns fast.</p>
+      <p class="res-link"><a href="https://sentence.yourdictionary.com/" target="_blank" rel="noopener">sentence.yourdictionary.com</a></p>
+    </li>
+
+    <li class="res-item">
+      <p class="res-title">A-Z Alternative Words</p>
+      <p class="res-desc">Plain-English alternatives to complex or pompous terms.</p>
+      <p class="res-link"><a href="https://www.plainenglish.co.uk/the-a-z-of-alternative-words.html" target="_blank" rel="noopener">plainenglish.co.uk</a></p>
+    </li>
+  </ul>
 </section>
+
 
 <!-- ========= SEARCH & COPY (tiny JS) ========= -->
 <script>

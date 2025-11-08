@@ -623,67 +623,122 @@ kbd{ font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberat
 (function () {
   function onReady(fn) {
     if (document.readyState !== 'loading') fn();
-    else document.addEventListener('DOMContentLoaded', fn);
+    else document.addEventListener('DOMContentLoaded', fn, { once: true });
   }
 
   onReady(function () {
     const q = document.getElementById('link-search');
     if (!q) return;
 
-    const getItems = () =>
-      Array.from(document.querySelectorAll('.card, #tools .res-item'));
-    let items = getItems();
+    const toolsRoot = document.getElementById('tools');
 
+    // Grab all items (cards + tool tiles)
+    function getItems() {
+      return Array.from(document.querySelectorAll('.card, #tools .res-item'));
+    }
+
+    // Build a robust text index once per node
+    function buildIndexFor(el) {
+      // Collect visible text
+      const parts = [el.innerText || el.textContent || ''];
+
+      // Pull tag chips from data-attributes / hidden spans
+      const tagAttr = el.getAttribute('data-tags');
+      if (tagAttr) parts.push(tagAttr);
+
+      // Include hrefs to make URL text searchable
+      el.querySelectorAll('a[href]').forEach(a => parts.push(a.href, a.textContent || ''));
+
+      const idx = parts.join(' ').replace(/\s+/g, ' ').trim().toLowerCase();
+      el.dataset._idx = idx;
+    }
+
+    let items = getItems();
+    items.forEach(buildIndexFor);
+
+    // Filtering
     function filter() {
       const v = (q.value || '').toLowerCase().trim();
+      if (!v) {
+        items.forEach(el => (el.style.display = ''));
+        return;
+      }
       items.forEach(el => {
-        const t = (el.innerText || el.textContent || '').toLowerCase();
-        el.style.display = v && !t.includes(v) ? 'none' : '';
+        const idx = el.dataset._idx || '';
+        el.style.display = idx.includes(v) ? '' : 'none';
       });
     }
 
-    // Focus with "/" (like VS Code)
+    // Debounce
+    let to = null;
+    q.addEventListener('input', () => {
+      clearTimeout(to);
+      to = setTimeout(filter, 50);
+    });
+
+    // "/" to focus, "Esc" to clear
     document.addEventListener('keydown', e => {
       if (e.key === '/' && document.activeElement !== q) {
         e.preventDefault();
         q.focus();
         q.select();
+      } else if (e.key === 'Escape' && document.activeElement === q) {
+        q.value = '';
+        filter();
       }
     });
 
-    // Debounced input
-    let to = null;
-    q.addEventListener('input', () => {
-      clearTimeout(to);
-      to = setTimeout(filter, 40);
-    });
-
-    // Copy buttons
-    document.addEventListener('click', e => {
+    // Safe copy handler (works without navigator.clipboard)
+    document.addEventListener('click', async e => {
       const btn = e.target.closest('button[data-copy]');
       if (!btn) return;
       const url = btn.getAttribute('data-copy');
-      (navigator.clipboard && navigator.clipboard.writeText(url)).then(() => {
+      try {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          await navigator.clipboard.writeText(url);
+        } else {
+          // Fallback
+          const ta = document.createElement('textarea');
+          ta.value = url;
+          ta.setAttribute('readonly', '');
+          ta.style.position = 'absolute';
+          ta.style.left = '-9999px';
+          document.body.appendChild(ta);
+          ta.select();
+          document.execCommand('copy');
+          document.body.removeChild(ta);
+        }
         const old = btn.textContent;
         btn.textContent = 'Copied! ✓';
         setTimeout(() => (btn.textContent = old), 900);
-      });
+      } catch (err) {
+        console.error('Copy failed:', err);
+      }
     });
 
-    // Rebind after PJAX/Turbolinks navigations (if your theme uses them)
-    document.addEventListener('pjax:complete', () => {
+    // Re-index after PJAX/Turbolinks or back/forward cache
+    function rebind() {
       items = getItems();
+      items.forEach(buildIndexFor);
       filter();
-    });
-    window.addEventListener('pageshow', () => {
-      items = getItems();
-    });
+    }
+    document.addEventListener('pjax:complete', rebind);
+    window.addEventListener('pageshow', rebind);
 
-    // Initial filter pass
+    // Initial pass
     filter();
+
+    // Optional: also re-index if Tools section is dynamically altered later
+    if (toolsRoot) {
+      const mo = new MutationObserver(() => {
+        rebind();
+      });
+      mo.observe(toolsRoot, { childList: true, subtree: true });
+    }
   });
 })();
 </script>
+
 
 
 <!--

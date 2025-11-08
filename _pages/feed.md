@@ -1,6 +1,6 @@
 ---
 permalink: /feed/
-title: "Feed & Highlights"
+title: " "  
 ---
 
 <!-- ===== FEED HEADER ===== -->

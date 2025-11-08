@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: ""          # was " " — make truly empty to avoid duplicate H1
+title: " "          # was " " — make truly empty to avoid duplicate H1
 author_profile: true
 redirect_from: 
   - /about/

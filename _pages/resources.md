@@ -4,15 +4,11 @@ title: " "
 ---
 
 <h1 style="margin:0 0 .75rem 0;">📣 Resources</h1>
-<p style="margin:0 0 .5rem 0;opacity:.9">
-Curated links I reference often—courses, papers, guides, and utilities.
-</p>
+<p style="margin:0 0 1rem 0;opacity:.9">Curated links I reference often—courses, papers, guides, and utilities.</p>
 
-<!-- SEARCH BAR -->
-<input id="searchInput" type="text" placeholder="Search..." 
+<input id="searchInput" type="text" placeholder="Search..."
 style="width:100%;padding:.6rem .75rem;border-radius:8px;border:1px solid rgba(255,255,255,.25);margin:0 0 1.2rem 0;background:rgba(255,255,255,.03);color:inherit;">
 
-<!-- NAV -->
 <nav style="display:flex;flex-wrap:wrap;gap:8px;margin:0 0 1.4rem 0;">
   <a href="#aillmtech" style="padding:.35rem .7rem;border:1px solid currentColor;border-radius:999px;text-decoration:none;">AI/LLM/TECH</a>
   <a href="#finance" style="padding:.35rem .7rem;border:1px solid currentColor;border-radius:999px;text-decoration:none;">FINANCE</a>
@@ -31,16 +27,14 @@ style="width:100%;padding:.6rem .75rem;border-radius:8px;border:1px solid rgba(2
 .card .meta{ font-size:.8rem; opacity:.75; margin:0 0 .35rem 0; }
 .actions a{ font-size:.82rem; border:1px dashed rgba(255,255,255,.35); padding:.25rem .55rem; border-radius:8px; text-decoration:none; }
 .actions a:hover{ border-style:solid; }
-@media (prefers-color-scheme: light){
-  .card{ background:#fff;border-color:#e5e7eb; }
-}
+@media (prefers-color-scheme: light){ .card{ background:#fff;border-color:#e5e7eb; } }
 </style>
 
-{% assign list = site.data.resources | map: "" %}
+{% assign raw = site.data.resources %}
 {% assign sections = "ai/llm/tech,finance,health,productivity,psychology,science" | split: "," %}
 
 {% for sec in sections %}
-  <section id="{{ sec | replace: '/', '' | replace: ' ', '' }}" class="res-sec">
+  <section id="{{ sec | replace: '/', '' }}" class="res-sec">
     <h3>
       {% case sec %}
         {% when "ai/llm/tech" %}🤖 AI / LLM / Tech
@@ -53,8 +47,8 @@ style="width:100%;padding:.6rem .75rem;border-radius:8px;border:1px solid rgba(2
     </h3>
 
     {% assign items = "" | split: "" %}
-    {% for item in list %}
-      {% assign clean_section = item.section | replace: "﻿", "" %}
+    {% for item in raw %}
+      {% assign clean_section = item.section | replace: "ï»¿", "" | replace: "﻿", "" %}
       {% if clean_section == sec %}
         {% assign items = items | push: item %}
       {% endif %}
@@ -72,15 +66,16 @@ style="width:100%;padding:.6rem .75rem;border-radius:8px;border:1px solid rgba(2
       {% endfor %}
       {% if items.size == 0 %}<li class="card"><p>No links yet.</p></li>{% endif %}
     </ul>
+
   </section>
 {% endfor %}
 
 <script>
-const searchInput = document.getElementById("searchInput");
-searchInput.addEventListener("input", function () {
-  const q = this.value.toLowerCase();
+const input = document.getElementById("searchInput");
+input.addEventListener("input", e => {
+  const q = e.target.value.toLowerCase();
   document.querySelectorAll(".card").forEach(card => {
-    const t = card.getAttribute("data-search")?.toLowerCase() || "";
+    const t = card.getAttribute("data-search").toLowerCase();
     card.style.display = t.includes(q) ? "" : "none";
   });
 });

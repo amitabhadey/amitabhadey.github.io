@@ -1,12 +1,17 @@
 main:
-  - title: "Teaching"
-    url: /teaching/
-    target: "_blank"
-  
+
   - title: "Feed"
     url: /feed/
     target: "_blank"
 
+  - title: "Teaching"
+    url: /teaching/
+    target: "_blank"
+
+  - title: "Resources"
+    url: /resources/
+    target: "_blank"
+  
   - title: "Substack"
     url: "https://amitabhadey.substack.com/"
     target: "_blank"

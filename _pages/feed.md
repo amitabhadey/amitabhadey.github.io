@@ -4,7 +4,7 @@ title: " "
 layout: single
 ---
 
-<h1 style="margin:0 0 .5rem 0;">📜 Feed &amp; Highlights</h1>
+<h1 style="margin:0 0 .5rem 0;">Feed &amp; Highlights</h1>
 <p style="margin:0 0 1.25rem 0; opacity:.9;">
   A curated timeline of professional milestones, academic achievements, and research updates.
 </p>

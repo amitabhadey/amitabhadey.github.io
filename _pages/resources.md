@@ -6,22 +6,16 @@ title: " "
 <h1 style="margin:0 0 .75rem 0;">📣 Resources</h1>
 <p style="margin:0 0 1rem 0;opacity:.9">Curated links I reference often—courses, papers, guides, and utilities.</p>
 
-<!-- Top nav pills -->
+<!-- Top nav pills (unchanged) -->
 <nav style="display:flex;flex-wrap:wrap;gap:8px;margin:0 0 1rem 0;">
-  <a href="#bookmarks" style="padding:.35rem .7rem;border:1px solid currentColor;border-radius:999px;text-decoration:none;">📌 Bookmarks</a>
-  <a href="#dsa"       style="padding:.35rem .7rem;border:1px solid currentColor;border-radius:999px;text-decoration:none;">🧩 DSA</a>
-  <a href="#ml"        style="padding:.35rem .7rem;border:1px solid currentColor;border-radius:999px;text-decoration:none;">🤖 ML</a>
-  <a href="#datasci"   style="padding:.35rem .7rem;border:1px solid currentColor;border-radius:999px;text-decoration:none;">📊 Data Science</a>
-  <a href="#math"      style="padding:.35rem .7rem;border:1px solid currentColor;border-radius:999px;text-decoration:none;">∑ Math</a>
-  <a href="#harvard"   style="padding:.35rem .7rem;border:1px solid currentColor;border-radius:999px;text-decoration:none;">🎓 Harvard</a>
-  <a href="#jobs"      style="padding:.35rem .7rem;border:1px solid currentColor;border-radius:999px;text-decoration:none;">💼 Jobs</a>
-  <a href="#writing"   style="padding:.35rem .7rem;border:1px solid currentColor;border-radius:999px;text-decoration:none;">✍️ Writing</a>
-  <a href="#tools"     style="padding:.35rem .7rem;border:1px solid currentColor;border-radius:999px;text-decoration:none;">🛠️ Tools</a>
+  <a href="#aillmtech"   style="padding:.35rem .7rem;border:1px solid currentColor;border-radius:999px;text-decoration:none;">AI/LLM/TECH</a>
+  <a href="#finance"     style="padding:.35rem .7rem;border:1px solid currentColor;border-radius:999px;text-decoration:none;">FINANCE</a>
+  <a href="#health"      style="padding:.35rem .7rem;border:1px solid currentColor;border-radius:999px;text-decoration:none;">HEALTH</a>
+  <a href="#producitivity" style="padding:.35rem .7rem;border:1px solid currentColor;border-radius:999px;text-decoration:none;">PRODUCTIVITY</a>
+  <a href="#psychology"  style="padding:.35rem .7rem;border:1px solid currentColor;border-radius:999px;text-decoration:none;">PSYCHOLOGY</a>
 </nav>
 
 <style>
-
-
 /* Cards */
 .res-sec{ margin:1.5rem 0 2rem; }
 .res-sec h3{ margin:.1rem 0 .8rem 0; font-size:1.05rem; letter-spacing:.01em; }
@@ -45,7 +39,7 @@ title: " "
   .card{ background:#fff;border-color:#e5e7eb; }
 }
 
-/* Tables (kept if you add any later) */
+/* Tables (if you add later) */
 .table-wrap{ overflow:auto; border-radius:12px; border:1px solid rgba(255,255,255,.25); }
 table.minimal{ width:100%; border-collapse:separate; border-spacing:0; }
 table.minimal th, table.minimal td{ padding:.6rem .75rem; border-bottom:1px solid rgba(255,255,255,.15); vertical-align:top; }
@@ -56,66 +50,19 @@ table.minimal tr:last-child td{ border-bottom:none; }
   .table-wrap{ border-color:#e5e7eb; }
   table.minimal th, table.minimal td{ border-bottom:1px solid #ececec; }
 }
-kbd{ font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono",monospace; font-size:.75em; }
 
-/* Tools grid */
-#tools .res-list{list-style:none;margin:.5rem 0 0;padding:0;display:grid;gap:.6rem}
-@media(min-width:720px){#tools .res-list{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(min-width:1160px){#tools .res-list{grid-template-columns:repeat(3,minmax(0,1fr))}}
-#tools .res-item{
-  border:1px solid rgba(255,255,255,.25);
-  border-radius:12px; background:rgba(255,255,255,.03);
-  padding:.8rem .9rem; display:grid; grid-template-rows:auto auto 1fr; gap:.35rem
-}
-#tools .res-title{margin:0;font-weight:700;letter-spacing:.01em}
-#tools .res-desc{margin:0;opacity:.9;font-size:.92rem;line-height:1.45}
-#tools .res-link a{
-  display:inline-block;margin-top:.15rem;text-decoration:none;border:1px dashed rgba(255,255,255,.35);
-  padding:.25rem .55rem;border-radius:8px;font-size:.85rem;color:inherit
-}
-#tools .res-link a:hover{border-style:solid}
-@media (prefers-color-scheme: light){
-  #tools .res-item{background:#fff;border-color:#e5e7eb}
-  #tools .res-link a{border-color:#e5e7eb;color:#111}
-  #tools .res-title,#tools .res-desc{color:#111}
-}
+kbd{ font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono",monospace; font-size:.75em; }
 </style>
 
-{%- comment -%} Load and split CSV rows {%- endcomment -%}
+{%- comment -%} Load CSV {%- endcomment -%}
 {%- assign all = site.data.resources | default: empty -%}
 {%- assign by_card = all | where: "format", "card" -%}
-{%- assign by_tile = all | where: "format", "tile" -%}
 
-{%- comment -%} ======== BOOKMARKS ======== {%- endcomment -%}
-<section id="bookmarks" class="res-sec">
-  <h3>📌 Bookmarks</h3>
-  {%- assign items = by_card | where: "section", "bookmarks" | where_exp: "i","i.title" | sort: "title" -%}
-  <ul class="links">
-  {%- if items and items.size > 0 -%}
-    {%- for item in items -%}
-      <li class="card" data-tags="{{ item.tags | default: '' | escape }}">
-        <h4>
-          <a href="{{ item.url | escape }}" target="_blank" rel="noopener">
-            {{ item.title | default: item.url | escape }}
-          </a>
-        </h4>
-        <div class="meta">{{ item.meta | default: '' }}</div>
-        {%- if item.desc -%}<p>{{ item.desc }}</p>{%- endif -%}
-        <div class="actions">
-          <a href="{{ item.url | escape }}" target="_blank" rel="noopener">Open</a>
-        </div>
-      </li>
-    {%- endfor -%}
-  {%- else -%}
-    <li class="card"><p>No bookmarks yet.</p></li>
-  {%- endif -%}
-  </ul>
-</section>
-
-{%- comment -%} ======== DSA ======== {%- endcomment -%}
-<section id="dsa" class="res-sec">
-  <h3>🧩 Data Structures & Algorithms</h3>
-  {%- assign items = by_card | where: "section", "dsa" | where_exp: "i","i.title" | sort: "title" -%}
+{%- comment -%} ======== AI/LLM/TECH ======== {%- endcomment -%}
+<section id="aillmtech" class="res-sec">
+  <h3>🤖 AI / LLM / Tech</h3>
+  {%- assign tag = "ai/llm/tech" -%}
+  {%- assign items = by_card | where_exp:"i","i.title" | where_exp:"i","i.tags and i.tags contains tag" | sort:"title" -%}
   <ul class="links">
   {%- if items and items.size > 0 -%}
     {%- for item in items -%}
@@ -127,15 +74,16 @@ kbd{ font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation M
       </li>
     {%- endfor -%}
   {%- else -%}
-    <li class="card"><p>No DSA links yet.</p></li>
+    <li class="card"><p>No links yet for this tag.</p></li>
   {%- endif -%}
   </ul>
 </section>
 
-{%- comment -%} ======== ML ======== {%- endcomment -%}
-<section id="ml" class="res-sec">
-  <h3>🤖 Machine Learning</h3>
-  {%- assign items = by_card | where: "section", "ml" | where_exp: "i","i.title" | sort: "title" -%}
+{%- comment -%} ======== FINANCE ======== {%- endcomment -%}
+<section id="finance" class="res-sec">
+  <h3>💰 Finance</h3>
+  {%- assign tag = "finance" -%}
+  {%- assign items = by_card | where_exp:"i","i.title" | where_exp:"i","i.tags and i.tags contains tag" | sort:"title" -%}
   <ul class="links">
   {%- if items and items.size > 0 -%}
     {%- for item in items -%}
@@ -147,15 +95,16 @@ kbd{ font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation M
       </li>
     {%- endfor -%}
   {%- else -%}
-    <li class="card"><p>No ML links yet.</p></li>
+    <li class="card"><p>No links yet for this tag.</p></li>
   {%- endif -%}
   </ul>
 </section>
 
-{%- comment -%} ======== DATA SCIENCE ======== {%- endcomment -%}
-<section id="datasci" class="res-sec">
-  <h3>📊 Data Science</h3>
-  {%- assign items = by_card | where: "section", "datasci" | where_exp: "i","i.title" | sort: "title" -%}
+{%- comment -%} ======== HEALTH ======== {%- endcomment -%}
+<section id="health" class="res-sec">
+  <h3>🩺 Health</h3>
+  {%- assign tag = "health" -%}
+  {%- assign items = by_card | where_exp:"i","i.title" | where_exp:"i","i.tags and i.tags contains tag" | sort:"title" -%}
   <ul class="links">
   {%- if items and items.size > 0 -%}
     {%- for item in items -%}
@@ -167,15 +116,16 @@ kbd{ font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation M
       </li>
     {%- endfor -%}
   {%- else -%}
-    <li class="card"><p>No Data Science links yet.</p></li>
+    <li class="card"><p>No links yet for this tag.</p></li>
   {%- endif -%}
   </ul>
 </section>
 
-{%- comment -%} ======== MATH ======== {%- endcomment -%}
-<section id="math" class="res-sec">
-  <h3>∑ Mathematics</h3>
-  {%- assign items = by_card | where: "section", "math" | where_exp: "i","i.title" | sort: "title" -%}
+{%- comment -%} ======== PRODUCTIVITY (anchor kept as #producitivity) ======== {%- endcomment -%}
+<section id="producitivity" class="res-sec">
+  <h3>⚡ Productivity</h3>
+  {%- assign tag = "productivity" -%}
+  {%- assign items = by_card | where_exp:"i","i.title" | where_exp:"i","i.tags and i.tags contains tag" | sort:"title" -%}
   <ul class="links">
   {%- if items and items.size > 0 -%}
     {%- for item in items -%}
@@ -187,15 +137,16 @@ kbd{ font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation M
       </li>
     {%- endfor -%}
   {%- else -%}
-    <li class="card"><p>No Math links yet.</p></li>
+    <li class="card"><p>No links yet for this tag.</p></li>
   {%- endif -%}
   </ul>
 </section>
 
-{%- comment -%} ======== HARVARD ======== {%- endcomment -%}
-<section id="harvard" class="res-sec">
-  <h3>🎓 Harvard Courses</h3>
-  {%- assign items = by_card | where: "section", "harvard" | where_exp: "i","i.title" | sort: "title" -%}
+{%- comment -%} ======== PSYCHOLOGY ======== {%- endcomment -%}
+<section id="psychology" class="res-sec">
+  <h3>🧠 Psychology</h3>
+  {%- assign tag = "psychology" -%}
+  {%- assign items = by_card | where_exp:"i","i.title" | where_exp:"i","i.tags and i.tags contains tag" | sort:"title" -%}
   <ul class="links">
   {%- if items and items.size > 0 -%}
     {%- for item in items -%}
@@ -207,74 +158,7 @@ kbd{ font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation M
       </li>
     {%- endfor -%}
   {%- else -%}
-    <li class="card"><p>No Harvard links yet.</p></li>
+    <li class="card"><p>No links yet for this tag.</p></li>
   {%- endif -%}
   </ul>
 </section>
-
-{%- comment -%} ======== JOBS ======== {%- endcomment -%}
-<section id="jobs" class="res-sec">
-  <h3>💼 Jobs & Interviews</h3>
-  {%- assign items = by_card | where: "section", "jobs" | where_exp: "i","i.title" | sort: "title" -%}
-  <ul class="links">
-  {%- if items and items.size > 0 -%}
-    {%- for item in items -%}
-      <li class="card" data-tags="{{ item.tags | default: '' | escape }}">
-        <h4><a href="{{ item.url | escape }}" target="_blank" rel="noopener">{{ item.title | default: item.url | escape }}</a></h4>
-        <div class="meta">{{ item.meta | default: '' }}</div>
-        {%- if item.desc -%}<p>{{ item.desc }}</p>{%- endif -%}
-        <div class="actions"><a href="{{ item.url | escape }}" target="_blank" rel="noopener">Open</a></div>
-      </li>
-    {%- endfor -%}
-  {%- else -%}
-    <li class="card"><p>No Jobs links yet.</p></li>
-  {%- endif -%}
-  </ul>
-</section>
-
-{%- comment -%} ======== WRITING ======== {%- endcomment -%}
-<section id="writing" class="res-sec">
-  <h3>✍️ Writing</h3>
-  {%- assign items = by_card | where: "section", "writing" | where_exp: "i","i.title" | sort: "title" -%}
-  <ul class="links">
-  {%- if items and items.size > 0 -%}
-    {%- for item in items -%}
-      <li class="card" data-tags="{{ item.tags | default: '' | escape }}">
-        <h4><a href="{{ item.url | escape }}" target="_blank" rel="noopener">{{ item.title | default: item.url | escape }}</a></h4>
-        <div class="meta">{{ item.meta | default: '' }}</div>
-        {%- if item.desc -%}<p>{{ item.desc }}</p>{%- endif -%}
-        <div class="actions"><a href="{{ item.url | escape }}" target="_blank" rel="noopener">Open</a></div>
-      </li>
-    {%- endfor -%}
-  {%- else -%}
-    <li class="card"><p>No Writing links yet.</p></li>
-  {%- endif -%}
-  </ul>
-</section>
-
-{%- comment -%} ======== TOOLS (TILES) ======== {%- endcomment -%}
-<section id="tools" class="res-sec">
-  <h3>🛠️ Tools</h3>
-  {%- assign items = by_tile | where: "section", "tools" -%}
-  {%- assign items = items | where_exp: "i","i.title" | sort: "title" -%}
-  <ul class="res-list">
-  {%- if items and items.size > 0 -%}
-    {%- for item in items -%}
-      <li class="res-item">
-        <p class="res-title">{{ item.title | default: item.url | escape }}</p>
-        {%- if item.desc -%}<p class="res-desc">{{ item.desc }}</p>{%- endif -%}
-        <p class="res-link"><a href="{{ item.url | escape }}" target="_blank" rel="noopener">{{ item.url | escape }}</a></p>
-      </li>
-    {%- endfor -%}
-  {%- else -%}
-      <li class="res-item">
-        <p class="res-title">No tools yet</p>
-        <p class="res-desc">Add rows with format=tile in <code>_data/resources.csv</code></p>
-      </li>
-  {%- endif -%}
-  </ul>
-</section>
-
-<script>
-
-</script>

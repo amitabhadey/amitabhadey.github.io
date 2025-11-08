@@ -1,13 +1,43 @@
-section,title,url,meta,desc,tags,format
-bookmarks,Collaborative Data Science for Healthcare — MIT,https://openlearninglibrary.mit.edu/courses/course-v1:MITx+HST.953x+3T2020/course/,Course • Healthcare • MITx,Team-based analytics and decision-making in clinical settings.,"healthcare course mit data",card
-bookmarks,CS448B: Visualization — Stanford,https://web.stanford.edu/class/archive/cs/cs448b/cs448b.1166/cgi-bin/wiki/index.php?title=Main_Page,Course • Visualization • Stanford,Foundations of interactive visualization and systems design.,"visualization stanford graphics",card
-dsa,Awesome Algorithms Education,https://github.com/gaerae/awesome-algorithms-education,GitHub • Curated,Hand-picked algorithm learning resources across formats.,"awesome list algorithms",card
-ml,Grokking Deep Learning,https://github.com/iamtrask/Grokking-Deep-Learning,Code • Concepts,From first principles to working neural nets—hands-on.,"book code",card
-datasci,Exploring Data with Python,https://github.com/StephenElston/ExploringDataWithPython,GitHub • Book,Exploratory analysis patterns and recipes in Python.,"python book",card
-math,An Introduction to Statistical Learning,https://www.statlearning.com/,Textbook • Stanford,The classic applied statistics + ML text (with labs).,"stats text stanford",card
-harvard,CS50: Introduction to Computer Science,https://pll.harvard.edu/course/cs50-introduction-computer-science,Course • Harvard,Legendary CS intro—problem sets, lectures, and labs.,"cs50 intro",card
-jobs,Jobs for Data Lovers — Data Elixir,https://jobs.dataelixir.com/jobs,Board • Data,Frequent DS/ML openings curated by Data Elixir.,"job board newsletter",card
-writing,Writing as a Thinking Tool,https://nesslabs.com/writing-thinking-tool,Essay • Metacognition,Use writing to clarify models and decisions.,"workflow practice",card
-tools,Typings,https://typings.gg/,—,A sleek and modern typing test website.,,tile
-tools,Ghostwriter,https://ghostwriter.kde.org/,—,Free and open-source distraction-free Markdown editor.,,tile
-ml,Andrej Karpathy: Neural Nets from Scratch,https://www.youtube.com/watch?v=VMj-3S1tku0,Talk • YouTube,From first principles to a tiny GPT.,karpathy lecture,card
+section,title,url,meta,desc,format
+ai/llm/tech,Writing as a Thinking Tool,https://nesslabs.com/writing-thinking-tool,#writing #learning #metacognition,How writing clarifies thought and boosts understanding.,card
+ai/llm/tech,Neural Nets from Scratch (Karpathy),https://www.youtube.com/watch?v=VMj-3S1tku0,#machinelearning #education #deepLearning,A step-by-step live build of neural networks from zero.,card
+ai/llm/tech,Passive Barriers (Ramit Sethi),https://www.getrichslowly.org/passive-barriers/,#behavior #psychology #habits,Why small inconveniences stop action and how to remove them.,card
+finance,Guide to Public Speaking (Ashcroft),https://michaelashcroft.com/writing/my-ultimate-guide-to-public-speaking/,#communication #publicSpeaking #selfImprovement,"A practical path to confident, conversational speaking.",card
+finance,Why Your Cat Thinks You're an Ape,https://www.wired.com/2014/10/cat-thinks-youre-huge-unpredictable-ape/,#animals #psychology #science,Understanding cat behavior through evolutionary mismatch.,card
+finance,Life of Quiet Desperation,https://www.miketuritzin.com/writing/are-you-leading-a-life-of-quiet-desperation/,#philosophy #selfAwareness #meaning,A reflection on drifting through life without purpose.,card
+finance,Audience-First Products (Perell),https://perell.com/essay/audience-first-products/,#creatorEconomy #product #growth,"Build people first, product second.",card
+finance,How to Make Millions Writing Online (Sam Parr),https://www.indiehackers.com/podcast/161-sam-parr-of-the-hustle,#writing #business #entrepreneurship,The business of attention and scalable content.,card
+finance,Adjusting to New Normals,https://www.sarahkpeck.com/2020/04/adjusting-to-new-normals-four-things-april-26-2020/,#mentalHealth #adaptation #life,How to emotionally adapt during times of disruption.,card
+finance,Building a Second Brain (Illustrated),https://maggieappleton.com/basb,#pkm #learning #creativity,Visual guide to organizing your digital knowledge.,card
+finance,Growth Without Goals,https://investorfieldguide.com/growth-without-goals/,#selfImprovement #systems #philosophy,Personal progress through systems rather than targets.,card
+finance,Procrastination Equation,https://alexvermeer.com/how-we-use-the-procrastination-equation/,#productivity #psychology #habits,A practical formula for why we delay and how to stop.,card
+finance,100 Blocks a Day,https://waitbutwhy.com/2016/10/100-blocks-day.html,#timeManagement #selfAwareness #priorities,Visualizing daily time to make deliberate life choices.,card
+finance,Innovation Nation (Canada & AI),https://financialpost.com/...,#AI #policy #innovation,How early AI leadership risks slipping away.,card
+finance,How AI Bias Happens,https://www.technologyreview.com/...,#AI #ethics #fairness,"Why algorithmic bias is structural, not accidental.",card
+finance,Why Sleep Deprivation Kills,https://www.quantamagazine.org/why-sleep-deprivation-kills-20200604/,#health #science #sleep,The cellular science behind why sleep is essential.,card
+finance,Great Talks Most Haven’t Heard,https://jamesclear.com/great-speeches,#communication #learning #inspiration,A curated list of powerful and overlooked speeches.,card
+finance,The Fermi Paradox,https://waitbutwhy.com/2014/05/fermi-paradox.html,#science #cosmology #existential,Why we might be alone—or not—in the universe.,card
+finance,Beyond Overpreparation,https://nesslabs.com/overpreparation,#growth #mindset #productivity,Learn to start before you feel perfectly ready.,card
+finance,Startup Founder’s Guide to Analytics,https://thinkgrowth.org/...,#startups #analytics #product,How to choose metrics that actually drive decisions.,card
+finance,100 Little Ideas (Housel),https://collabfund.com/blog/100-little-ideas/,#thinking #finance #life,A compact collection of insights on life and money.,card
+finance,Teaching My Son About Money,https://www.mrmoneymustache.com/...,#finance #parenting #simplicity,"Practical, values-based financial lessons for kids.",card
+finance,How to Get Rich (Naval),https://nav.al/rich,#wealth #philosophy #career,"Wealth through skill leverage, not luck.",card
+finance,Hierarchy of Financial Needs,https://www.madfientist.com/hierarchy-of-financial-needs/,#finance #minimalism #retirement,Money priorities mapped from survival to purpose.,card
+finance,Passive Income Ideas,https://dollarsprout.com/passive-income-ideas/,#money #income #sideHustle,A survey of realistic ways to earn beyond salary.,card
+finance,Responding to Income Loss,https://radicalpersonalfinance...,#finance #resilience #emergency,Immediate steps when financial stability collapses.,card
+health,50/30/20 Rule,https://www.thebalancemoney.com/the-50-30-20-rule-of-thumb-453922,#budgeting #personalFinance #basics,A simple budgeting framework for everyday spending.,card
+productivity,How I Save 50% of Income,https://www.theantimba.com/how-i-save-over-50-of-my-income/,#saving #lifestyleDesign #money,Systemization of frugality and intentional spending.,card
+productivity,Freedom Calculator (Natalieason),https://www.nateliason.com/blog/financial-freedom,#FIRE #planning #wealth,A math-based blueprint for early financial independence.,card
+productivity,Crypto Heat Map,https://coin360.com/,#crypto #markets #tools,Real-time market visualization for crypto assets.,card
+productivity,Perils of Market Timing,https://www.wellsfargoadvisors.com/...,#investing #risk #behavioralFinance,Why predicting the market consistently is nearly impossible.,card
+productivity,Algebra of Wealth (Galloway),https://www.youtube.com/watch?v=uNrjrDV9-YQ,#finance #career #strategy,Four variables that drive long-term wealth accumulation.,card
+productivity,Financial Advice for My Son,https://www.fool.com/...,#finance #mindset #generational,Gentle timeless lessons for building financial security.,card
+productivity,Finviz Heatmaps,https://finviz.com/map.ashx,#stocks #tools #markets,Visual snapshot of sector performance and trends.,card
+productivity,Little Book Beats the Market (Summary),https://fourminutebooks.com/...,#investing #value #strategy,A simple formula for consistent value investing.,card
+productivity,50/30/20 Rule (N26),https://n26.com/en-eu/blog/50-30-20-rule,#budgeting #money #management,Another breakdown of the popular budgeting ratio.,card
+productivity,20/10 Debt Rule,https://www.thebalancemoney.com/...,#debt #finance #limits,Max recommended personal debt load relative to income.,card
+psychology,ETF Research Overlap Tool,https://www.etfrc.com/funds/overlap.php,#investing #etf #tools,Compare holdings across ETFs to avoid redundancy.,card
+psychology,Dataroma,https://www.dataroma.com/m/home.php,#stocks #portfolio #research,Track what top investors are buying and holding.,card
+science,ETF Comparison Tool,https://www.etf.com/tools/etf-comparison,#investing #etf #analysis,Side-by-side ETF performance and cost analysis.,card
+science,Portfolio Visualizer,https://www.portfoliovisualizer.com/backtest-portfolio#analysisResults,#investing #simulation #risk,Backtest and stress-test portfolio allocations.,card
+finance,Does Market Timing Work? (Schwab),https://www.schwab.com/learn/story/does-market-timing-work,#investing #behavior #longTerm,Evidence-based case against trying to time markets.,card

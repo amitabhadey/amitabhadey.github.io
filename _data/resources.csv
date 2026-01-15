@@ -1,43 +1,46 @@
-section,title,url,meta,desc,format
-productivity,Writing as a Thinking Tool,https://nesslabs.com/writing-thinking-tool,#writing #learning #metacognition,How writing clarifies thought and boosts understanding.,card
-ai/llm/tech,Neural Nets from Scratch (Karpathy),https://www.youtube.com/watch?v=VMj-3S1tku0,#machinelearning #education #deepLearning,A step-by-step live build of neural networks from zero.,card
-psychology,Passive Barriers (Ramit Sethi),https://www.getrichslowly.org/passive-barriers/,#behavior #psychology #habits,Why small inconveniences stop action and how to remove them.,card
-productivity,Guide to Public Speaking (Ashcroft),https://michaelashcroft.com/writing/my-ultimate-guide-to-public-speaking/,#communication #publicSpeaking #selfImprovement,"A practical path to confident, conversational speaking.",card
-science,Why Your Cat Thinks You're an Ape,https://www.wired.com/2014/10/cat-thinks-youre-huge-unpredictable-ape/,#animals #psychology #science,Understanding cat behavior through evolutionary mismatch.,card
-psychology,Life of Quiet Desperation,https://www.miketuritzin.com/writing/are-you-leading-a-life-of-quiet-desperation/,#philosophy #selfAwareness #meaning,A reflection on drifting through life without purpose.,card
-productivity,Audience-First Products (Perell),https://perell.com/essay/audience-first-products/,#creatorEconomy #product #growth,"Build people first, product second.",card
-finance,How to Make Millions Writing Online (Sam Parr),https://www.indiehackers.com/podcast/161-sam-parr-of-the-hustle,#writing #business #entrepreneurship,The business of attention and scalable content.,card
-productivity,Adjusting to New Normals,https://www.sarahkpeck.com/2020/04/adjusting-to-new-normals-four-things-april-26-2020/,#mentalHealth #adaptation #life,How to emotionally adapt during times of disruption.,card
-productivity,Building a Second Brain (Illustrated),https://maggieappleton.com/basb,#pkm #learning #creativity,Visual guide to organizing your digital knowledge.,card
-productivity,Growth Without Goals,https://investorfieldguide.com/growth-without-goals/,#selfImprovement #systems #philosophy,Personal progress through systems rather than targets.,card
-productivity,Procrastination Equation,https://alexvermeer.com/how-we-use-the-procrastination-equation/,#productivity #psychology #habits,A practical formula for why we delay and how to stop.,card
-productivity,100 Blocks a Day,https://waitbutwhy.com/2016/10/100-blocks-day.html,#timeManagement #selfAwareness #priorities,Visualizing daily time to make deliberate life choices.,card
-ai/llm/tech,Innovation Nation (Canada & AI),https://financialpost.com/...,#AI #policy #innovation,How early AI leadership risks slipping away.,card
-ai/llm/tech,How AI Bias Happens,https://www.technologyreview.com/...,#AI #ethics #fairness,"Why algorithmic bias is structural, not accidental.",card
-health,Why Sleep Deprivation Kills,https://www.quantamagazine.org/why-sleep-deprivation-kills-20200604/,#health #science #sleep,The cellular science behind why sleep is essential.,card
-productivity,Great Talks Most Haven’t Heard,https://jamesclear.com/great-speeches,#communication #learning #inspiration,A curated list of powerful and overlooked speeches.,card
-science,The Fermi Paradox,https://waitbutwhy.com/2014/05/fermi-paradox.html,#science #cosmology #existential,Why we might be alone—or not—in the universe.,card
-psychology,Beyond Overpreparation,https://nesslabs.com/overpreparation,#growth #mindset #productivity,Learn to start before you feel perfectly ready.,card
-productivity,Startup Founder’s Guide to Analytics,https://thinkgrowth.org/...,#startups #analytics #product,How to choose metrics that actually drive decisions.,card
-productivity,100 Little Ideas (Housel),https://collabfund.com/blog/100-little-ideas/,#thinking #finance #life,A compact collection of insights on life and money.,card
-finance,Teaching My Son About Money,https://www.mrmoneymustache.com/...,#finance #parenting #simplicity,"Practical, values-based financial lessons for kids.",card
-finance,How to Get Rich (Naval),https://nav.al/rich,#wealth #philosophy #career,"Wealth through skill leverage, not luck.",card
-finance,Hierarchy of Financial Needs,https://www.madfientist.com/hierarchy-of-financial-needs/,#finance #minimalism #retirement,Money priorities mapped from survival to purpose.,card
-finance,Passive Income Ideas,https://dollarsprout.com/passive-income-ideas/,#money #income #sideHustle,A survey of realistic ways to earn beyond salary.,card
-finance,Responding to Income Loss,https://radicalpersonalfinance...,#finance #resilience #emergency,Immediate steps when financial stability collapses.,card
-finance,50/30/20 Rule,https://www.thebalancemoney.com/the-50-30-20-rule-of-thumb-453922,#budgeting #personalFinance #basics,A simple budgeting framework for everyday spending.,card
-finance,How I Save 50% of Income,https://www.theantimba.com/how-i-save-over-50-of-my-income/,#saving #lifestyleDesign #money,Systemization of frugality and intentional spending.,card
-finance,Freedom Calculator (Natalieason),https://www.nateliason.com/blog/financial-freedom,#FIRE #planning #wealth,A math-based blueprint for early financial independence.,card
-finance,Crypto Heat Map,https://coin360.com/,#crypto #markets #tools,Real-time market visualization for crypto assets.,card
-finance,Perils of Market Timing,https://www.wellsfargoadvisors.com/...,#investing #risk #behavioralFinance,Why predicting the market consistently is nearly impossible.,card
-finance,Algebra of Wealth (Galloway),https://www.youtube.com/watch?v=uNrjrDV9-YQ,#finance #career #strategy,Four variables that drive long-term wealth accumulation.,card
-finance,Financial Advice for My Son,https://www.fool.com/...,#finance #mindset #generational,Gentle timeless lessons for building financial security.,card
-finance,Finviz Heatmaps,https://finviz.com/map.ashx,#stocks #tools #markets,Visual snapshot of sector performance and trends.,card
-finance,Little Book Beats the Market (Summary),https://fourminutebooks.com/...,#investing #value #strategy,A simple formula for consistent value investing.,card
-finance,50/30/20 Rule (N26),https://n26.com/en-eu/blog/50-30-20-rule,#budgeting #money #management,Another breakdown of the popular budgeting ratio.,card
-finance,20/10 Debt Rule,https://www.thebalancemoney.com/...,#debt #finance #limits,Max recommended personal debt load relative to income.,card
-finance,ETF Research Overlap Tool,https://www.etfrc.com/funds/overlap.php,#investing #etf #tools,Compare holdings across ETFs to avoid redundancy.,card
-finance,Dataroma,https://www.dataroma.com/m/home.php,#stocks #portfolio #research,Track what top investors are buying and holding.,card
-finance,ETF Comparison Tool,https://www.etf.com/tools/etf-comparison,#investing #etf #analysis,Side-by-side ETF performance and cost analysis.,card
-finance,Portfolio Visualizer,https://www.portfoliovisualizer.com/backtest-portfolio#analysisResults,#investing #simulation #risk,Backtest and stress-test portfolio allocations.,card
-finance,Does Market Timing Work? (Schwab),https://www.schwab.com/learn/story/does-market-timing-work,#investing #behavior #longTerm,Evidence-based case against trying to time markets.,card
+section,title,url,meta,desc
+ai/llm/tech,Neural Nets from Scratch (Karpathy),https://www.youtube.com/watch?v=VMj-3S1tku0,#machinelearning #education #deepLearning,A step-by-step live build of neural networks from zero.
+ai/llm/tech,Innovation Nation (Canada & AI),https://financialpost.com/...,#AI #policy #innovation,How early AI leadership risks slipping away.
+ai/llm/tech,How AI Bias Happens,https://www.technologyreview.com/...,#AI #ethics #fairness,"Why algorithmic bias is structural, not accidental."
+ai/llm/tech,Engineering \ Anthropic Blog,https://www.anthropic.com/engineering,#ai #llm #blog #anthropic #claude,Engineering at Anthropic: Inside the team building reliable AI systems
+ai/llm/tech,Perplexity Blog,https://www.perplexity.ai/hub,#ai #llm #blog #perplexity,"Explore Perplexity's blog for articles, announcements, product updates, and tips to optimize your experience. "
+ai/llm/tech,Why Language Models Hallucinate,https://arxiv.org/pdf/2509.04664,#llm #hallucination,Language models hallucinate because standard training and evaluation procedures reward guessing over acknowledging uncertainty.
+finance,How to Make Millions Writing Online (Sam Parr),https://www.indiehackers.com/podcast/161-sam-parr-of-the-hustle,#writing #business #entrepreneurship,The business of attention and scalable content.
+finance,Teaching My Son About Money,https://www.mrmoneymustache.com/...,#finance #parenting #simplicity,"Practical, values-based financial lessons for kids."
+finance,How to Get Rich (Naval),https://nav.al/rich,#wealth #philosophy #career,"Wealth through skill leverage, not luck."
+finance,Hierarchy of Financial Needs,https://www.madfientist.com/hierarchy-of-financial-needs/,#finance #minimalism #retirement,Money priorities mapped from survival to purpose.
+finance,Passive Income Ideas,https://dollarsprout.com/passive-income-ideas/,#money #income #sideHustle,A survey of realistic ways to earn beyond salary.
+finance,Responding to Income Loss,https://radicalpersonalfinance...,#finance #resilience #emergency,Immediate steps when financial stability collapses.
+finance,50/30/20 Rule,https://www.thebalancemoney.com/the-50-30-20-rule-of-thumb-453922,#budgeting #personalFinance #basics,A simple budgeting framework for everyday spending.
+finance,How I Save 50% of Income,https://www.theantimba.com/how-i-save-over-50-of-my-income/,#saving #lifestyleDesign #money,Systemization of frugality and intentional spending.
+finance,Freedom Calculator (Natalieason),https://www.nateliason.com/blog/financial-freedom,#FIRE #planning #wealth,A math-based blueprint for early financial independence.
+finance,Crypto Heat Map,https://coin360.com/,#crypto #markets #tools,Real-time market visualization for crypto assets.
+finance,Perils of Market Timing,https://www.wellsfargoadvisors.com/...,#investing #risk #behavioralFinance,Why predicting the market consistently is nearly impossible.
+finance,Algebra of Wealth (Galloway),https://www.youtube.com/watch?v=uNrjrDV9-YQ,#finance #career #strategy,Four variables that drive long-term wealth accumulation.
+finance,Financial Advice for My Son,https://www.fool.com/...,#finance #mindset #generational,Gentle timeless lessons for building financial security.
+finance,Finviz Heatmaps,https://finviz.com/map.ashx,#stocks #tools #markets,Visual snapshot of sector performance and trends.
+finance,Little Book Beats the Market (Summary),https://fourminutebooks.com/...,#investing #value #strategy,A simple formula for consistent value investing.
+finance,50/30/20 Rule (N26),https://n26.com/en-eu/blog/50-30-20-rule,#budgeting #money #management,Another breakdown of the popular budgeting ratio.
+finance,20/10 Debt Rule,https://www.thebalancemoney.com/...,#debt #finance #limits,Max recommended personal debt load relative to income.
+finance,ETF Research Overlap Tool,https://www.etfrc.com/funds/overlap.php,#investing #etf #tools,Compare holdings across ETFs to avoid redundancy.
+finance,Dataroma,https://www.dataroma.com/m/home.php,#stocks #portfolio #research,Track what top investors are buying and holding.
+finance,ETF Comparison Tool,https://www.etf.com/tools/etf-comparison,#investing #etf #analysis,Side-by-side ETF performance and cost analysis.
+finance,Portfolio Visualizer,https://www.portfoliovisualizer.com/backtest-portfolio#analysisResults,#investing #simulation #risk,Backtest and stress-test portfolio allocations.
+finance,Does Market Timing Work? (Schwab),https://www.schwab.com/learn/story/does-market-timing-work,#investing #behavior #longTerm,Evidence-based case against trying to time markets.
+health,Why Sleep Deprivation Kills,https://www.quantamagazine.org/why-sleep-deprivation-kills-20200604/,#health #science #sleep,The cellular science behind why sleep is essential.
+productivity,Writing as a Thinking Tool,https://nesslabs.com/writing-thinking-tool,#writing #learning #metacognition,How writing clarifies thought and boosts understanding.
+productivity,Guide to Public Speaking (Ashcroft),https://michaelashcroft.com/writing/my-ultimate-guide-to-public-speaking/,#communication #publicSpeaking #selfImprovement,"A practical path to confident, conversational speaking."
+productivity,Audience-First Products (Perell),https://perell.com/essay/audience-first-products/,#creatorEconomy #product #growth,"Build people first, product second."
+productivity,Adjusting to New Normals,https://www.sarahkpeck.com/2020/04/adjusting-to-new-normals-four-things-april-26-2020/,#mentalHealth #adaptation #life,How to emotionally adapt during times of disruption.
+productivity,Building a Second Brain (Illustrated),https://maggieappleton.com/basb,#pkm #learning #creativity,Visual guide to organizing your digital knowledge.
+productivity,Growth Without Goals,https://investorfieldguide.com/growth-without-goals/,#selfImprovement #systems #philosophy,Personal progress through systems rather than targets.
+productivity,Procrastination Equation,https://alexvermeer.com/how-we-use-the-procrastination-equation/,#productivity #psychology #habits,A practical formula for why we delay and how to stop.
+productivity,100 Blocks a Day,https://waitbutwhy.com/2016/10/100-blocks-day.html,#timeManagement #selfAwareness #priorities,Visualizing daily time to make deliberate life choices.
+productivity,Great Talks Most Haven‚Äôt Heard,https://jamesclear.com/great-speeches,#communication #learning #inspiration,A curated list of powerful and overlooked speeches.
+productivity,Startup Founder‚Äôs Guide to Analytics,https://thinkgrowth.org/...,#startups #analytics #product,How to choose metrics that actually drive decisions.
+productivity,100 Little Ideas (Housel),https://collabfund.com/blog/100-little-ideas/,#thinking #finance #life,A compact collection of insights on life and money.
+psychology,Passive Barriers (Ramit Sethi),https://www.getrichslowly.org/passive-barriers/,#behavior #psychology #habits,Why small inconveniences stop action and how to remove them.
+psychology,Life of Quiet Desperation,https://www.miketuritzin.com/writing/are-you-leading-a-life-of-quiet-desperation/,#philosophy #selfAwareness #meaning,A reflection on drifting through life without purpose.
+psychology,Beyond Overpreparation,https://nesslabs.com/overpreparation,#growth #mindset #productivity,Learn to start before you feel perfectly ready.
+science,Why Your Cat Thinks You're an Ape,https://www.wired.com/2014/10/cat-thinks-youre-huge-unpredictable-ape/,#animals #psychology #science,Understanding cat behavior through evolutionary mismatch.
+science,The Fermi Paradox,https://waitbutwhy.com/2014/05/fermi-paradox.html,#science #cosmology #existential,Why we might be alone‚Äîor not‚Äîin the universe.

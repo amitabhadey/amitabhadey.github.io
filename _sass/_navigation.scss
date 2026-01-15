@@ -251,18 +251,27 @@
 
   @include breakpoint(max-width $small) {
     width: 100%;
+    padding-right: 3rem;
 
     .visible-links {
       width: 100%;
-      padding-right: 3rem;
+      display: block;
 
       li {
         display: none;
       }
 
       li.masthead__menu-item--lg {
-        display: table-cell;
+        display: block;
+        max-width: 100%;
       }
+    }
+
+    .visible-links a {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-right: 0;
     }
 
     .greedy-nav__toggle {

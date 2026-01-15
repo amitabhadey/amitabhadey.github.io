@@ -126,6 +126,14 @@ body {
   background: transparent;
 }
 
+html[data-theme="light"] .masthead #site-nav .visible-links a:hover,
+html[data-theme="light"] .masthead #site-nav .visible-links a:focus {
+  color: #ffffff !important;
+  background: #FE7401 !important;
+  box-shadow: inset 0 0 0 999px #FE7401;
+  border-radius: $border-radius;
+}
+
 [data-theme="light"] .greedy-nav .visible-links a:before {
   background: #FE7401;
 }
@@ -180,6 +188,14 @@ body {
 [data-theme="dark"] .greedy-nav .visible-links a:hover:before,
 [data-theme="dark"] .greedy-nav .visible-links a:focus:before {
   background: transparent;
+}
+
+html[data-theme="dark"] .masthead #site-nav .visible-links a:hover,
+html[data-theme="dark"] .masthead #site-nav .visible-links a:focus {
+  color: #000000 !important;
+  background: #22c55e !important;
+  box-shadow: inset 0 0 0 999px #22c55e;
+  border-radius: $border-radius;
 }
 
 /* Light mode anchor pills on homepage */

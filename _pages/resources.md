@@ -10,7 +10,7 @@ title: " "
 style="width:100%;padding:.6rem .75rem;border-radius:8px;border:1px solid rgba(255,255,255,.25);margin:0 0 1.2rem 0;background:rgba(255,255,255,.03);color:inherit;">
 
 <nav style="display:flex;flex-wrap:wrap;gap:8px;margin:0 0 1.4rem 0;">
-  <a href="#aillmtech" style="padding:.35rem .7rem;border:1px solid currentColor;border-radius:999px;text-decoration:none;">AI/LLM/Tech</a>
+  <a href="#aillmtech" style="padding:.35rem .7rem;border:1px solid currentColor;border-radius:999px;text-decoration:none;">AI</a>
   <a href="#finance" style="padding:.35rem .7rem;border:1px solid currentColor;border-radius:999px;text-decoration:none;">Finance</a>
   <a href="#health" style="padding:.35rem .7rem;border:1px solid currentColor;border-radius:999px;text-decoration:none;">Health</a>
   <a href="#productivity" style="padding:.35rem .7rem;border:1px solid currentColor;border-radius:999px;text-decoration:none;">Productivity</a>

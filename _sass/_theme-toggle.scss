@@ -126,6 +126,12 @@ body {
   background: $primary-color;
 }
 
+[data-theme="dark"] .theme-toggle {
+  position: fixed;
+  top: 0.75rem;
+  right: 0.75rem;
+}
+
 [data-theme="dark"] .theme-toggle:hover,
 [data-theme="dark"] .theme-toggle:focus {
   color: $masthead-link-color;
@@ -149,8 +155,8 @@ body {
 [data-theme="dark"] .anchor-nav a:hover,
 [data-theme="dark"] .anchor-nav a:focus {
   color: #000000 !important;
-  background: #22c55e !important;
-  border-color: #22c55e !important;
+  background: $primary-color !important;
+  border-color: $primary-color !important;
 }
 
 /* Light mode cards + borders: Feed */
@@ -269,6 +275,11 @@ body {
   border-color: #e5e7eb !important;
 }
 
+/* Dark mode: publication abstract label */
+[data-theme="dark"] .pub-details summary {
+  color: $primary-color !important;
+}
+
 [data-theme="light"] .pub-title,
 [data-theme="light"] .pub-meta,
 [data-theme="light"] .pub-details summary,
@@ -296,9 +307,19 @@ body {
   color: #FE7401 !important;
 }
 
+/* Dark mode: Feed expand buttons */
+[data-theme="dark"] .mm-feed .feed-details summary {
+  color: $primary-color !important;
+}
+
 /* Light mode: Teaching expand buttons */
 [data-theme="light"] .teach-details summary {
   color: #FE7401 !important;
+}
+
+/* Dark mode: Teaching expand buttons */
+[data-theme="dark"] .teach-details summary {
+  color: $primary-color !important;
 }
 
 [data-theme="light"] .pub-card .badge {

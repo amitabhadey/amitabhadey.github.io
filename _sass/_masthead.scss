@@ -25,6 +25,10 @@
       z-index: 10;
     }
 
+    @include breakpoint(max-width $small) {
+      padding-top: 3.5em;
+    }
+
     a {
       text-decoration: none;
     }

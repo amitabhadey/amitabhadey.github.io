@@ -1,0 +1,111 @@
+/* ==========================================================================
+   THEME TOGGLE + LIGHT THEME OVERRIDES
+   ========================================================================== */
+
+html {
+  background-color: $background-color;
+  color-scheme: dark;
+}
+
+body {
+  background-color: $background-color;
+}
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 1rem;
+  padding: 0.35rem 0.75rem;
+  font-family: $sans-serif;
+  font-size: $type-size-6;
+  font-weight: 700;
+  color: $masthead-link-color;
+  background: transparent;
+  border: 1px solid $masthead-link-color;
+  border-radius: $border-radius;
+  cursor: pointer;
+  transition: $global-transition;
+}
+
+.theme-toggle:hover,
+.theme-toggle:focus {
+  color: $masthead-link-color-hover;
+  border-color: $masthead-link-color-hover;
+}
+
+/* Light theme overrides */
+[data-theme="light"] {
+  color-scheme: light;
+}
+
+[data-theme="light"] body {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+[data-theme="light"] a,
+[data-theme="light"] .greedy-nav a,
+[data-theme="light"] .masthead__menu-item a {
+  color: #08396C;
+}
+
+[data-theme="light"] a:visited {
+  color: #08396C;
+}
+
+[data-theme="light"] a:hover,
+[data-theme="light"] a:focus {
+  color: #08396C;
+}
+
+[data-theme="light"] .masthead {
+  border-bottom-color: #d0d7de;
+}
+
+[data-theme="light"] .greedy-nav {
+  background: #ffffff;
+}
+
+[data-theme="light"] .greedy-nav button {
+  background-color: #08396C;
+}
+
+[data-theme="light"] .theme-toggle {
+  color: #08396C;
+  border-color: #08396C;
+}
+
+[data-theme="light"] .theme-toggle:hover,
+[data-theme="light"] .theme-toggle:focus {
+  color: #062b52;
+  border-color: #062b52;
+}
+
+[data-theme="light"] blockquote {
+  border-left-color: #08396C;
+}
+
+[data-theme="light"] .btn,
+[data-theme="light"] .btn--info {
+  background-color: #08396C;
+}
+
+[data-theme="light"] .btn:hover,
+[data-theme="light"] .btn--info:hover {
+  background-color: #062b52;
+}
+
+[data-theme="light"] .pagination li a.current {
+  background: #08396C;
+}
+
+[data-theme="light"] p > code,
+[data-theme="light"] a > code,
+[data-theme="light"] li > code,
+[data-theme="light"] figcaption > code,
+[data-theme="light"] td > code {
+  background: #f6f8fa;
+  border-color: #d0d7de;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
+}

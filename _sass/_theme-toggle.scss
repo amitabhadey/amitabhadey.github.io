@@ -138,7 +138,7 @@ body {
 [data-theme="light"] #searchInput {
   background: #ffffff;
   color: #111111;
-  border-color: #e5e7eb;
+  border-color: #000000;
 }
 
 [data-theme="light"] .theme-toggle {
@@ -193,6 +193,12 @@ body {
   color: #08396C !important;
 }
 
+/* Light mode: Substack link highlight on homepage */
+[data-theme="light"] .page__content a[href*="substack"] {
+  color: #FE7401 !important;
+  border-bottom-color: #FE7401 !important;
+}
+
 /* Light mode: publication cards */
 [data-theme="light"] .pub-card {
   background: #f3f4f6 !important;
@@ -202,7 +208,6 @@ body {
 
 [data-theme="light"] .pub-title,
 [data-theme="light"] .pub-meta,
-[data-theme="light"] .pub-actions a,
 [data-theme="light"] .pub-details summary,
 [data-theme="light"] .pub-details div,
 [data-theme="light"] .cite {
@@ -210,12 +215,27 @@ body {
 }
 
 [data-theme="light"] .pub-actions a {
-  border-bottom-color: #08396C !important;
+  color: #FE7401 !important;
+  border-bottom-color: #FE7401 !important;
 }
 
 [data-theme="light"] .pub-actions a:hover {
   color: #FE7401 !important;
   border-bottom-color: #FE7401 !important;
+}
+
+[data-theme="light"] .pub-details summary {
+  color: #FE7401 !important;
+}
+
+/* Light mode: Feed expand buttons */
+[data-theme="light"] .mm-feed .feed-details summary {
+  color: #FE7401 !important;
+}
+
+/* Light mode: Teaching expand buttons */
+[data-theme="light"] .teach-details summary {
+  color: #FE7401 !important;
 }
 
 [data-theme="light"] .pub-card .badge {

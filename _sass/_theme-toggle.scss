@@ -78,6 +78,15 @@ body {
   background: #ffffff;
 }
 
+[data-theme="light"] .greedy-nav .hidden-links {
+  background: #ffffff;
+  border-color: #d0d7de;
+}
+
+[data-theme="light"] .greedy-nav .hidden-links a {
+  color: #08396C;
+}
+
 [data-theme="light"] .greedy-nav a:hover,
 [data-theme="light"] .greedy-nav a:focus {
   color: #08396C;
@@ -89,6 +98,26 @@ body {
 
 [data-theme="light"] .greedy-nav__toggle {
   background-color: #08396C;
+}
+
+/* Dark theme overrides */
+[data-theme="dark"] .masthead__site-title {
+  color: $primary-color;
+}
+
+[data-theme="dark"] .masthead__site-title:hover,
+[data-theme="dark"] .masthead__site-title:focus {
+  color: $masthead-link-color-hover;
+}
+
+[data-theme="dark"] .greedy-nav__toggle {
+  background-color: $background-color;
+}
+
+[data-theme="dark"] .greedy-nav__toggle .navicon,
+[data-theme="dark"] .greedy-nav__toggle .navicon:before,
+[data-theme="dark"] .greedy-nav__toggle .navicon:after {
+  background: $primary-color;
 }
 
 /* Light mode anchor pills on homepage */

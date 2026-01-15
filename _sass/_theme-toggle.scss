@@ -105,6 +105,13 @@ body {
   border-radius: $border-radius;
 }
 
+[data-theme="light"] .masthead__menu-item a:hover,
+[data-theme="light"] .masthead__menu-item a:focus {
+  color: #ffffff !important;
+  background: #FE7401 !important;
+  border-radius: $border-radius;
+}
+
 [data-theme="light"] .greedy-nav .visible-links a:hover:before,
 [data-theme="light"] .greedy-nav .visible-links a:focus:before {
   background: transparent;
@@ -142,6 +149,13 @@ body {
 [data-theme="dark"] .greedy-nav .visible-links a:focus {
   color: #000000;
   background: #22c55e;
+  border-radius: $border-radius;
+}
+
+[data-theme="dark"] .masthead__menu-item a:hover,
+[data-theme="dark"] .masthead__menu-item a:focus {
+  color: #000000 !important;
+  background: #22c55e !important;
   border-radius: $border-radius;
 }
 

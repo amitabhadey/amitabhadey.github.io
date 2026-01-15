@@ -73,7 +73,11 @@ body {
 
 [data-theme="light"] .greedy-nav a:hover,
 [data-theme="light"] .greedy-nav a:focus {
-  color: #FE7401;
+  color: #08396C;
+}
+
+[data-theme="light"] .greedy-nav .visible-links a:before {
+  background: #FE7401;
 }
 
 [data-theme="light"] .greedy-nav__toggle {

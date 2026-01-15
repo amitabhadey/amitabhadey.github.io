@@ -1,4 +1,4 @@
-<script src="{{ base_path }}/assets/js/main.min.js"></script>
-<script src="{{ base_path }}/assets/js/theme-toggle.js"></script>
+<script src="{{ base_path }}/assets/js/main.min.js?v={{ site.github.build_revision | default: site.time | date: '%s' }}"></script>
+<script src="{{ base_path }}/assets/js/theme-toggle.js?v={{ site.github.build_revision | default: site.time | date: '%s' }}"></script>
 
 {% include analytics.html %}

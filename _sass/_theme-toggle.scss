@@ -32,6 +32,14 @@ body {
   z-index: 1000;
 }
 
+@include breakpoint(max-width $small) {
+  .theme-toggle {
+    top: 3.25rem;
+    left: 1rem;
+    right: auto;
+  }
+}
+
 .theme-toggle:hover,
 .theme-toggle:focus {
   color: $masthead-link-color-hover;

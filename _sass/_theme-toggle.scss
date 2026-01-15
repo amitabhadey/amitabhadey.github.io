@@ -43,6 +43,14 @@ body {
     position: static;
     margin: 0;
   }
+
+  [data-theme="dark"] .theme-toggle {
+    position: static;
+    top: auto;
+    right: auto;
+    left: auto;
+    margin: 0;
+  }
 }
 
 .theme-toggle:hover,

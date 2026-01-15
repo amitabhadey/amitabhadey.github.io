@@ -8,7 +8,7 @@ redirect_from:
 ---
 
 <!-- Anchor Navigation -->
-<div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; margin: 1.8rem 0;">
+<div class="anchor-nav" style="display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; margin: 1.8rem 0;">
   <a href="#about-me" style="padding: 6px 18px; border: 1px solid #fff; border-radius: 8px; text-decoration: none; color: #fff; font-size: 0.95rem; display: inline-block; white-space: nowrap; line-height: 1;">About</a>
   <a href="#what-i-do" style="padding: 6px 18px; border: 1px solid #fff; border-radius: 8px; text-decoration: none; color: #fff; font-size: 0.95rem; display: inline-block; white-space: nowrap; line-height: 1;">Work</a>
   <a href="#professional-experience" style="padding: 6px 18px; border: 1px solid #fff; border-radius: 8px; text-decoration: none; color: #fff; font-size: 0.95rem; display: inline-block; white-space: nowrap; line-height: 1;">Experience</a>

@@ -26,6 +26,10 @@ body {
   border-radius: $border-radius;
   cursor: pointer;
   transition: $global-transition;
+  position: fixed;
+  top: 0.75rem;
+  right: 0.75rem;
+  z-index: 1000;
 }
 
 .theme-toggle:hover,
@@ -69,6 +73,63 @@ body {
 
 [data-theme="light"] .greedy-nav__toggle {
   background-color: #08396C;
+}
+
+/* Light mode anchor pills on homepage */
+[data-theme="light"] .anchor-nav a {
+  color: #08396C !important;
+  border-color: #08396C !important;
+}
+
+/* Light mode cards + borders: Feed */
+[data-theme="light"] .mm-feed .feed-item {
+  background: #ffffff;
+  border-color: #e5e7eb;
+  box-shadow: 0 6px 16px rgba(8, 57, 108, 0.08);
+}
+
+[data-theme="light"] .mm-feed .feed-tag {
+  border-color: #e5e7eb;
+  color: #111111;
+}
+
+[data-theme="light"] .mm-feed .feed-img {
+  border-color: #e5e7eb;
+}
+
+/* Light mode cards + borders: Teaching */
+[data-theme="light"] .teach-card {
+  background: #ffffff;
+  border-color: #e5e7eb;
+  box-shadow: 0 6px 16px rgba(8, 57, 108, 0.08);
+}
+
+[data-theme="light"] .badge {
+  border-color: #e5e7eb;
+  color: #111111;
+}
+
+[data-theme="light"] .teach-actions a {
+  color: #08396C;
+  border-color: #c9d6e6;
+}
+
+/* Light mode cards + borders: Resources */
+[data-theme="light"] .links .card {
+  background: #ffffff;
+  border-color: #e5e7eb;
+  box-shadow: 0 6px 16px rgba(8, 57, 108, 0.08);
+}
+
+[data-theme="light"] .links .actions a {
+  color: #08396C;
+  border-color: #c9d6e6;
+}
+
+[data-theme="light"] #searchInput {
+  background: #ffffff;
+  color: #111111;
+  border-color: #e5e7eb;
 }
 
 [data-theme="light"] .theme-toggle {

@@ -60,7 +60,7 @@ body {
 
 [data-theme="light"] a:hover,
 [data-theme="light"] a:focus {
-  color: #08396C;
+  color: #FE7401;
 }
 
 [data-theme="light"] .masthead {
@@ -69,6 +69,11 @@ body {
 
 [data-theme="light"] .greedy-nav {
   background: #ffffff;
+}
+
+[data-theme="light"] .greedy-nav a:hover,
+[data-theme="light"] .greedy-nav a:focus {
+  color: #FE7401;
 }
 
 [data-theme="light"] .greedy-nav__toggle {
@@ -159,6 +164,60 @@ body {
 
 [data-theme="light"] .pagination li a.current {
   background: #08396C;
+}
+
+[data-theme="light"] .pagination li a:hover,
+[data-theme="light"] .pagination li a:focus,
+[data-theme="light"] .pagination--pager:hover,
+[data-theme="light"] .pagination--pager:focus {
+  color: #FE7401;
+}
+
+/* Light mode: author social icons (LinkedIn/GitHub) */
+[data-theme="light"] .author__urls .fab,
+[data-theme="light"] .author__urls .fas,
+[data-theme="light"] .author__urls .ai,
+[data-theme="light"] .author__urls svg {
+  color: #000000 !important;
+  fill: #000000 !important;
+}
+
+/* Light mode: ensure inline-styled links stay visible */
+[data-theme="light"] .page__content a,
+[data-theme="light"] .author__content a,
+[data-theme="light"] .author__urls a {
+  color: #08396C !important;
+}
+
+/* Light mode: publication cards */
+[data-theme="light"] .pub-card {
+  background: #f3f4f6 !important;
+  color: #111111 !important;
+  border-color: #e5e7eb !important;
+}
+
+[data-theme="light"] .pub-title,
+[data-theme="light"] .pub-meta,
+[data-theme="light"] .pub-actions a,
+[data-theme="light"] .pub-details summary,
+[data-theme="light"] .pub-details div,
+[data-theme="light"] .cite {
+  color: #111111 !important;
+}
+
+[data-theme="light"] .pub-actions a {
+  border-bottom-color: #08396C !important;
+}
+
+[data-theme="light"] .pub-actions a:hover {
+  color: #FE7401 !important;
+  border-bottom-color: #FE7401 !important;
+}
+
+[data-theme="light"] .pub-card .badge {
+  border-color: #e5e7eb !important;
+  color: #111111 !important;
+  background: #ffffff !important;
 }
 
 [data-theme="light"] p > code,

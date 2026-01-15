@@ -64,6 +64,21 @@ $(window).resize(function() {
   updateNav();
 });
 
+$(window).on('load', function() {
+  updateNav();
+});
+
+var navTicking = false;
+$(window).on('scroll', function() {
+  if (!navTicking) {
+    navTicking = true;
+    window.requestAnimationFrame(function() {
+      updateNav();
+      navTicking = false;
+    });
+  }
+});
+
 $btn.on('click', function() {
   $hlinks.toggleClass('hidden');
   $(this).toggleClass('close');

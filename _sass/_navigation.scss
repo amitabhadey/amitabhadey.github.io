@@ -249,6 +249,15 @@
     }
   }
 
+  @include breakpoint(max-width $small) {
+    width: 100%;
+
+    .visible-links {
+      width: 100%;
+      padding-right: 3rem;
+    }
+  }
+
   .hidden-links {
     position: absolute;
     top: 100%;

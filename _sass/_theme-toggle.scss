@@ -43,14 +43,6 @@ body {
     position: static;
     margin: 0;
   }
-
-  [data-theme="dark"] .theme-toggle {
-    position: static;
-    top: auto;
-    right: auto;
-    left: auto;
-    margin: 0;
-  }
 }
 
 .theme-toggle:hover,
@@ -144,6 +136,16 @@ body {
 [data-theme="dark"] .theme-toggle:focus {
   color: $masthead-link-color;
   border-color: $masthead-link-color;
+}
+
+@include breakpoint(max-width $small) {
+  [data-theme="dark"] .theme-toggle {
+    position: static;
+    top: auto;
+    right: auto;
+    left: auto;
+    margin: 0;
+  }
 }
 
 /* Light mode anchor pills on homepage */

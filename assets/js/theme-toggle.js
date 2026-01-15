@@ -18,14 +18,20 @@
   }
 
   function getPreferredTheme() {
-    if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
-      return "dark";
-    }
     return "light";
   }
 
   function applyTheme(theme) {
     document.documentElement.setAttribute("data-theme", theme);
+  }
+
+  function emitThemeChanged(theme) {
+    try {
+      var event = new CustomEvent("theme:changed", { detail: { theme: theme } });
+      document.dispatchEvent(event);
+    } catch (e) {
+      // Ignore if CustomEvent is unsupported
+    }
   }
 
   function updateToggle(theme) {
@@ -44,6 +50,7 @@
     applyTheme(theme);
     setStoredTheme(theme);
     updateToggle(theme);
+    emitThemeChanged(theme);
   }
 
   function init() {
@@ -52,6 +59,7 @@
 
     applyTheme(theme);
     updateToggle(theme);
+    emitThemeChanged(theme);
 
     var toggle = document.querySelector("[data-theme-toggle]");
     if (!toggle) {

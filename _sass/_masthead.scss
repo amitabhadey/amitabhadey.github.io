@@ -26,7 +26,8 @@
     }
 
     @include breakpoint(max-width $small) {
-      padding-top: 3.5em;
+      padding-top: 3.75em;
+      padding-bottom: 2.5em;
     }
 
     a {

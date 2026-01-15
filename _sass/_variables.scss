@@ -95,7 +95,7 @@ $type-size-syntax           : 0.875em;  // ~14px
    $link-color-hover           : mix(#bb0000, $link-color, 25%) !default;
    $link-color-visited         : mix(#fff, $link-color, 15%) !default;
    $masthead-link-color        : $primary-color !default;
-   $masthead-link-color-hover  : mix(#000, $primary-color, 25%) !default;
+   $masthead-link-color-hover  : #FE7401 !default;
    $navicon-link-color-hover   : mix(#fff, $primary-color, 75%) !default;
 
 

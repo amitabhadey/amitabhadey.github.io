@@ -1,0 +1,6 @@
+<div class="page__footer-follow">
+  {% if site.data.ui-text[site.locale].follow_label %}
+    <strong>{{ site.data.ui-text[site.locale].follow_label }}</strong>
+  {% endif %}
+</div>
+<div class="page__footer-copyright">&copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}.</div>

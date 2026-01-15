@@ -12,7 +12,7 @@ redirect_from:
   <a href="#about-me" style="padding: 6px 18px; border: 1px solid #fff; border-radius: 8px; text-decoration: none; color: #fff; font-size: 0.95rem; display: inline-block; white-space: nowrap; line-height: 1;">About</a>
   <a href="#what-i-do" style="padding: 6px 18px; border: 1px solid #fff; border-radius: 8px; text-decoration: none; color: #fff; font-size: 0.95rem; display: inline-block; white-space: nowrap; line-height: 1;">Work</a>
   <a href="#professional-experience" style="padding: 6px 18px; border: 1px solid #fff; border-radius: 8px; text-decoration: none; color: #fff; font-size: 0.95rem; display: inline-block; white-space: nowrap; line-height: 1;">Experience</a>
-  <a href="#academic-background" style="padding: 6px 18px; border: 1px solid #fff; border-radius: 8px; text-decoration: none; color: #fff; font-size: 0.95rem; display: inline-block; white-space: nowrap; line-height: 1;">Academic Background</a>
+  <a href="#academic-background" style="padding: 6px 18px; border: 1px solid #fff; border-radius: 8px; text-decoration: none; color: #fff; font-size: 0.95rem; display: inline-block; white-space: nowrap; line-height: 1;">Academic</a>
   <a href="#research-themes" style="padding: 6px 18px; border: 1px solid #fff; border-radius: 8px; text-decoration: none; color: #fff; font-size: 0.95rem; display: inline-block; white-space: nowrap; line-height: 1;">Research</a>
   <a href="#publications-list" style="padding: 6px 18px; border: 1px solid #fff; border-radius: 8px; text-decoration: none; color: #fff; font-size: 0.95rem; display: inline-block; white-space: nowrap; line-height: 1;">Publications</a>
 </div>

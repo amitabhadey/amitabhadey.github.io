@@ -255,6 +255,22 @@
     .visible-links {
       width: 100%;
       padding-right: 3rem;
+
+      li {
+        display: none;
+      }
+
+      li:first-child {
+        display: table-cell;
+      }
+    }
+
+    .greedy-nav__toggle {
+      display: block;
+    }
+
+    .greedy-nav__toggle.hidden {
+      display: block;
     }
   }
 

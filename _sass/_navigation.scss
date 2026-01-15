@@ -260,18 +260,6 @@
       li {
         display: none;
       }
-
-      li.masthead__menu-item--lg {
-        display: block;
-        max-width: 100%;
-      }
-    }
-
-    .visible-links a {
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      margin-right: 0;
     }
 
     .greedy-nav__toggle {

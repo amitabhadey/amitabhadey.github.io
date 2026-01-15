@@ -34,9 +34,8 @@ body {
 
 @include breakpoint(max-width $small) {
   .theme-toggle {
-    top: 3.25rem;
-    left: 1rem;
-    right: auto;
+    position: static;
+    margin: 0;
   }
 }
 

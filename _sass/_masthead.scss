@@ -26,8 +26,8 @@
     }
 
     @include breakpoint(max-width $small) {
-      padding-top: 3.75em;
-      padding-bottom: 2.5em;
+      padding-top: 1em;
+      padding-bottom: 1.5em;
     }
 
     a {
@@ -49,6 +49,17 @@
     display: flex;
     align-items: center;
     margin-left: 0.5rem;
+  }
+
+  @include breakpoint(max-width $small) {
+    flex-direction: column;
+    align-items: flex-start;
+
+    .masthead__actions {
+      width: 100%;
+      margin-left: 0;
+      margin-top: 0.5rem;
+    }
   }
 
   ul {

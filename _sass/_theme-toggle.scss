@@ -126,6 +126,12 @@ body {
   background: $primary-color;
 }
 
+[data-theme="dark"] .theme-toggle:hover,
+[data-theme="dark"] .theme-toggle:focus {
+  color: $masthead-link-color;
+  border-color: $masthead-link-color;
+}
+
 /* Light mode anchor pills on homepage */
 [data-theme="light"] .anchor-nav a {
   color: #08396C !important;

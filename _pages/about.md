@@ -23,7 +23,7 @@ redirect_from:
 <h1 style="margin:0 0 .75rem 0;">👋 About Me</h1>
 <span id="about-me"></span>
 
-I am a **senior data scientist @ optum / prev: comp sci lecturer @uncg**, working at the intersection of **Large Language Models (LLMs)**, healthcare systems, and enterprise AI.  
+I am a **Senior Data Scientist** at **Optum (UnitedHealth Group)**, working at the intersection of **Large Language Models (LLMs)**, healthcare systems, and enterprise AI.  
 My work focuses on transforming **general-purpose language models** into **clinically specialized systems** that operate under real-world constraints such as interpretability, regulatory safety, workflow alignment, and domain knowledge grounding.
 
 <p style="margin-top: .75rem;">

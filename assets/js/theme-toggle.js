@@ -41,9 +41,18 @@
     }
 
     var isDark = theme === "dark";
+    var icon = toggle.querySelector(".theme-toggle__icon");
+    var label = toggle.querySelector(".theme-toggle__label");
     toggle.setAttribute("aria-pressed", String(isDark));
     toggle.setAttribute("title", isDark ? "Switch to light mode" : "Switch to dark mode");
-    toggle.textContent = isDark ? "Light mode" : "Dark mode";
+    if (icon) {
+      icon.textContent = isDark ? "☀️" : "🌙";
+    }
+    if (label) {
+      label.textContent = isDark ? "Light mode" : "Dark mode";
+    } else {
+      toggle.textContent = isDark ? "Light mode" : "Dark mode";
+    }
   }
 
   function setTheme(theme) {

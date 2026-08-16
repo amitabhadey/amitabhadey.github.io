@@ -11,3 +11,5 @@ group :jekyll_plugins do
   # Remove or comment out hawkins
   # gem 'hawkins', '~> 0.1.0'
 end
+
+gem "webrick", "~> 1.9"

@@ -11,6 +11,10 @@ main:
   - title: "Resources"
     url: /resources/
     target: "_blank"
+
+  - title: "Photography"
+    url: /photography/
+    target: "_blank"
   
   - title: "CV"
     url: /files/amitabhadey_cv.pdf

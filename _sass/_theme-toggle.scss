@@ -16,7 +16,7 @@ body {
   align-items: center;
   justify-content: center;
   gap: 0.4rem;
-  margin: 0 1rem;
+  margin: 0;
   padding: 0.35rem 0.75rem;
   font-family: $sans-serif;
   font-size: $type-size-6;
@@ -28,8 +28,8 @@ body {
   cursor: pointer;
   transition: $global-transition;
   position: fixed;
-  top: 0.75rem;
-  right: 0.75rem;
+  bottom: 0.9rem;
+  right: 0.9rem;
   z-index: 1000;
 }
 
@@ -40,8 +40,8 @@ body {
 
 @include breakpoint(max-width $small) {
   .theme-toggle {
-    position: static;
-    margin: 0;
+    bottom: 0.75rem;
+    right: 0.75rem;
   }
 }
 
@@ -108,12 +108,12 @@ body {
 
 /* Dark theme overrides */
 [data-theme="dark"] .masthead__site-title {
-  color: $primary-color;
+  color: #000;
 }
 
 [data-theme="dark"] .masthead__site-title:hover,
 [data-theme="dark"] .masthead__site-title:focus {
-  color: $masthead-link-color-hover;
+  color: #111;
 }
 
 [data-theme="dark"] .greedy-nav__toggle {
@@ -128,8 +128,6 @@ body {
 
 [data-theme="dark"] .theme-toggle {
   position: fixed;
-  top: 0.75rem;
-  right: 0.75rem;
 }
 
 [data-theme="dark"] .theme-toggle:hover,
@@ -140,11 +138,8 @@ body {
 
 @include breakpoint(max-width $small) {
   [data-theme="dark"] .theme-toggle {
-    position: static;
-    top: auto;
-    right: auto;
-    left: auto;
-    margin: 0;
+    bottom: 0.75rem;
+    right: 0.75rem;
   }
 }
 
@@ -276,6 +271,14 @@ body {
 [data-theme="light"] .page__content a[href*="substack"] {
   color: #FE7401 !important;
   border-bottom-color: #FE7401 !important;
+}
+
+/* Match homepage paragraph size across page content */
+.page__content p,
+.page__content li,
+.page__content dd,
+.page__content dt {
+  font-size: 0.9rem;
 }
 
 /* Dark mode: Substack link highlight on homepage */

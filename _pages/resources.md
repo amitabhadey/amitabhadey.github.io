@@ -3,7 +3,7 @@ permalink: /resources/
 title: " "
 ---
 
-<h1 style="margin:0 0 .75rem 0;">📣 Resources</h1>
+<h1 style="margin:0 0 .75rem 0;">Resources</h1>
 <p style="margin:0 0 1rem 0;opacity:.9">Curated links I reference often—courses, papers, guides, and utilities.</p>
 
 <input id="searchInput" type="text" placeholder="Search..."
@@ -37,12 +37,12 @@ style="width:100%;padding:.6rem .75rem;border-radius:8px;border:1px solid rgba(2
   <section id="{{ sec | replace: '/', '' }}" class="res-sec">
     <h3>
       {% case sec %}
-        {% when "ai/llm/tech" %}🤖 AI / LLM / Tech
-        {% when "finance" %}💰 Finance
-        {% when "health" %}🩺 Health
-        {% when "productivity" %}⚡ Productivity
-        {% when "psychology" %}🧠 Psychology
-        {% when "science" %}🔬 Science
+        {% when "ai/llm/tech" %}AI / LLM / Tech
+        {% when "finance" %}Finance
+        {% when "health" %}Health
+        {% when "productivity" %}Productivity
+        {% when "psychology" %}Psychology
+        {% when "science" %}Science
       {% endcase %}
     </h3>
 

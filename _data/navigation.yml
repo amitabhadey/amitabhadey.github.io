@@ -1,5 +1,8 @@
 main:
 
+  - title: "Home"
+    url: /
+
   - title: "Feed"
     url: /feed/
     target: "_blank"
@@ -10,6 +13,10 @@ main:
 
   - title: "Resources"
     url: /resources/
+    target: "_blank"
+
+  - title: "Publications"
+    url: /publications/
     target: "_blank"
 
   - title: "Photography"

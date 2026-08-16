@@ -4,7 +4,7 @@ title: " "
 ---
 
 <!-- ===== PAGE HEADER ===== -->
-<h1 style="margin:0 0 .5rem 0;">🎓 Teaching</h1>
+<h1 style="margin:0 0 .5rem 0;">Teaching</h1>
 <p style="margin:0 0 1.25rem 0; opacity:.9;">
   Selected courses I’ve taught at the University of North Carolina at Greensboro (UNCG).
 </p>

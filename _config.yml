@@ -81,12 +81,12 @@ analytics:
 # Site Author
 author:
   name             : "Amitabha Dey"
-  avatar           : "profile.png"
+  avatar           : "profile-2026.png"
   bio              : "senior data scientist @ optum / prev: comp sci lecturer @uncg"
   email            : "amitabhadey.drive@gmail.com"
   linkedin         : "amitabhadey"
   github           : "amitabhadey"
-  googlescholar    : "https://scholar.google.com/citations?user=FbySRjMAAAAJ&hl=en&oi=sra"
+  googlescholar    :
   employer         : 
   pubmed           : 
   

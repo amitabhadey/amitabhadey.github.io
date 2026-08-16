@@ -181,6 +181,7 @@
     display: block;
     margin: 0 1rem;
     padding: 0.5rem 0;
+    font-size: 0.85rem;
     color: $masthead-link-color;
     text-decoration: none;
 
@@ -203,6 +204,7 @@
 
   .visible-links {
     display: table;
+    margin: 0 auto;
 
     li {
       display: table-cell;

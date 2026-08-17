@@ -28,5 +28,5 @@ I focus on autonomous and assisted medical coding intelligence, long-context rea
 </p>
 
 <p style="font-size: 0.9rem; line-height: 1.7; margin: 0;">
-  I occasionally write reflections on research, systems building, and professional growth on <a href="https://amitabhadey.substack.com/" target="_blank" style="border-bottom:1px dotted; text-decoration:none; color:#fff;">Substack</a>.
+  I ocassionally use <a href="https://amitabhadey.substack.com/" target="_blank" style="border-bottom:1px dotted; text-decoration:none; color:#fff;">Substack</a> for personal reflection and journaling.
 </p>

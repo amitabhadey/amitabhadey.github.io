@@ -69,39 +69,25 @@
    Author profile and links
    ========================================================================== */
 
-.author__profile-head {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 0.75rem;
-
-  @include breakpoint($large) {
-    display: block;
-    margin-bottom: 0;
-  }
-}
-
 .author__avatar {
-  display: block;
-  width: 84px;
-  flex: 0 0 84px;
+  display: table-cell;
+  vertical-align: top;
+  width: 36px;
   // set width only, for non-square avatars
   // height: 36px;
 
   @include breakpoint($large) {
     display: block;
     width: auto;
-    flex: 0 0 auto;
     height: auto;
   }
 
   img {
     max-width: 1000px;
-    width: 84px;
+    width: 160px;
     border-radius: 50%;
 
     @include breakpoint($large) {
-      width: 160px;
       padding: 5px;
       border: 1px solid $border-color;
     }
@@ -109,10 +95,10 @@
 }
 
 .author__content {
-  display: block;
-  vertical-align: middle;
-  padding-left: 0;
-  padding-right: 0;
+  display: table-cell;
+  vertical-align: top;
+  padding-left: 15px;
+  padding-right: 25px;
   line-height: 1;
 
   @include breakpoint($large) {
@@ -124,7 +110,7 @@
 }
 
 .author__name {
-  margin: 0 0 0.25rem 0;
+  margin: 0;
 
   @include breakpoint($large) {
     margin-top: 10px;
@@ -147,12 +133,12 @@
 
 .author__urls-wrapper {
   position: relative;
-  display: block;
-  vertical-align: top;
+  display: none;
+  vertical-align: middle;
   font-family: $sans-serif;
   z-index: 10;
   position: relative;
-  cursor: default;
+  cursor: pointer;
 
   li:last-child {
     a {
@@ -167,19 +153,19 @@
 }
 
 .author__urls {
-  display: block;
-  position: relative;
-  right: auto;
-  margin: 0;
-  padding: 0;
+  display: none;
+  position: absolute;
+  right: 0;
+  margin-top: 15px;
+  padding: 10px;
   list-style-type: none;
-  border: 0;
-  border-radius: 0;
-  background: transparent;
-  z-index: 1;
-  box-shadow: none;
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+  background: #5B6780;
+  z-index: -1;
+  box-shadow: 0 0 10px rgba(#000, 0.25);
   cursor: default;
-  color: inherit;
+  color: #ffffff;
 
   @include breakpoint($large) {
     display: block;

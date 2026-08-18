@@ -5,10 +5,6 @@ layout: single
 ---
 
 <h1 style="margin:0 0 .5rem 0;">Feed &amp; Highlights</h1>
-<p style="margin:0 0 1.25rem 0; opacity:.9;">
-  A curated timeline of professional milestones, academic achievements, and research updates.
-</p>
-<hr style="border:none;border-top:1px solid #666;opacity:.4;margin:1rem 0 1.25rem;">
 
 <!-- ===== INLINE STYLES (NAMESPACED) ===== -->
 <style>
@@ -74,10 +70,25 @@ layout: single
 <div class="mm-feed">
   <div class="feed-wrap">
 
-    <!-- ===== 2023–Present ===== -->
-    <section class="feed-year" aria-label="2023–Present">
-      <h2>2023–Present</h2>
+    <section class="feed-year">
       <ul class="feed-list">
+
+        <li class="feed-item">
+          <div class="feed-head">
+            <span class="feed-tag">Team</span>
+            <time class="feed-time" datetime="2026-08-18">Aug 18, 2026</time>
+          </div>
+          <p class="feed-title">NYC Onsite Meeting '26</p>
+          <div class="feed-details">
+            <div class="feed-body">
+              <p>Great to finally meet the team in person. Not everyone made it into the photo, but this is the only one I managed to get from the evening.</p>
+              <p>I feel incredibly fortunate to be part of such a talented and diverse group of people. It's inspiring to work alongside colleagues with different backgrounds, perspectives, and expertise, all pushing toward the same goal.</p>
+              <p>And to top it all off, we had the New York skyline as the backdrop, a view that's hard to beat.</p>
+              <p>Looking forward to building many more great things together!</p>
+              <img class="feed-img lightboxable" src="/images/nyc-onsite.jpeg" alt="NYC onsite meeting 2026">
+            </div>
+          </div>
+        </li>
 
         <li class="feed-item">
           <div class="feed-head">
@@ -86,13 +97,12 @@ layout: single
           </div>
           <p class="feed-title">Started at Optum (UnitedHealth Group) — Senior SWE ➜ Senior Data Scientist</p>
           <p class="feed-note">Working at the intersection of <strong>LLMs</strong>, healthcare systems, and enterprise AI.</p>
-          <details class="feed-details">
-            <summary>View details &amp; media</summary>
+          <div class="feed-details">
             <div class="feed-body">
               <p>Building scalable model pipelines that improve patient outcomes and operational efficiency. #TeamUnited</p>
               <img class="feed-img lightboxable" src="/images/optum.jpg" alt="Optum banner">
             </div>
-          </details>
+          </div>
         </li>
 
         <li class="feed-item">
@@ -102,15 +112,14 @@ layout: single
           </div>
           <p class="feed-title">Commendations from Students</p>
           <p class="feed-note">Grateful for the feedback that fuels rigorous, supportive learning experiences.</p>
-          <details class="feed-details">
-            <summary>View gallery</summary>
+          <div class="feed-details">
             <div class="feed-body">
               <img class="feed-img lightboxable" src="/images/evaluation/Commendations%20from%20Students-1.png" alt="Commendations 1">
               <img class="feed-img lightboxable" src="/images/evaluation/Commendations%20from%20Students-2.png" alt="Commendations 2">
               <img class="feed-img lightboxable" src="/images/evaluation/Commendations%20from%20Students-3.png" alt="Commendations 3">
               <img class="feed-img lightboxable" src="/images/evaluation/Commendations%20from%20Students-4.png" alt="Commendations 4">
             </div>
-          </details>
+          </div>
         </li>
 
         <li class="feed-item">
@@ -120,13 +129,12 @@ layout: single
           </div>
           <p class="feed-title">CAS Sciences PTF Annual Review (Computer Science) — 2024</p>
           <p class="feed-note">Highlights ongoing contributions to instruction, mentorship, and research initiatives.</p>
-          <details class="feed-details">
-            <summary>Open images</summary>
+          <div class="feed-details">
             <div class="feed-body">
               <img class="feed-img lightboxable" src="/images/cas_annual_review/2024_1.png" alt="CAS review 2024 page 1">
               <img class="feed-img lightboxable" src="/images/cas_annual_review/2024_2.png" alt="CAS review 2024 page 2">
             </div>
-          </details>
+          </div>
         </li>
 
         <li class="feed-item">
@@ -136,12 +144,11 @@ layout: single
           </div>
           <p class="feed-title">13th Annual COE Graduate Poster Competition</p>
           <p class="feed-note"><em>“A Machine Learning Approach to Predict 3D Printability of Biopolymer-Based Ink.”</em></p>
-          <details class="feed-details">
-            <summary>View poster</summary>
+          <div class="feed-details">
             <div class="feed-body">
               <img class="feed-img lightboxable" src="/images/13th%20COE%20Poster_Shakib_CBBE_Dr.%20Azad-1.png" alt="Poster">
             </div>
-          </details>
+          </div>
         </li>
 
         <li class="feed-item">
@@ -151,13 +158,12 @@ layout: single
           </div>
           <p class="feed-title">CAS Sciences PTF Annual Review (Computer Science) — 2023</p>
           <p class="feed-note">Documenting growth across teaching, service, and lab collaborations.</p>
-          <details class="feed-details">
-            <summary>Open images</summary>
+          <div class="feed-details">
             <div class="feed-body">
               <img class="feed-img lightboxable" src="/images/cas_annual_review/2023_1.jpeg" alt="CAS review 2023 page 1">
               <img class="feed-img lightboxable" src="/images/cas_annual_review/2023_2.jpg" alt="CAS review 2023 page 2">
             </div>
-          </details>
+          </div>
         </li>
 
         <li class="feed-item">
@@ -167,12 +173,11 @@ layout: single
           </div>
           <p class="feed-title">Joined UNCG as Computer Science Lecturer</p>
           <p class="feed-note">Taught Systems Programming, Advanced Data Structures, and Data Science.</p>
-          <details class="feed-details">
-            <summary>View photo</summary>
+          <div class="feed-details">
             <div class="feed-body">
               <img class="feed-img lightboxable" src="/images/lecturer.jpeg" alt="UNCG lecturer">
             </div>
-          </details>
+          </div>
         </li>
 
         <li class="feed-item">
@@ -181,14 +186,13 @@ layout: single
             <time class="feed-time" datetime="2023-06-06">Jun 6, 2023</time>
           </div>
           <p class="feed-title">LDEB — arXiv Preprint Announced</p>
-          <details class="feed-details">
-            <summary>Open post</summary>
+          <div class="feed-details">
             <div class="feed-body">
               <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7071891478133817345"
                       height="360" width="100%" frameborder="0" allowfullscreen=""
                       title="LinkedIn post: LDEB"></iframe>
             </div>
-          </details>
+          </div>
         </li>
 
         <li class="feed-item">
@@ -198,12 +202,11 @@ layout: single
           </div>
           <p class="feed-title">Outstanding Graduate Student Award</p>
           <p class="feed-note">Recognized by UNCG CS for scholarly accomplishment and department contributions.</p>
-          <details class="feed-details">
-            <summary>View photo</summary>
+          <div class="feed-details">
             <div class="feed-body">
               <img class="feed-img lightboxable" src="/images/gradaward.jpeg" alt="Award photo">
             </div>
-          </details>
+          </div>
         </li>
 
         <li class="feed-item">
@@ -212,12 +215,11 @@ layout: single
             <time class="feed-time" datetime="2023-05-04">May 4, 2023</time>
           </div>
           <p class="feed-title">Doctoral &amp; Master’s Commencement — UNCG</p>
-          <details class="feed-details">
-            <summary>View photo</summary>
+          <div class="feed-details">
             <div class="feed-body">
               <img class="feed-img lightboxable" src="/images/graduation.jpeg" alt="Graduation photo">
             </div>
-          </details>
+          </div>
         </li>
 
         <li class="feed-item">
@@ -226,12 +228,11 @@ layout: single
             <time class="feed-time" datetime="2023-05-04">May 4, 2023</time>
           </div>
           <p class="feed-title">Featured on UNCG CS Website</p>
-          <details class="feed-details">
-            <summary>View image</summary>
+          <div class="feed-details">
             <div class="feed-body">
               <img class="feed-img lightboxable" src="/images/featured.jpeg" alt="Featured image">
             </div>
-          </details>
+          </div>
         </li>
 
       </ul>

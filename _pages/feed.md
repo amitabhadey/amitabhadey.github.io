@@ -76,7 +76,7 @@ layout: single
         <li class="feed-item">
           <div class="feed-head">
             <span class="feed-tag">Team</span>
-            <time class="feed-time" datetime="2026-08-18">Aug 18, 2026</time>
+            <time class="feed-time" datetime="2026-07-23">Jul 23, 2026</time>
           </div>
           <p class="feed-title">NYC Onsite Meeting '26</p>
           <div class="feed-details">
@@ -93,7 +93,7 @@ layout: single
         <li class="feed-item">
           <div class="feed-head">
             <span class="feed-tag">Career</span>
-            <time class="feed-time" datetime="2023-08-01">Aug 1, 2023</time>
+            <time class="feed-time" datetime="2025-08-01">Aug 1, 2025</time>
           </div>
           <p class="feed-title">Started at Optum (UnitedHealth Group) — Senior SWE ➜ Senior Data Scientist</p>
           <p class="feed-note">Working at the intersection of <strong>LLMs</strong>, healthcare systems, and enterprise AI.</p>
@@ -108,7 +108,7 @@ layout: single
         <li class="feed-item">
           <div class="feed-head">
             <span class="feed-tag">Teaching</span>
-            <time class="feed-time">Fall 2022 → Present</time>
+            <time class="feed-time">Fall 2022 → Spring 2025</time>
           </div>
           <p class="feed-title">Commendations from Students</p>
           <p class="feed-note">Grateful for the feedback that fuels rigorous, supportive learning experiences.</p>
